@@ -6,6 +6,6 @@
     <title>footer</title>
 </head>
 <body>
-    <p>Ouais c'est le footer</p>
+    <p>Ouais c'est le footer !</p>
 </body>
 </html>
