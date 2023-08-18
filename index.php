@@ -92,8 +92,27 @@
 
     <div class="dividing-bar"></div>
 
-    <div class="section-avis">
-        
+    <div class="avis-container">
+        <div class="shadow-left"></div>
+        <div class="section-avis">
+            <h2>Avis</h2>
+            <p>Ils nous ont fait confiance</p>
+            <div class="avis-caroussel">
+                <div class="avis">
+                    <p class="avis-text">Super garage ils ont bien réparé ma voiture ! C’était pas gagné </p>
+                    <p class="avis-name">Monique L.</p>
+                </div>
+                <div class="avis">
+                    <p class="avis-text">Super garage ils ont bien réparé ma voiture ! C’était pas gagné </p>
+                    <p class="avis-name">Monique L.</p>
+                </div>
+                <div class="avis">
+                    <p class="avis-text">Super garage ils ont bien réparé ma voiture ! C’était pas gagné </p>
+                    <p class="avis-name">Monique L.</p>
+                </div>
+            </div>
+        </div>
+        <div class="shadow-right"></div>
     </div>
 
     <div class="dividing-bar"></div>
