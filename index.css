@@ -1,0 +1,161 @@
+html {
+    color: white;
+    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+
+}
+
+body {
+    margin: 0px;
+}
+
+header {
+    background-color: #18181F;
+    color: white;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    width: 35%;
+    padding-left: 4%;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.nav-container {
+    width: 35%;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.active {
+    color: #09A7A0;
+    font-size: 1rem;
+}
+
+.nav-ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-ul li {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.nav-ul li:hover {
+    zoom: 110%;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.connect-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 20%;
+    padding-right: 3%;
+    font-size: 0.9rem;
+}
+
+.connect-container a {
+    display: flex;
+}
+
+.connect-icon {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+
+
+/* Main */
+
+.dividing-bar {
+    background-color: #18181F;
+    height: 25px;
+}
+
+/* Qui sommes-nous ? */
+
+.qui-sommes-nous {
+    background-color: #24242B;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.crew-sections {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.crew-section {
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.crew-img {
+    width: 215px;
+    height: 140px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+
+/* Véhicules d'occasions */
+
+.vehicules-occasions {
+    display: flex;
+    background-color: #24242B;
+    align-items: center;
+    justify-content: center;
+}
+
+.vehicules {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.vehicules h2 {
+    margin-bottom: 5px;
+}
+
+.vehicules-imgs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.vehicules-img {
+    width: 185px;
+    height: 115px;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.vehicule {
+
+}
+
+/* Avis */
+
