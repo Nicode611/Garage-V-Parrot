@@ -154,7 +154,18 @@ a {
 }
 
 .vehicule-card {
+    display: flex;
+    flex-direction: column;
+}
 
+.vehicule-img {
+    width: 590px;
+    height: 349px;
+    object-fit: cover;
+}
+
+.topline {
+    display: flex;
 }
 
 /* Avis */

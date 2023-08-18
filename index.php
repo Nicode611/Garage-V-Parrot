@@ -73,10 +73,18 @@
             </div>
         </div>
         <div class="vehicule-card">
-            <img src="img/skoda fabia.png" alt="">
+            <img class="vehicule-img" src="img/skoda fabia.png" alt="">
             <div class="card-bottom">
-                <h3>Skoda Fabia</h3>
-                
+                <div class="topline">
+                    <h3 class="vehicule-model">Skoda Fabia</h3>
+                    <div>
+                        <h4 class="vehicule-year">2015</h4>
+                        <h4 class="vehicule-km">165 000 km</h4>
+                    </div>
+                </div>
+                <p class="vehicule-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque libero urna, blandit pellentesque arcu at, ornare vehicula velit. Praesent tortor dolor, consequat at elementum ut, sollicitudin vitae enim.</p>
+                <h3 class="vehicule-price">12 500 €</h3>
+
             </div>
         </div>
     </div>
