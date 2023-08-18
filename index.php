@@ -32,7 +32,7 @@
     </div>
 </header>
 <main>
-    <div class="qui-sommes-nous">
+    <div class="section-qui-sommes-nous">
         <h2>Qui Sommes-nous ?</h2>
         <div class="crew-sections">
             <div class="crew-section">
@@ -58,8 +58,10 @@
             </div>
         </div>
     </div>
+
     <div class="dividing-bar"></div>
-    <div class="vehicules-occasions">
+
+    <div class="section-vehicules-occasions">
         <div class="vehicules">
             <h2>Véhicules d'occasions</h2>
             <p>Nos véhicules d’occasion disponibles à l’achat.</p>
@@ -78,16 +80,23 @@
                 <div class="topline">
                     <h3 class="vehicule-model">Skoda Fabia</h3>
                     <div>
-                        <h4 class="vehicule-year">2015</h4>
-                        <h4 class="vehicule-km">165 000 km</h4>
+                        <h4 class="vehicule-year vehicule-infos">2015</h4>
+                        <h4 class="vehicule-km vehicule-infos">165 000 km</h4>
                     </div>
                 </div>
                 <p class="vehicule-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque libero urna, blandit pellentesque arcu at, ornare vehicula velit. Praesent tortor dolor, consequat at elementum ut, sollicitudin vitae enim.</p>
                 <h3 class="vehicule-price">12 500 €</h3>
-
             </div>
         </div>
     </div>
+
+    <div class="dividing-bar"></div>
+
+    <div class="section-avis">
+        
+    </div>
+
+    <div class="dividing-bar"></div>
 
 </main>
 

@@ -1,4 +1,5 @@
 html {
+    background-color: #24242B;
     color: white;
     font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 
@@ -83,11 +84,13 @@ a {
 .dividing-bar {
     background-color: #18181F;
     height: 25px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 /* Qui sommes-nous ? */
 
-.qui-sommes-nous {
+.section-qui-sommes-nous {
     background-color: #24242B;
     color: white;
     display: flex;
@@ -120,11 +123,11 @@ a {
 
 /* Véhicules d'occasions */
 
-.vehicules-occasions {
+.section-vehicules-occasions {
     display: flex;
     background-color: #24242B;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .vehicules {
@@ -154,19 +157,40 @@ a {
 }
 
 .vehicule-card {
+    background-color: white;
+    color: black;
     display: flex;
     flex-direction: column;
+    width: 30%;
+    border-radius: 0px 0px 15px 15px;
 }
 
 .vehicule-img {
-    width: 590px;
+    width: auto;
     height: 349px;
     object-fit: cover;
 }
 
+.card-bottom {
+    padding: 15px;
+}
+
 .topline {
     display: flex;
+    justify-content: space-between;
+}
+
+.vehicule-infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
 }
 
 /* Avis */
 
+.section-avis {
+    
+}
