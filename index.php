@@ -72,7 +72,13 @@
                 <a href="#"><img class="vehicules-img" src="img/skoda fabia.png"></a>
             </div>
         </div>
-        <div class="vehicule"></div>
+        <div class="vehicule-card">
+            <img src="img/skoda fabia.png" alt="">
+            <div class="card-bottom">
+                <h3>Skoda Fabia</h3>
+                
+            </div>
+        </div>
     </div>
 
 </main>
