@@ -42,15 +42,16 @@
             </div>
             <div class="crew-section">
                 <img class="crew-img" src="img/Lucie.jpg">
-                <h3>V. Parrot</h3>
+                <h3>Lucie</h3>
                 <p>
                     Employée depuis 2018, s’occupe de la vente de 
                     véhicules d’occasions et des réparations moto.
                 </p>
             </div>
             <div class="crew-section">
+                <div class="background-glow"></div>
                 <img class="crew-img" src="img/Christian.jpg">
-                <h3>V. Parrot</h3>
+                <h3>Christian</h3>
                 <p>
                 Employé depuis 2017, s’occupe de la réparation 
                 automobile et la vente de véhicules d’occasions.
@@ -63,15 +64,17 @@
 
     <div class="section-vehicules-occasions">
         <div class="vehicules">
-            <h2>Véhicules d'occasions</h2>
-            <p>Nos véhicules d’occasion disponibles à l’achat.</p>
+            <div>
+                <h2>Véhicules d'occasions</h2>
+                <p>Nos véhicules d’occasion disponibles à l’achat.</p>
+            </div>
             <div class="vehicules-imgs">
                 <a href="#"><img class="vehicules-img" src="img/peugeot 308.png"></a>
                 <a href="#"><img class="vehicules-img" src="img/audi rs4.png"></a>
                 <a href="#"><img class="vehicules-img" src="img/audi tt.png"></a>
                 <a href="#"><img class="vehicules-img" src="img/lamborghini urus.png"></a>
                 <a href="#"><img class="vehicules-img" src="img/mercedes amg.png"></a>
-                <a href="#"><img class="vehicules-img" src="img/skoda fabia.png"></a>
+                <a href="#"><img class="vehicules-img vehicule-active" src="img/skoda fabia.png"></a>
             </div>
         </div>
         <div class="vehicule-card">
