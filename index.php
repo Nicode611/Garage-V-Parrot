@@ -19,11 +19,13 @@
         <h2>Qui Sommes-nous ?</h2>
         <div class="crew-sections">
             <div class="crew-section">
+                <div class="crew-img-glow"></div>
                 <img class="crew-img" src="img/V.Parrot.jpg">
                 <h3>V. Parrot</h3>
                 <p>Gérant et créateur du garage depuis 2017.</p>
             </div>
             <div class="crew-section">
+                <div class="crew-img-glow"></div>
                 <img class="crew-img" src="img/Lucie.jpg">
                 <h3>Lucie</h3>
                 <p>
@@ -32,7 +34,7 @@
                 </p>
             </div>
             <div class="crew-section">
-                <div class="background-glow"></div>
+                <div class="crew-img-glow"></div>
                 <img class="crew-img" src="img/Christian.jpg">
                 <h3>Christian</h3>
                 <p>
