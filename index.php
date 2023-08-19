@@ -3,34 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="footer/footer.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="Header/header.css">
+    <link rel="stylesheet" href="Footer/footer.css">
     <title>Garage V. Parrot</title>
 </head>
 <body>
-<header>
-    <div class="logo-container">
-        <a href="#">
-            <img class="logo" src="header/logo.png">
-        </a>
-    </div>
-    <div class="nav-container">
-        <nav>
-            <ul class="nav-ul">
-                <a href="#"><li class="active">ACCUEIL</li></a>
-                <a href="#"><li>SERVICES</li></a>
-                <a href="#"><li>OCCASIONS</li></a>
-                <a href="#"><li>CONTACT</li></a>
-            </ul>
-        </nav>
-    </div>
-    <div class="connect-container">
-        <a href="#">
-            <p class="connect">Se connecter</p>
-            <img class="connect-icon" src="header/user-icon.png">
-        </a>
-    </div>
-</header>
+
+    <?php
+        require "Header/header.html";
+    ?>
+
 <main>
     <div class="section-qui-sommes-nous">
         <h2>Qui Sommes-nous ?</h2>
