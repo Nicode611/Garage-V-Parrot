@@ -16,7 +16,7 @@
 
 <main>
     <div class="section-qui-sommes-nous">
-        <h2>Qui Sommes-nous ?</h2>
+        <h2>Qui Sotmmes-nous ?</h2>
         <div class="crew-sections">
             <div class="crew-section">
                 <div class="crew-img-glow"></div>
