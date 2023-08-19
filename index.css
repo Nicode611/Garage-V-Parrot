@@ -109,6 +109,10 @@ body {
     object-position: center;
 }
 
+.vehicules-img:hover {
+    cursor: pointer;
+}
+
 .vehicule-card {
     background-color: white;
     color: black;

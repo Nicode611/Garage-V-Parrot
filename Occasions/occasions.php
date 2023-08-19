@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="occasions.css">
+    <link rel="stylesheet" href="../Occasions/occasions.css">
     <link rel="stylesheet" href="../Header/header.css">
     <link rel="stylesheet" href="../Footer/footer.css">
     <title>Garage V. Parrot</title>
@@ -15,18 +15,18 @@
     ?>
 
 <div class="section-vehicules-occasions">
-        <div class="vehicules">
+        <div class="vehicules-container">
             <div>
                 <h2>Véhicules d'occasions</h2>
                 <p>Nos véhicules d’occasion disponibles à l’achat.</p>
             </div>
             <div class="vehicules-imgs">
-                <a href="#"><img class="vehicules-img" src="../img/peugeot 308.png"></a>
-                <a href="#"><img class="vehicules-img" src="../img/audi rs4.png"></a>
-                <a href="#"><img class="vehicules-img" src="../img/audi tt.png"></a>
-                <a href="#"><img class="vehicules-img" src="../img/lamborghini urus.png"></a>
-                <a href="#"><img class="vehicules-img" src="../img/mercedes amg.png"></a>
-                <a href="#"><img class="vehicules-img vehicule-active" src="../img/skoda fabia.png"></a>
+                <img class="vehicules-img" src="../img/peugeot 308.png">
+                <img class="vehicules-img" src="../img/audi rs4.png">
+                <img class="vehicules-img" src="../img/audi tt.png">
+                <img class="vehicules-img" src="../img/lamborghini urus.png">
+                <img class="vehicules-img" src="../img/mercedes amg.png">
+                <img class="vehicules-img vehicule-active" src="../img/skoda fabia.png">
             </div>
         </div>
         <div class="vehicule-card">
@@ -49,5 +49,6 @@
         require "../Footer/footer.html";
     ?>
 
+    <script src="script-selection-vehicule.js"></script>
 </body>
 </html>

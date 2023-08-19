@@ -54,12 +54,12 @@
                 <p>Nos véhicules d’occasion disponibles à l’achat.</p>
             </div>
             <div class="vehicules-imgs">
-                <a href="#"><img class="vehicules-img" src="img/peugeot 308.png"></a>
-                <a href="#"><img class="vehicules-img" src="img/audi rs4.png"></a>
-                <a href="#"><img class="vehicules-img" src="img/audi tt.png"></a>
-                <a href="#"><img class="vehicules-img" src="img/lamborghini urus.png"></a>
-                <a href="#"><img class="vehicules-img" src="img/mercedes amg.png"></a>
-                <a href="#"><img class="vehicules-img vehicule-active" src="img/skoda fabia.png"></a>
+                <img class="vehicules-img" src="img/peugeot 308.png">
+                <img class="vehicules-img" src="img/audi rs4.png">
+                <img class="vehicules-img" src="img/audi tt.png">
+                <img class="vehicules-img" src="img/lamborghini urus.png">
+                <img class="vehicules-img" src="img/mercedes amg.png">
+                <img class="vehicules-img vehicule-active" src="img/skoda fabia.png">
             </div>
         </div>
         <div class="vehicule-card">
@@ -111,5 +111,6 @@
     require "footer/footer.html";
     ?>
 
+<script src="/Occasions/script-selection-vehicule.js"></script>
 </body>
 </html>
