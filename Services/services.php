@@ -10,9 +10,9 @@
 </head>
 <body>
     
-    <?php
-        require "../Header/header.html";
-    ?>
+<?php
+    require "../Header/header.html";
+?>
 
     <main>
     <div class="glow"></div>
@@ -42,9 +42,9 @@
         </div>
     </main>
 
-    <?php
-        require "../Footer/footer.html";
-    ?>
+<?php
+    require "../Footer/footer.html";
+?>
 
 </body>
 </html>

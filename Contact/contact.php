@@ -10,13 +10,15 @@
 </head>
 <body>
     
-    <?php
-        require "../Header/header.html";
-    ?>
+<?php
+    require "../Header/header.html";
+?>
 
-    <?php
-        require "../Footer/footer.html";
-    ?>
+
+
+<?php
+    require "../Footer/footer.html";
+?>
 
 </body>
 </html>

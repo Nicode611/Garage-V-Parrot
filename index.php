@@ -10,9 +10,9 @@
 </head>
 <body>
 
-    <?php
-        require "Header/header.html";
-    ?>
+<?php
+    require "Header/header.html";
+?>
 
 <main>
     <div class="section-qui-sommes-nous">
@@ -107,10 +107,10 @@
 
 </main>
 
-    <?php
+<?php
     require "footer/footer.html";
-    ?>
+?>
 
-<script src="/Occasions/script-selection-vehicule.js"></script>
+<script src="/Scripts/script-selection-vehicule.js"></script>
 </body>
 </html>

@@ -10,9 +10,9 @@
 </head>
 <body>
     
-    <?php
-        require "../Header/header.html";
-    ?>
+<?php
+    require "../Header/header.html";
+?>
 
 <div class="section-vehicules-occasions">
         <div class="vehicules-container">
@@ -45,10 +45,10 @@
         </div>
     </div>
 
-    <?php
-        require "../Footer/footer.html";
-    ?>
+<?php
+    require "../Footer/footer.html";
+?>
 
-    <script src="script-selection-vehicule.js"></script>
+    <script src="../Scripts/script-selection-vehicule.js"></script>
 </body>
 </html>
