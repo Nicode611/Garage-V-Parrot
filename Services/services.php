@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="services.css">
     <link rel="stylesheet" href="../Header/header.css">
-    <link rel="stylesheet" href="../Footer/footer.css">
     <title>Garage V. Parrot</title>
 </head>
 <body>
@@ -43,7 +42,7 @@
     </main>
 
 <?php
-    require "../Footer/footer.html";
+    require "../Footer/footer.php";
 ?>
 
 </body>

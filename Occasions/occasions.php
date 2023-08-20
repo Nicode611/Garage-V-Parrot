@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Occasions/occasions.css">
     <link rel="stylesheet" href="../Header/header.css">
-    <link rel="stylesheet" href="../Footer/footer.css">
     <title>Garage V. Parrot</title>
 </head>
 <body>
@@ -46,7 +45,7 @@
     </div>
 
 <?php
-    require "../Footer/footer.html";
+    require "../Footer/footer.php";
 ?>
 
     <script src="../Scripts/script-selection-vehicule.js"></script>

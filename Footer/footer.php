@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="footer.css">
+        <link rel="stylesheet" href="/Footer/footer.css">
         <title>Garage V. Parrot</title>
     </head>
 <footer>
@@ -14,11 +14,7 @@
     </div>
     <div class="horaires-footer-container">
         <h1 class="footer-titles">Horaires</h1>
-        <p class="footer-texts">Lundi : 8h - 12h30 / 14h - 18h<br>
-            Mardi : 8h - 12h30 / 14h - 18h<br>
-            Mercredi : 8h - 12h30 / 14h - 18h<br>
-            Jeudi : 8h - 12h30 / 14h - 18h<br>
-            Vendredi : 8h - 12h30 / 14h - 18h</p>
+        <?php include "../Horaires/horaires.html"; ?>
     </div>
     <div class="infos-footer-container">
         <h1 class="footer-titles">Infos</h1>
