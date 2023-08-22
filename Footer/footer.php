@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/Footer/footer.css">
+        <link rel="stylesheet" href="/Garage-V-Parrot/Footer/footer.css">
         <title>Garage V. Parrot</title>
     </head>
 <footer>

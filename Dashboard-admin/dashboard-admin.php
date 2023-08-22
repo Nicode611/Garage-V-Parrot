@@ -51,18 +51,20 @@
                 <div class="service-form-container">
                 <form class="service-form" action="traitement.php" method="post" enctype="multipart/form-data">
         
-                    <div class="service-add-img">
-                        <label for="image">Image :</label><br>
-                        <input type="file" name="image" id="image" accept="image/*" required>
+                    <div class="service-add">
+                        <div class="service-add-img">
+                            <label for="image">Image :</label><br>
+                            <input type="file" name="image" id="image" accept="image/*" required>
+                        </div>
+                        <div class="service-add-infos">
+                            <label for="titre">Titre :</label>
+                            <input type="text" name="titre" id="titre" required><br>
+        
+                            <label for="texte">Texte :</label>
+                            <textarea name="texte" id="texte" rows="4" cols="50" required></textarea><br>
+                        </div>
                     </div>
-                    <div class="service-add-infos">
-                        <label for="titre">Titre :</label>
-                        <input type="text" name="titre" id="titre" required><br>
-    
-                        <label for="texte">Texte :</label>
-                        <textarea name="texte" id="texte" rows="4" cols="50" required></textarea><br>
-                    </div>
-                    <input type="submit" value="Télécharger et Soumettre">
+                    <input class="service-submit" type="submit" value="Valider">
                 </form>
                 </div>
             </div>

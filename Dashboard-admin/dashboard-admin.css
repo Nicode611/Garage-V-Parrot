@@ -95,3 +95,45 @@ main {
     margin: 20px;
     width: 50%;
 }
+
+
+.service-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    margin: 50px;
+}
+
+.service-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service-add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-add-img {
+    text-align: center;
+}
+
+.service-add-infos {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-submit {
+    width: 118px;
+    height: 38px;
+    background-color: #09A7A0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+}
