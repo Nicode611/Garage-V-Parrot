@@ -39,6 +39,7 @@ main {
 
 .service {
     display: flex;
+    align-items: center;
     width: 40%;
     margin: 50px;
 }
@@ -55,4 +56,27 @@ main {
     flex-direction: column;
     margin: 20px;
     width: 50%;
+}
+
+.service-form-container {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    margin: 50px;
+}
+
+.service-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service-add-img {
+}
+
+.service-add-infos {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
 }

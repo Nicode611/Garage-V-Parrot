@@ -1,0 +1,97 @@
+html {
+    background-color: #24242B;
+    color: white;
+    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+body {
+    margin: 0px;
+}
+
+main {
+    display: flex;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 16%;
+    max-width: 250px;
+    min-width: 180px;
+    background-color: #18181F;
+    margin: 0px;
+}
+
+.sidebar-ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.sidebar-ul:hover {
+    cursor: pointer;
+}
+
+.sidebar-li {
+    list-style: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.sidebar-active {
+    background-color: #09A7A0;
+    color: black;
+    font-weight: 500;
+}
+
+/* Services */
+
+.dashboard-services {
+    position: relative;
+    width: 84%;
+}
+
+.glow {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 500px;
+    height: 400px;
+    background: radial-gradient(circle, #09a79f9f, transparent);
+    filter: blur(80px);
+    transform: scale(2.5); /* Ajuster la valeur pour l'effet de taille */
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.main-title {
+    text-align: center;
+}
+
+.services-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.service {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    margin: 50px;
+}
+
+.service-img {
+    width: 213px;
+    height: 103px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.service-infos {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 50%;
+}
