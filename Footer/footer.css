@@ -53,6 +53,12 @@ button:hover {
     padding-right: 5%;
     flex: 1;
 }
+
+.footer-horaires {
+    font-size: 0.9rem;
+    font-weight: 200;
+}
+
 .infos-footer-container {
     align-items: center;
     justify-content: center;
