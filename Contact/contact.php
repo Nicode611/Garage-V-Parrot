@@ -31,7 +31,7 @@
     
             <textarea id="message" placeholder="Message" name="message" rows="4" cols="50" required></textarea><br><br>
     
-            <input id="send" type="submit" value="Envoyer">
+            <input id="contact-submit" type="submit" value="Envoyer">
         </form>
     </div>
 </main>

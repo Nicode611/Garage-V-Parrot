@@ -159,6 +159,10 @@ main {
     width: 100%;
 }
 
+.service-form1 > input {
+    height: 25px;
+}
+
 .service-submit {
     width: 118px;
     height: 38px;
@@ -254,6 +258,7 @@ main {
 
 .occasions-form1 > * {
     width: 15%;
+    height: 25px;
     margin: 10px;
 }
 

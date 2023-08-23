@@ -88,7 +88,7 @@ h2 {
     resize: none;
 }
 
-#send {
+#contact-submit {
     width: 118px;
     height: 38px;
     background-color: #09A7A0;
@@ -99,6 +99,7 @@ h2 {
     align-self: center;
 }
 
-#send:hover {
+#contact-submit:hover {
     cursor: pointer;
+    zoom: 110%;
 }
