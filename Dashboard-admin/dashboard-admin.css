@@ -129,7 +129,7 @@ main {
     flex-direction: column;
 }
 
-.service-submit {
+.submit {
     width: 118px;
     height: 38px;
     background-color: #09A7A0;
@@ -220,9 +220,27 @@ main {
 }
 
 
+/* Horaires */
+
+.dashboard-horaires {
+    width: 84%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.horaires-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.horaires-form > * {
+    margin: 5px;
+}
 
 
-
+/* Employés */
 
 
 

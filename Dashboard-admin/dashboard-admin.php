@@ -67,7 +67,7 @@
                             <textarea name="texte" id="texte" rows="4" cols="50" required></textarea><br>
                         </div>
                     </div>
-                    <input class="service-submit" type="submit" value="Valider">
+                    <input class="submit" type="submit" value="Valider">
                 </form>
                 </div>
             </div>
@@ -109,7 +109,35 @@
 
 
         <!-- Partie Horaires -->
-        
+        <div class="dashboard-horaires hide">
+            <h2>Modifiez les horaires</h2>
+            <form class="horaires-form" action="traitement.php" method="post">
+                <label for="jour">Jour de la semaine :</label>
+                <select name="jour" id="jour">
+                    <option value="lundi">Lundi</option>
+                    <option value="mardi">Mardi</option>
+                    <option value="mercredi">Mercredi</option>
+                    <option value="jeudi">Jeudi</option>
+                    <option value="vendredi">Vendredi</option>
+                    <option value="samedi">Samedi</option>
+                    <option value="dimanche">Dimanche</option>
+                </select>
+
+                <label for="heureOuverture">Heure d'Ouverture :</label>
+                <input type="time" name="heureOuverture" id="heureOuverture">
+
+                <label for="heureFermeture">Heure de Fermeture :</label>
+                <input type="time" name="heureFermeture" id="heureFermeture">
+
+                <input class="submit" type="submit" value="Enregistrer">
+            </form>
+        </div>
+
+
+        <!-- Partie Employés -->
+        <div class="dashboard-employes">
+            
+        </div>
     </main>
 
 

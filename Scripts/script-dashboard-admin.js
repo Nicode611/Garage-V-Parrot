@@ -1,5 +1,7 @@
 let sectionServices = document.querySelector('.dashboard-services');
 let sectionOccasions = document.querySelector('.dashboard-occasions');
+let sectionHoraires = document.querySelector('.dashboard-horaires');
+let sectionEmployes = document.querySelector('.dashboard-employes');
 let tabs = document.querySelectorAll(".sidebar-li");
 
 function setActive(event) {
@@ -19,6 +21,18 @@ function setActive(event) {
         sectionOccasions.classList.remove("hide");
     } else {
         sectionOccasions.classList.add("hide");
+    }
+
+    if (event.currentTarget.classList.contains("sidebar-horaires")) {
+        sectionHoraires.classList.remove("hide");
+    } else {
+        sectionHoraires.classList.add("hide");
+    }
+
+    if (event.currentTarget.classList.contains("sidebar-employes")) {
+        sectionEmployes.classList.remove("hide");
+    } else {
+        sectionEmployes.classList.add("hide");
     }
 }
 
