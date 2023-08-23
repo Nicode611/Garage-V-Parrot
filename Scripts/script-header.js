@@ -10,25 +10,34 @@ document.addEventListener("DOMContentLoaded", function () {
 // Met la classe active à l'element voulu selon la page chargée
     if (currentFileName === "index.php") {
         accueil.classList.add("active");
-    } else {
-        accueil.classList.add("none");
+        services.classList.remove("active");
+        occasions.classList.remove("active");
+        contact.classList.remove("active");
+        console.log('fait');
     }
 
     if (currentFileName === "services.php") {
+        accueil.classList.remove("active");
         services.classList.add("active");
-    } else {
-        services.classList.add("none");
+        occasions.classList.remove("active");
+        contact.classList.remove("active");
+        console.log('fait');
     }
 
     if (currentFileName === "occasions.php") {
+        accueil.classList.remove("active");
+        services.classList.remove("active");
         occasions.classList.add("active");
-    } else {
-        occasions.classList.add("none");
-    }
+        contact.classList.remove("active");
+        console.log('fait');
+    } 
 
     if (currentFileName === "contact.php") {
+        accueil.classList.remove("active");
+        services.classList.remove("active");
+        occasions.classList.remove("active");
         contact.classList.add("active");
-    } else {
-        contact.classList.add("none");
-    }
+        console.log('fait');
+    } 
 });
+
