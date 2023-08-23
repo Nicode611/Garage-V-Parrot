@@ -59,20 +59,13 @@
                 </div>
                 <div class="service-form-container">
                 <form class="service-form" action="traitement.php" method="post" enctype="multipart/form-data">
-                    <div class="service-add">
-                        <div class="service-add-img">
-                            <label for="image">Image :</label><br>
-                            <input type="file" name="image" id="image" accept="image/*" required>
-                        </div>
-                        <div class="service-add-infos">
-                            <label for="titre">Titre :</label>
-                            <input type="text" name="titre" id="titre" required><br>
-        
-                            <label for="texte">Texte :</label>
-                            <textarea name="texte" id="texte" rows="4" cols="50" required></textarea><br>
-                        </div>
+                    <h3>Ajouter un service :</h3>
+                    <div class="service-form1">
+                        <input type="file" name="image" id="service-image" accept="image/*" required>
+                        <input placeholder="Titre" type="text" name="titre" id="service-titre" required>
+                        <textarea placeholder="Texte" name="texte" id="service-texte" rows="4" cols="50" required></textarea>
                     </div>
-                    <input class="submit" type="submit" value="Valider">
+                    <input class="service-submit" type="submit" value="Valider">
                 </form>
                 </div>
             </div>
@@ -110,26 +103,28 @@
                     </div>
                     <div class="vehicules">
                         <svg viewBox="-102.4 -102.4 1228.80 1228.80" fill="#ffffff" class="vehicules-delete" version="1.1" xmlns="http://www.w3.org/2000/svg" transform="matrix(1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="6.144"></g><g id="SVGRepo_iconCarrier"><path d="M512 897.6c-108 0-209.6-42.4-285.6-118.4-76-76-118.4-177.6-118.4-285.6 0-108 42.4-209.6 118.4-285.6 76-76 177.6-118.4 285.6-118.4 108 0 209.6 42.4 285.6 118.4 157.6 157.6 157.6 413.6 0 571.2-76 76-177.6 118.4-285.6 118.4z m0-760c-95.2 0-184.8 36.8-252 104-67.2 67.2-104 156.8-104 252s36.8 184.8 104 252c67.2 67.2 156.8 104 252 104 95.2 0 184.8-36.8 252-104 139.2-139.2 139.2-364.8 0-504-67.2-67.2-156.8-104-252-104z" fill=""></path><path d="M707.872 329.392L348.096 689.16l-31.68-31.68 359.776-359.768z" fill=""></path><path d="M328 340.8l32-31.2 348 348-32 32z" fill=""></path></g></svg>
-                        <img class="vehicules-img vehicule-active" src="../img/skoda fabia.png">
+                        <img class="vehicules-img" src="../img/skoda fabia.png">
                     </div>
                 </div>
-            </div>
-            <div class="vehicule-card">
-                <img class="vehicule-img" src="../img/skoda fabia.png" alt="">
-                <div class="card-bottom">
-                    <div class="topline">
-                        <h3 class="vehicule-model">Skoda Fabia</h3>
-                        <div>
-                            <h4 class="vehicule-year vehicule-infos">2015</h4>
-                            <h4 class="vehicule-km vehicule-infos">165 000 km</h4>
-                        </div>
+                <form class="occasions-form" action="traitement.php" method="post" enctype="multipart/form-data">
+                    <h3>Ajouter un véhicule :</h3>
+                    <div class="occasions-form1">
+                        <input placeholder="Modèle" type="text" name="modele" id="occasions-modele" required>
+                        <input placeholder="Année" type="number" name="annee" id="occasions-annee" min="1900" max="2099" required>
+                        <input placeholder="Kilométrage" type="number" name="kilometrage" id="occasions-kilometrage" required>
+                        <input placeholder="Prix" type="number" name="prix" id="occasions-prix" step="0.01" required>
                     </div>
-                    <p class="vehicule-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque libero urna, blandit pellentesque arcu at, ornare vehicula velit. Praesent tortor dolor, consequat at elementum ut, sollicitudin vitae enim.</p>
-                    <h3 class="vehicule-price">12 500 €</h3>
-                </div>
+                    <br>
+                    <div class="occasions-form2">
+                        <input type="file" name="image" id="occasions-image" accept="image/*" required>
+                        <textarea placeholder="Description" name="description" id="occasions-description" rows="4" required></textarea>
+                    </div>
+                    <br>
+
+                    <input class="occasions-submit" type="submit" value="Ajouter le véhicule">
+                </form>
             </div>
         </div>
-        <script src="../Scripts/script-selection-vehicule.js"></script>
 
 
         <!-- Partie Horaires -->

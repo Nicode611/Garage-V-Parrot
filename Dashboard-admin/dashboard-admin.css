@@ -124,32 +124,38 @@ main {
     margin: 50px;
 }
 
+::placeholder {
+    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    color: #000;
+}
+
 .service-form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    border: solid 1px #09A7A0;
+    border-radius: 10px;
+    padding: 20px;
 }
 
-.service-add {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.service-add-img {
-    text-align: center;
-}
-
-.service-add-infos {
-    width: 35%;
+.service-form1 {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
 }
 
-.submit {
+.service-form1 > * {
+    margin: 10px;
+    width: 100%;
+}
+
+.service-submit {
     width: 118px;
     height: 38px;
+    margin-top: 10px;
     background-color: #09A7A0;
     color: white;
     border: none;
@@ -166,22 +172,22 @@ main {
     justify-content: space-around;
     margin-top: 50px;
     margin-bottom: 50px;
-    overflow: hidden;
+    width: 100%;
 }
 
 .vehicules-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
     text-align: center;
 }
 
 .vehicules-imgs {
-    width: 70%;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    width: 650px;
+    margin-top: 30px;
 }
 
 .vehicules {
@@ -189,10 +195,6 @@ main {
     width: 185px;
     height: 115px;
     margin: 15px;
-}
-
-.vehicule-active {
-    border: 1px solid #09A7A0;
 }
 
 .vehicules-img {
@@ -221,37 +223,47 @@ main {
     opacity: 1;
 }
 
-.vehicule-card {
-    background-color: white;
-    color: black;
+.occasions-form {
+    padding: 20px;
+    margin-top: 50px;
+    border: solid 1px #09A7A0;
+    border-radius: 10px;
+}
+
+.occasions-form h3 {
+    margin-top: 0px;
+}
+
+.occasions-form1 {
     display: flex;
-    flex-direction: column;
-    width: 30%;
-    border-radius: 0px 0px 15px 15px;
-}
-
-.vehicule-img {
-    width: auto;
-    height: 349px;
-    object-fit: cover;
-}
-
-.card-bottom {
-    padding: 15px;
-}
-
-.topline {
-    display: flex;
-    justify-content: space-between;
-}
-
-.vehicule-infos {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    margin: 5px;
+}
+
+.occasions-form1 > * {
+    width: 15%;
+    margin: 10px;
+}
+
+.occasions-form2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#occasions-description {
+    width: 250px;
+}
+
+.occasions-submit {
+    width: 118px;
+    height: 38px;
+    background-color: #09A7A0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+    margin-top: 10px;
 }
 
 
