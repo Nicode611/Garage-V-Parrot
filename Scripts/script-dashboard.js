@@ -1,5 +1,3 @@
-// Affichage des éléments
-
 let sectionServices = document.querySelector('.dashboard-services');
 let sectionOccasions = document.querySelector('.dashboard-occasions');
 let sectionHoraires = document.querySelector('.dashboard-horaires');
@@ -14,38 +12,45 @@ function setActive(event) {
 
     event.currentTarget.classList.add("sidebar-active");
 
-    if (event.currentTarget.classList.contains("sidebar-services")) {
-        sectionServices.classList.remove("hide");
-    } else {
+    // Vérifie si les sections existent puis les cachent
+    if (sectionServices) {
         sectionServices.classList.add("hide");
     }
-
-    if (event.currentTarget.classList.contains("sidebar-occasions")) {
-        sectionOccasions.classList.remove("hide");
-    } else {
+    if (sectionOccasions) {
         sectionOccasions.classList.add("hide");
     }
-
-    if (event.currentTarget.classList.contains("sidebar-horaires")) {
-        sectionHoraires.classList.remove("hide");
-    } else {
+    if (sectionHoraires) {
         sectionHoraires.classList.add("hide");
     }
-
-    if (event.currentTarget.classList.contains("sidebar-employes")) {
-        sectionEmployes.classList.remove("hide");
-    } else {
+    if (sectionEmployes) {
         sectionEmployes.classList.add("hide");
     }
-
-    if (event.currentTarget.classList.contains("sidebar-infos")) {
-        sectionInfos.classList.remove("hide");
-    } else {
+    if (sectionInfos) {
         sectionInfos.classList.add("hide");
+    }
+
+    // Affiche les sections
+    if (event.currentTarget.classList.contains("sidebar-services") && sectionServices) {
+        sectionServices.classList.remove("hide");
+    }
+
+    if (event.currentTarget.classList.contains("sidebar-occasions") && sectionOccasions) {
+        sectionOccasions.classList.remove("hide");
+    }
+
+    if (event.currentTarget.classList.contains("sidebar-horaires") && sectionHoraires) {
+        sectionHoraires.classList.remove("hide");
+    }
+
+    if (event.currentTarget.classList.contains("sidebar-employes") && sectionEmployes) {
+        sectionEmployes.classList.remove("hide");
+    }
+
+    if (event.currentTarget.classList.contains("sidebar-infos") && sectionInfos) {
+        sectionInfos.classList.remove("hide");
     }
 }
 
 tabs.forEach(function(tabs) {
-    tabs.addEventListener('click', setActive)
+    tabs.addEventListener('click', setActive);
 });
-
