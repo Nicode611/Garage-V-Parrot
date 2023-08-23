@@ -10,10 +10,10 @@ body {
 
 main {
     display: flex;
+    height: 90vh;
 }
 
 .sidebar {
-    height: 100vh;
     width: 16%;
     max-width: 250px;
     min-width: 180px;
@@ -78,9 +78,23 @@ main {
 
 .service {
     display: flex;
+    position: relative;
     align-items: center;
     width: 40%;
     margin: 50px;
+}
+
+.delete-icon:hover {
+    cursor: pointer;
+}
+
+.delete-icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 40px;
+    right: 40px;
+    opacity: 1;
 }
 
 .service-img {
@@ -96,7 +110,6 @@ main {
     margin: 20px;
     width: 50%;
 }
-
 
 .service-form-container {
     display: flex;
