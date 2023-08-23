@@ -10,13 +10,13 @@ body {
 
 main {
     display: flex;
-    height: 90vh;
 }
 
 .sidebar {
     width: 16%;
     max-width: 250px;
     min-width: 180px;
+    height: 100vh;
     background-color: #18181F;
     margin: 0px;
 }
@@ -81,14 +81,17 @@ main {
     position: relative;
     align-items: center;
     width: 40%;
+    min-width: 500px;
+    max-height: 240px;
     margin: 50px;
 }
 
-.delete-icon:hover {
+.service-delete:hover {
     cursor: pointer;
+    zoom: 110%;
 }
 
-.delete-icon {
+.service-delete {
     position: absolute;
     width: 40px;
     height: 40px;
@@ -116,6 +119,8 @@ main {
     flex-direction: column;
     align-items: center;
     width: 40%;
+    min-width: 500px;
+    max-height: 240px;
     margin: 50px;
 }
 
@@ -172,15 +177,18 @@ main {
     text-align: center;
 }
 
-.vehicules h2 {
-    margin-bottom: 5px;
+.vehicules-imgs {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.vehicules-imgs {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
+.vehicules {
+    position: relative;
+    width: 185px;
+    height: 115px;
+    margin: 15px;
 }
 
 .vehicule-active {
@@ -197,6 +205,20 @@ main {
 
 .vehicules-img:hover {
     cursor: pointer;
+}
+
+.vehicules-delete:hover {
+    cursor: pointer;
+    zoom: 110%;
+}
+
+.vehicules-delete {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0px;
+    right: 0px;
+    opacity: 1;
 }
 
 .vehicule-card {
