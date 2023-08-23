@@ -164,7 +164,6 @@ main {
 }
 
 .service-submit {
-    width: 118px;
     height: 38px;
     margin-top: 10px;
     background-color: #09A7A0;
@@ -273,7 +272,6 @@ main {
 }
 
 .occasions-submit {
-    width: 118px;
     height: 38px;
     background-color: #09A7A0;
     color: white;
@@ -326,7 +324,6 @@ main {
 }
 
 .horaires-submit {
-    width: 118px;
     height: 38px;
     margin-top: 10px;
     background-color: #09A7A0;

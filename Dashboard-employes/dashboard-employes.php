@@ -25,33 +25,27 @@
 
         <!-- Partie infos -->
         <div class="dashboard-infos">
-            <img src="/Garage-V-Parrot/Header/user-icon.png">
-            <form action="traitement.php" method="post">
+            <img class="user-icon" src="/Garage-V-Parrot/Header/user-icon.png">
+            <form class="infos-form" action="traitement.php" method="post">
                 <label for="prenom">Prénom :</label>
-                <input type="text" name="prenom" id="prenom" required>
+                <input class="infos-fields" type="text" name="prenom" id="prenom">
                 <br>
-
                 <label for="nom">Nom :</label>
-                <input type="text" name="nom" id="nom" required>
+                <input class="infos-fields" type="text" name="nom" id="nom">
                 <br>
-
                 <label for="telephone">Téléphone :</label>
-                <input type="tel" name="telephone" id="telephone" required>
+                <input class="infos-fields" type="tel" name="telephone" id="telephone">
                 <br>
-
                 <label for="email">Adresse e-mail :</label>
-                <input type="email" name="email" id="email" required>
+                <input class="infos-fields" type="email" name="email" id="email">
                 <br>
-
                 <label for="password">Mot de passe :</label>
-                <input type="password" name="password" id="password" required>
+                <input class="infos-fields" type="password" name="password" id="password">
                 <br>
-
                 <label for="confirm_password">Confirmation du mot de passe :</label>
-                <input type="password" name="confirm_password" id="confirm_password" required>
+                <input class="infos-fields" type="password" name="confirm_password" id="confirm_password">
                 <br>
-
-                <input type="submit" value="Modifier les informations">
+                <input class="infos-submit" type="submit" value="Modifier les informations">
             </form>
         </div>
 
@@ -110,6 +104,6 @@
     </main>
 
 
-    <script src="../Scripts/script-dashboard-admin.js"></script>
+    <script src="../Scripts/script-dashboard.js"></script>
 </body>
 </html>

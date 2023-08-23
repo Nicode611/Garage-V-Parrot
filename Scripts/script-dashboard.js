@@ -4,6 +4,7 @@ let sectionServices = document.querySelector('.dashboard-services');
 let sectionOccasions = document.querySelector('.dashboard-occasions');
 let sectionHoraires = document.querySelector('.dashboard-horaires');
 let sectionEmployes = document.querySelector('.dashboard-employes');
+let sectionInfos = document.querySelector('.dashboard-infos');
 let tabs = document.querySelectorAll(".sidebar-li");
 
 function setActive(event) {
@@ -36,15 +37,15 @@ function setActive(event) {
     } else {
         sectionEmployes.classList.add("hide");
     }
+
+    if (event.currentTarget.classList.contains("sidebar-infos")) {
+        sectionInfos.classList.remove("hide");
+    } else {
+        sectionInfos.classList.add("hide");
+    }
 }
 
 tabs.forEach(function(tabs) {
     tabs.addEventListener('click', setActive)
 });
 
-
-// Services
-
-
-
-// Occasions

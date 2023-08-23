@@ -164,6 +164,6 @@
     </main>
 
 
-    <script src="../Scripts/script-dashboard-admin.js"></script>
+    <script src="../Scripts/script-dashboard.js"></script>
 </body>
 </html>
