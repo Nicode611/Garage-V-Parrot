@@ -13,7 +13,7 @@
     require "../Header/header.html";
 ?>
 
-<div class="section-vehicules-occasions">
+    <div class="section-vehicules-occasions">
         <div class="vehicules-container">
             <div>
                 <h2>Véhicules d'occasions</h2>
