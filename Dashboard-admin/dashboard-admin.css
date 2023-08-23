@@ -48,7 +48,9 @@ main {
 
 .dashboard-services {
     position: relative;
-    width: 84%;
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
 }
 
 .glow {
@@ -171,8 +173,8 @@ main {
     background-color: #24242B;
     justify-content: space-around;
     margin-top: 50px;
-    margin-bottom: 50px;
     width: 100%;
+    height: 100%;
 }
 
 .vehicules-container {
@@ -270,20 +272,53 @@ main {
 /* Horaires */
 
 .dashboard-horaires {
-    width: 84%;
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+}
+
+.horaires-form > *, .horaires-form-matin > *, .horaires-form-apresmidi > * {
+    margin: 5px;
 }
 
 .horaires-form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #09A7A0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 100px;
+}  
+
+.horaires-form h3 {
+    margin-bottom: 20px;
 }
 
-.horaires-form > * {
-    margin: 5px;
+.horaires-form1 {
+    display: flex;
+    align-items: center;
+}
+
+.horaires-form-matin, .horaires-form-apresmidi {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0px 30px 30px 30px;
+    width: 150px;
+}
+
+.horaires-submit {
+    width: 118px;
+    height: 38px;
+    margin-top: 10px;
+    background-color: #09A7A0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
 }
 
 

@@ -29,7 +29,6 @@
         <!-- Partie services -->
         <div class="dashboard-services">
             <div class="glow"></div>
-            <h2 class="main-title">Nos services</h2>
             <div class="services-section">
                 <div class="service">
                 <svg viewBox="-102.4 -102.4 1228.80 1228.80" fill="#ffffff" class="service-delete" version="1.1" xmlns="http://www.w3.org/2000/svg" transform="matrix(1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="6.144"></g><g id="SVGRepo_iconCarrier"><path d="M512 897.6c-108 0-209.6-42.4-285.6-118.4-76-76-118.4-177.6-118.4-285.6 0-108 42.4-209.6 118.4-285.6 76-76 177.6-118.4 285.6-118.4 108 0 209.6 42.4 285.6 118.4 157.6 157.6 157.6 413.6 0 571.2-76 76-177.6 118.4-285.6 118.4z m0-760c-95.2 0-184.8 36.8-252 104-67.2 67.2-104 156.8-104 252s36.8 184.8 104 252c67.2 67.2 156.8 104 252 104 95.2 0 184.8-36.8 252-104 139.2-139.2 139.2-364.8 0-504-67.2-67.2-156.8-104-252-104z" fill=""></path><path d="M707.872 329.392L348.096 689.16l-31.68-31.68 359.776-359.768z" fill=""></path><path d="M328 340.8l32-31.2 348 348-32 32z" fill=""></path></g></svg>
@@ -75,10 +74,6 @@
         <!-- Partie Occasions -->
         <div class="dashboard-occasions hide">
             <div class="vehicules-container">
-                <div>
-                    <h2>Véhicules d'occasions</h2>
-                    <p>Nos véhicules d’occasion disponibles à l’achat.</p>
-                </div>
                 <div class="vehicules-imgs">
                     <div class="vehicules">
                         <svg viewBox="-102.4 -102.4 1228.80 1228.80" fill="#ffffff" class="vehicules-delete" version="1.1" xmlns="http://www.w3.org/2000/svg" transform="matrix(1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="6.144"></g><g id="SVGRepo_iconCarrier"><path d="M512 897.6c-108 0-209.6-42.4-285.6-118.4-76-76-118.4-177.6-118.4-285.6 0-108 42.4-209.6 118.4-285.6 76-76 177.6-118.4 285.6-118.4 108 0 209.6 42.4 285.6 118.4 157.6 157.6 157.6 413.6 0 571.2-76 76-177.6 118.4-285.6 118.4z m0-760c-95.2 0-184.8 36.8-252 104-67.2 67.2-104 156.8-104 252s36.8 184.8 104 252c67.2 67.2 156.8 104 252 104 95.2 0 184.8-36.8 252-104 139.2-139.2 139.2-364.8 0-504-67.2-67.2-156.8-104-252-104z" fill=""></path><path d="M707.872 329.392L348.096 689.16l-31.68-31.68 359.776-359.768z" fill=""></path><path d="M328 340.8l32-31.2 348 348-32 32z" fill=""></path></g></svg>
@@ -128,9 +123,9 @@
 
 
         <!-- Partie Horaires -->
-        <div class="dashboard-horaires hide">
-            <h2>Modifiez les horaires</h2>
+        <div class="dashboard-horaires hide"> 
             <form class="horaires-form" action="traitement.php" method="post">
+                <h3>Modifiez les horaires</h3>
                 <label for="jour">Jour de la semaine :</label>
                 <select name="jour" id="jour">
                     <option value="lundi">Lundi</option>
@@ -141,14 +136,23 @@
                     <option value="samedi">Samedi</option>
                     <option value="dimanche">Dimanche</option>
                 </select>
-
-                <label for="heureOuverture">Heure d'Ouverture :</label>
-                <input type="time" name="heureOuverture" id="heureOuverture">
-
-                <label for="heureFermeture">Heure de Fermeture :</label>
-                <input type="time" name="heureFermeture" id="heureFermeture">
-
-                <input class="submit" type="submit" value="Enregistrer">
+                <div class="horaires-form1">
+                    <div class="horaires-form-matin">
+                        <h4>Matin</h4>
+                        <label for="heureOuverture">Ouverture :</label>
+                        <input type="time" name="heureOuverture" id="heureOuverture">
+                        <label for="heureFermeture">Fermeture :</label>
+                        <input type="time" name="heureFermeture" id="heureFermeture">
+                    </div>
+                    <div class="horaires-form-apresmidi">
+                        <h4>Après-midi</h4>
+                        <label for="heureOuverture">Ouverture :</label>
+                        <input type="time" name="heureOuverture" id="heureOuverture">
+                        <label for="heureFermeture">Fermeture :</label>
+                        <input type="time" name="heureFermeture" id="heureFermeture">
+                    </div>
+                </div>
+                <input class="horaires-submit" type="submit" value="Enregistrer">
             </form>
         </div>
 
