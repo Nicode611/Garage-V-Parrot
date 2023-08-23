@@ -28,6 +28,7 @@ button {
 
 button:hover {
     cursor: pointer;
+    zoom: 105%;
 }
 
 .contact-footer-container {

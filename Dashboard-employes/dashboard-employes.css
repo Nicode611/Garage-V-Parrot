@@ -84,11 +84,12 @@ main {
     color: white;
     border: none;
     border-radius: 10px;
-    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 4px 10px rgb(0, 0, 0));
 }
 
 .infos-submit:hover {
     cursor: pointer;
+    zoom: 105%;
 }
 
 /* Occasions */
@@ -195,8 +196,13 @@ main {
     color: white;
     border: none;
     border-radius: 10px;
-    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 4px 10px rgb(0, 0, 0));
     margin-top: 10px;
+}
+
+.occasions-submit:hover {
+    cursor: pointer;
+    zoom: 105%;
 }
 
 
