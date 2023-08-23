@@ -1,3 +1,5 @@
+// Affichage des éléments
+
 let sectionServices = document.querySelector('.dashboard-services');
 let sectionOccasions = document.querySelector('.dashboard-occasions');
 let sectionHoraires = document.querySelector('.dashboard-horaires');
@@ -39,3 +41,10 @@ function setActive(event) {
 tabs.forEach(function(tabs) {
     tabs.addEventListener('click', setActive)
 });
+
+
+// Services
+
+
+
+// Occasions

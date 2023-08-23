@@ -110,6 +110,6 @@
     require "Footer/footer.php";
 ?>
 
-<script src="/Scripts/script-selection-vehicule.js"></script>
+<script src="Scripts/script-selection-vehicule.js"></script>
 </body>
 </html>
