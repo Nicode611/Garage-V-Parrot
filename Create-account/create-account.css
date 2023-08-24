@@ -12,7 +12,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
 h2 {
@@ -24,7 +24,7 @@ h2 {
     color: #000;
 }
 
-.connect-form {
+.create-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,27 +32,38 @@ h2 {
     width: 500px;
 }
 
-.connect-form > * {
-    margin: 15px;
+.create-form1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 81%;
 }
 
-.connect-fields {
-    height: 25px;
-    width: 60%;
+.create-fields {
+    height: 30px;
     border: solid 1px black;
 }
 
-.connect-submit {
+.create-form > .create-fields {
+    width: 80%;
+}
+
+.create-form1 > .create-fields {
+    width: 40%;
+    margin-bottom: 40px;
+}
+
+
+.create-submit {
     height: 38px;
     background-color: #09A7A0;
     color: white;
     border: none;
     border-radius: 10px;
     filter: drop-shadow(0px 4px 10px rgb(0, 0, 0));
-    margin-top: 30px;
 }
 
-.connect-submit:hover {
+.create-submit:hover {
     cursor: pointer;
     zoom: 105%;
 }
