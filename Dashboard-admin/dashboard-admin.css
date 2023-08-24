@@ -10,6 +10,7 @@ body {
 
 main {
     display: flex;
+    width: 100%;
 }
 
 .sidebar {
@@ -47,7 +48,9 @@ main {
 /* Services */
 
 .dashboard-services {
-    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
     height: 100%;
     margin-top: 50px;
@@ -74,8 +77,6 @@ main {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-left: 5%;
-    margin-right: 5%;
 }
 
 .service {
