@@ -94,6 +94,10 @@ main {
 
 /* Occasions */
 
+.dashboard-occasions {
+    width: 100%;
+}
+
 
 .hide {
     display: none;
