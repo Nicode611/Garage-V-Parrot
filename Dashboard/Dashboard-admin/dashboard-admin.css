@@ -145,6 +145,7 @@ main {
     border: solid 1px #09A7A0;
     border-radius: 10px;
     padding: 20px;
+    box-shadow: 0px 10px 15px rgb(0, 0, 0);
 }
 
 .service-form1 {
@@ -167,6 +168,7 @@ main {
 .service-submit {
     height: 38px;
     margin-top: 10px;
+    padding: 10px;
     background-color: #09A7A0;
     color: white;
     border: none;
@@ -225,16 +227,16 @@ main {
     cursor: pointer;
 }
 
-.vehicules-delete:hover {
+.delete:hover {
     cursor: pointer;
     zoom: 110%;
 }
 
-.vehicules-delete:hover ~ .vehicules-img {
+.delete:hover ~ * {
     filter: blur(5px);
 }
 
-.vehicules-delete {
+.delete {
     position: absolute;
     width: 40px;
     height: 40px;
@@ -249,6 +251,7 @@ main {
     margin-top: 50px;
     border: solid 1px #09A7A0;
     border-radius: 10px;
+    box-shadow: 0px 10px 15px rgb(0, 0, 0);
 }
 
 .occasions-form h3 {
@@ -285,6 +288,7 @@ main {
     border-radius: 10px;
     filter: drop-shadow(0px 4px 10px rgb(0, 0, 0));
     margin-top: 10px;
+    padding: 10px;
 }
 
 .occasions-submit:hover {
@@ -315,6 +319,7 @@ main {
     border-radius: 10px;
     padding: 20px;
     margin-top: 100px;
+    box-shadow: 0px 10px 15px rgb(0, 0, 0);
 }  
 
 .horaires-form h3 {
@@ -337,6 +342,7 @@ main {
 .horaires-submit {
     height: 38px;
     margin-top: 10px;
+    padding: 10px;
     background-color: #09A7A0;
     color: white;
     border: none;
@@ -353,10 +359,92 @@ main {
 /* Employés */
 
 .dashboard-employes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
+    margin-top: 50px;
+}
+
+.employe {
     display: flex;
+    align-items: center;
+    position: relative;
+    width: 700px;
+    height: 100px;
+    background-color: #18181F;
+    border: solid 1px #09A7A0;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.employe > div {
+    width: 33.33%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+.employe > div > * {
+    margin: 0px;
+}
+
+.employe > div > h3 {
+    margin-bottom: 10px;
+}
+
+.employe-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    background-color: #24242B;
+    border: solid 1px #09A7A0;
+    width: 700px;
+    height: auto;
+    border-radius: 10px;
+    margin: 50px;
+    padding: 20px 0px 20px 0px;
+    box-shadow: 0px 10px 15px rgb(0, 0, 0);
+}
+
+.employe-form > h3 {
+    margin: 0px;
+}
+
+.employe-form > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px 0px 30px 0px;
+}
+
+.employe-form > div > * {
+    width: 20%;
+    height: 25px;
+    border: solid 1px black;
+}
+
+.employe-submit {
+    background-color: #09A7A0;
+    color: white;
+    border: none;
+    align-self: center;
+    height: 38px;
+    padding: 10px;
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 10px rgb(0, 0, 0));
+}
+
+.employe-submit:hover {
+    cursor: pointer;
+    zoom: 105%;
 }
 
 
