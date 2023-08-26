@@ -13,7 +13,6 @@
     ?>
 
     <main>
-
         <div class="sidebar">
             <nav class="sidebar-nav">
                 <ul class="sidebar-ul">
@@ -37,7 +36,7 @@
         <!-- Occasions -->
         <div class="dashboard-occasions hide">
             <?php 
-                require "../includes/dashboard-occasions.html";
+                require ("../includes/dashboard-occasions.html");
             ?>
         </div>
 
@@ -136,6 +135,6 @@
         </div>
     </main>
 
-    <script src="../assets/js/script-dashboard.js"></script>
+    <script src="/Garage-V-Parrot/assets/js/script-dashboard.js"></script>
 </body>
 </html>

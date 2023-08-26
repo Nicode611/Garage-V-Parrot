@@ -1,13 +1,18 @@
-let sectionServices = document.querySelector('.dashboard-services');
-let sectionOccasions = document.querySelector('.dashboard-occasions');
-let sectionHoraires = document.querySelector('.dashboard-horaires');
-let sectionEmployes = document.querySelector('.dashboard-employes');
-let sectionInfos = document.querySelector('.dashboard-infos');
 let tabs = document.querySelectorAll(".sidebar-li");
 
+tabs.forEach(function(tab) {
+    tab.addEventListener('click', setActive);
+});
+
 function setActive(event) {
-    tabs.forEach(function(tabs) {
-        tabs.classList.remove("sidebar-active");
+    let sectionServices = document.querySelector('.dashboard-services');
+    let sectionOccasions = document.querySelector('.dashboard-occasions');
+    let sectionHoraires = document.querySelector('.dashboard-horaires');
+    let sectionEmployes = document.querySelector('.dashboard-employes');
+    let sectionInfos = document.querySelector('.dashboard-infos');
+
+    tabs.forEach(function(tab) {
+        tab.classList.remove("sidebar-active");
     });
 
     event.currentTarget.classList.add("sidebar-active");
@@ -39,6 +44,7 @@ function setActive(event) {
     }
 
     if (event.currentTarget.classList.contains("sidebar-horaires") && sectionHoraires) {
+        console.log("La fonction setActive a été appelée.");
         sectionHoraires.classList.remove("hide");
     }
 
@@ -47,10 +53,7 @@ function setActive(event) {
     }
 
     if (event.currentTarget.classList.contains("sidebar-infos") && sectionInfos) {
+        console.log("La fonction setActive a été appelée.");
         sectionInfos.classList.remove("hide");
     }
 }
-
-tabs.forEach(function(tabs) {
-    tabs.addEventListener('click', setActive);
-});
