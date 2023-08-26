@@ -8,17 +8,14 @@ body {
     margin: 0px;
 }
 
-
-
-/* Main */
-
 .dividing-bar {
     position: relative;
     background-color: #18181F;
     height: 25px;
 }
 
-/* Qui sommes-nous ? */
+
+/* Presentation */
 
 .section-presentation::before {
   content: " ";
@@ -64,17 +61,6 @@ body {
     font-weight: 300;
     width: 50%;
 }
-
-.crew-sections {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 50px;
-}
-
-
-/* Véhicules d'occasions */
-
 
 
 /* Avis */

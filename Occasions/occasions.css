@@ -85,7 +85,7 @@ body {
     padding: 15px;
 }
 
-.topline {
+.card-bottom > div {
     display: flex;
     justify-content: space-between;
 }

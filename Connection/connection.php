@@ -16,8 +16,8 @@
     <main>
         <h2>Connectez vous</h2>
         <form class="connect-form" action="traitement.php" method="post">
-            <input class="connect-fields" placeholder="Email" type="email" name="email" id="email">
-            <input class="connect-fields" placeholder="Mot de passe" type="password" name="password" id="password">
+            <input class="connect-fields" placeholder="Email" type="email" name="email" id="connectEmail">
+            <input class="connect-fields" placeholder="Mot de passe" type="password" name="password" id="connectPassword">
             <input class="connect-submit" type="submit" value="Se connecter">
         </form>
     </main>

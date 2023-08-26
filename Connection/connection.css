@@ -50,6 +50,7 @@ h2 {
     border-radius: 10px;
     filter: drop-shadow(0px 4px 10px rgb(0, 0, 0));
     margin-top: 30px;
+    padding: 10px;
 }
 
 .connect-submit:hover {

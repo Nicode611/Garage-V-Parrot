@@ -15,23 +15,16 @@
 
 <main>
     <h2>Contactez nous</h2>
-
     <div class="form-container">
         <div class="glow"></div>
-        <form class="form" action="traitement.php" method="POST">
+        <form class="contact-form" action="traitement.php" method="POST">
             <div class="first-line">
-                <input type="text" placeholder="Nom" id="nom" name="nom" required>
-        
-                <input type="tel" placeholder="Téléphone" id="telephone" name="telephone">
+                <input type="text" placeholder="Nom" id="contactNom" name="nom" required>
+                <input type="tel" placeholder="Téléphone" id="contactTelephone" name="telephone">
             </div>
-
-            <br><br>
-    
-            <input type="email" placeholder="Email" id="email" name="email" required><br><br>
-    
-            <textarea id="message" placeholder="Message" name="message" rows="4" cols="50" required></textarea><br><br>
-    
-            <input id="contact-submit" type="submit" value="Envoyer">
+            <input type="email" placeholder="Email" id="contactEmail" name="email" required>
+            <textarea id="contactMessage" placeholder="Message" name="message" rows="4" cols="50" required></textarea>
+            <input id="contactSubmit" type="submit" value="Envoyer">
         </form>
     </div>
 </main>

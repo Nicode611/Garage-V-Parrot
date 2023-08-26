@@ -14,6 +14,7 @@
 ?>
 
 <main>
+    <!-- Présentation -->
     <div class="section-presentation">
         <div class="presentation-glow"></div>
         <h2>Bienvenue au Garage V. Parrot !</h2>
@@ -25,15 +26,13 @@
         Nous sommes là pour vous et votre voiture.
         </p>
     </div>
-
-    <div class="dividing-bar"></div>
-    
+    <div class="dividing-bar"></div>    
+    <!-- Occasions -->
     <?php
         require("Occasions/occasions.html"); 
     ?>
-
     <div class="dividing-bar"></div>
-
+    <!-- Avis -->
     <div class="avis-container">
         <div class="shadow-left"></div>
         <div class="section-avis">
@@ -56,9 +55,7 @@
         </div>
         <div class="shadow-right"></div>
     </div>
-
     <div class="dividing-bar"></div>
-
 </main>
 
 <?php
