@@ -80,7 +80,7 @@
         <!-- Partie Horaires -->
         <div class="dashboard-horaires hide"> 
             <form class="horaires-form" action="traitement.php" method="post">
-                <h3>Modifiez les horaires</h3>
+                <h3>Modifier les horaires :</h3>
                 <label for="jour">Jour de la semaine :</label>
                 <select name="jour" id="jour">
                     <option value="lundi">Lundi</option>
