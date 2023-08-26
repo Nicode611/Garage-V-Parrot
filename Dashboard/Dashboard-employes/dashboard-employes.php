@@ -25,8 +25,8 @@
 
         <!-- Partie infos -->
         <div class="dashboard-infos">
-            <img class="user-icon" src="/Garage-V-Parrot/Header/user-icon.png">
             <form class="infos-form" action="traitement.php" method="post">
+                <img class="user-icon" src="/Garage-V-Parrot/Header/user-icon.png"><br>
                 <label for="prenom">Prénom :</label>
                 <input class="infos-fields" type="text" name="prenom" id="prenom">
                 <br>
