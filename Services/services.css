@@ -33,7 +33,7 @@ main {
 
 .services-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     margin-left: 5%;
     margin-right: 5%;
@@ -41,11 +41,12 @@ main {
 
 .service {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     width: 40%;
     margin: 20px 50px 20px 50px;
     min-width: 500px;
-    max-height: 240px;
 }
 
 .service-img {
@@ -58,8 +59,12 @@ main {
 .service-infos {
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    margin: 5px;
     width: 50%;
+}
+
+.service-infos > * {
+    margin: 5px;
 }
 
 .service-description {
