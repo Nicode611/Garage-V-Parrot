@@ -87,3 +87,16 @@ a {
 .hide {
     display: none;
 }
+
+
+/* Mobile */
+
+@media screen and (max-width: 1000px) {
+    .accueil, .services, .occasions, .contact, .admin, .employes {
+        display: none;
+    }
+
+    .services-mobile, .occasions-mobile, .contact-mobile {
+        display: block;
+    }
+}

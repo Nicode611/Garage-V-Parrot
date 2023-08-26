@@ -126,3 +126,10 @@ body {
 .avis-text {
     font-weight: 500;
 }
+
+
+/* Mobile */
+
+@media screen and (max-width: 1000px) {
+    
+}
