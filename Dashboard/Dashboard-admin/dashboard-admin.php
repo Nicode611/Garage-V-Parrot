@@ -166,7 +166,7 @@
                     <input type="text" placeholder="Nom" id="nomEmploye" name="nomEmploye" required>
                     <input type="text" placeholder="Prénom" id="prenomEmploye" name="prenomEmploye" required>
                 </div>
-                <input class="employe-submit" type="submit" value="Soumettre">
+                <input class="employe-submit" type="submit" value="Ajouter">
             </form>
         </div>
     </main>
