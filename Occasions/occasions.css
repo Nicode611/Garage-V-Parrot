@@ -10,13 +10,27 @@ body {
 
 .section-vehicules-occasions {
     display: flex;
-    background-color: #24242B;
     justify-content: space-around;
+    position: relative;
     padding: 70px 0px 70px 0px;
     overflow: hidden;
 }
 
-.vehicules-container {
+.occasions-glow {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 300px;
+    height: 200px;
+    background: radial-gradient(circle, #09a79f9f, transparent);
+    filter: blur(80px);
+    transform: scale(2.5);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+
+.vehicules {
     display: flex;
     flex-direction: column;
     align-items: center;
