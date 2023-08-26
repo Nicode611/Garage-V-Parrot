@@ -13,8 +13,9 @@
     require "../Header/header.html";
 ?>
 
+<h2 class="main-title">Nos services</h2>
 <?php
-    require "services.html";
+    require "service.php";
 ?>
 
 <?php
