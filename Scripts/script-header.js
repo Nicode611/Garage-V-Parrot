@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
         services.classList.remove("active");
         occasions.classList.remove("active");
         contact.classList.remove("active");
-        console.log('fait');
     }
 
     if (currentFileName === "services.php") {
@@ -21,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
         services.classList.add("active");
         occasions.classList.remove("active");
         contact.classList.remove("active");
-        console.log('fait');
     }
 
     if (currentFileName === "occasions.php") {
@@ -29,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
         services.classList.remove("active");
         occasions.classList.add("active");
         contact.classList.remove("active");
-        console.log('fait');
     } 
 
     if (currentFileName === "contact.php") {
@@ -37,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
         services.classList.remove("active");
         occasions.classList.remove("active");
         contact.classList.add("active");
-        console.log('fait');
     } 
 });
 
