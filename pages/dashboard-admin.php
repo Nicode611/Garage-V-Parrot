@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dashboard-admin.css">
+    <link rel="stylesheet" href="../assets/css/dashboard-admin.css">
     <title>Garage V. Parrot</title>
 </head>
 <body>
     
     <?php 
-        require "../..//Header/header.html";
+        require "../includes/header.html";
     ?>
 
     <main>
@@ -29,7 +29,7 @@
         <!-- Services -->
         <div class="dashboard-services">
             <?php
-                require("../../Services/service.php");
+                require("../includes/service.php");
             ?>
         </div>
 
@@ -37,7 +37,7 @@
         <!-- Occasions -->
         <div class="dashboard-occasions hide">
             <?php 
-                require "../dashboard-occasions.html";
+                require "../includes/dashboard-occasions.html";
             ?>
         </div>
 
@@ -136,6 +136,6 @@
         </div>
     </main>
 
-    <script src="../../Scripts/script-dashboard.js"></script>
+    <script src="../assets/js/script-dashboard.js"></script>
 </body>
 </html>

@@ -19,7 +19,7 @@ body {
 
 .section-presentation::before {
   content: " ";
-  background-image:  url('img/background.jpg');
+  background-image:  url('../images/background.jpg');
   background-size: cover;
   background-position: bottom;
   background-attachment: fixed;
