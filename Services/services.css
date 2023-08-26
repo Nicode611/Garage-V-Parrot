@@ -10,6 +10,8 @@ body {
 
 main {
     position: relative;
+    padding: 50px 0px 50px 0px;
+    min-height: 100vh;
 }
 
 .glow {
@@ -41,12 +43,12 @@ main {
     display: flex;
     align-items: center;
     width: 40%;
-    margin: 50px;
+    margin: 20px 50px 20px 50px;
 }
 
 .service-img {
-    width: 313px;
-    height: 203px;
+    width: 250px;
+    height: 150px;
     border-radius: 20px;
     object-fit: cover;
 }
@@ -56,4 +58,8 @@ main {
     flex-direction: column;
     margin: 20px;
     width: 50%;
+}
+
+.service-description {
+    font-weight: 300;
 }

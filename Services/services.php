@@ -14,7 +14,7 @@
 ?>
 
     <main>
-    <div class="glow"></div>
+        <div class="glow"></div>
         <h2 class="main-title">Nos services</h2>
         <div class="services-section">
             <div class="service">

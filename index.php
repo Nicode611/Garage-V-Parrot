@@ -14,39 +14,22 @@
 ?>
 
 <main>
-    <div class="section-qui-sommes-nous">
-        <h2>Qui Sommes-nous ?</h2>
-        <div class="crew-sections">
-            <div class="crew-section">
-                <div class="crew-img-glow"></div>
-                <img class="crew-img" src="img/V.Parrot.jpg">
-                <h3>V. Parrot</h3>
-                <p>Gérant et créateur du garage depuis 2017.</p>
-            </div>
-            <div class="crew-section">
-                <div class="crew-img-glow"></div>
-                <img class="crew-img" src="img/Lucie.jpg">
-                <h3>Lucie</h3>
-                <p>
-                    Employée depuis 2018, s’occupe de la vente de 
-                    véhicules d’occasions et des réparations moto.
-                </p>
-            </div>
-            <div class="crew-section">
-                <div class="crew-img-glow"></div>
-                <img class="crew-img" src="img/Christian.jpg">
-                <h3>Christian</h3>
-                <p>
-                Employé depuis 2017, s’occupe de la réparation 
-                automobile et la vente de véhicules d’occasions.
-                </p>
-            </div>
-        </div>
+    <div class="section-presentation">
+        <div class="presentation-glow"></div>
+        <h2>Bienvenue au Garage V. Parrot !</h2>
+        <p class="presentation-text">
+        Nous sommes votre destination de confiance pour tout ce qui concerne votre voiture.<br><br>
+        Avec 15 ans d'expertise, nous offrons des services de réparation, d'entretien et de vente de véhicules d'occasion. Chez nous, votre voiture est entre de bonnes mains.<br><br>
+
+        Explorez notre site pour en savoir plus sur ce que nous faisons et n'hésitez pas à nous contacter.<br>
+        Nous sommes là pour vous et votre voiture.
+        </p>
     </div>
 
     <div class="dividing-bar"></div>
-
+    
     <div class="section-vehicules-occasions">
+    <div class="occasions-glow"></div>
         <div class="vehicules">
             <div>
                 <h2>Véhicules d'occasions</h2>
