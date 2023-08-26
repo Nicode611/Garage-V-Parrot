@@ -122,6 +122,10 @@ main {
     width: 50%;
 }
 
+.service-description {
+    font-weight: 300;
+}
+
 .service-form-container {
     display: flex;
     flex-direction: column;

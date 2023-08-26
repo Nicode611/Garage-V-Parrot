@@ -20,7 +20,7 @@
         <h1 class="footer-titles">Infos</h1>
         <p class="footer-texts">
             8 rue detail<br>
-            58200 Grigny
+            31000 Toulouse
         </p>
         <p class="footer-texts">
             <svg class="phone-icon" width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

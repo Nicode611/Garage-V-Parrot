@@ -1,4 +1,3 @@
-
 header {
     background-color: #18181F;
     color: white;
@@ -10,7 +9,6 @@ header {
 }
 
 .logo-container {
-    width: 35%;
     padding-left: 4%;
 }
 
@@ -20,7 +18,6 @@ header {
 }
 
 .nav-container {
-    width: 35%;
     justify-content: center;
     align-items: center;
     font-size: 0.9rem;
@@ -54,7 +51,6 @@ a {
     display: flex;
     justify-content: end;
     align-items: center;
-    width: 20%;
     padding-right: 3%;
     font-size: 0.9rem;
 }
