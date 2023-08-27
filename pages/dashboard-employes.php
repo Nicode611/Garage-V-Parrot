@@ -14,19 +14,25 @@
 
     <main>
         <div class="sidebar">
+            <div class="sidebar-btn">
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
+            </div>
             <nav class="sidebar-nav">
                 <ul class="sidebar-ul">
                     <li class="sidebar-li sidebar-infos sidebar-active">Infos personelles</li>
                     <li class="sidebar-li sidebar-occasions">Occasions</li>
                 </ul>
             </nav>
+            <div class="dashboard-overlay"></div>
         </div>
 
 
         <!-- Partie infos -->
         <div class="dashboard-infos">
             <form class="infos-form" action="traitement.php" method="post">
-                <img class="user-icon" src="/Garage-V-Parrot/Header/user-icon.png"><br>
+                <img class="user-icon" src="/Garage-V-Parrot/assets/images/user-icon.png"><br>
                 <label for="prenom">Prénom :</label>
                 <input class="infos-fields" type="text" name="prenom" id="prenom">
                 <br>

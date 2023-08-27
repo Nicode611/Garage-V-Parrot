@@ -6,6 +6,7 @@ footer {
     align-items: center;
     justify-content: space-around;
     padding-bottom: 30px;
+    box-shadow: 0px -7px 20px rgba(0, 0, 0, 0.534);
 }
 
 .footer-titles {

@@ -55,7 +55,6 @@
         </div>
         <div class="shadow-right"></div>
     </div>
-    <div class="dividing-bar"></div>
 </main>
 
 <?php
