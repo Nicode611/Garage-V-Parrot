@@ -14,6 +14,11 @@
 
     <main>
         <div class="sidebar">
+            <div class="sidebar-btn">
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
+            </div>
             <nav class="sidebar-nav">
                 <ul class="sidebar-ul">
                     <li class="sidebar-li sidebar-services sidebar-active">Services</li>
@@ -22,6 +27,7 @@
                     <li class="sidebar-li sidebar-employes">Employés</li>
                 </ul>
             </nav>
+            <div class="dashboard-overlay"></div>
         </div>
 
 

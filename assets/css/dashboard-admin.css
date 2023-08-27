@@ -27,6 +27,10 @@ main {
     margin: 0px;
 }
 
+.sidebar-btn {
+    display: none;
+}
+
 .sidebar-ul {
     margin: 0px;
     padding: 0px;
@@ -338,4 +342,76 @@ main {
 
 .hide {
     display: none;
+}
+
+
+@media screen and (max-width: 1000px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 40px;
+        min-height: auto;
+        max-width: 100%;
+        width: 100%;
+        background-color: #24242B;
+        border-bottom: solid 1px white;
+        border-top: solid 1px white;
+    }
+
+    .sidebar-btn {
+        display: block;
+        cursor: pointer;
+    }
+
+    .sidebar-nav {
+        position: absolute;
+        top: -500px; /* Position à droite et valeur en pixels */
+        width: 250px;
+        height: 100%;
+        z-index: 3;
+        transition: top 0.4s; /* Changement de left à right */
+    }
+
+    .sidebar-ul {
+        background-color: #18181F;
+        border: solid 1px white;
+        border-top: none;
+    }
+
+    .sidebar-nav.open {
+        display: block;
+        top: 41px;
+    }
+
+    .sidebar-active {
+        background-color: #24242B;
+        border: solid 1px #ffffff;
+        color: white;
+    }
+    
+    .dashboard-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        z-index: 998;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .dashboard-overlay.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
 }
