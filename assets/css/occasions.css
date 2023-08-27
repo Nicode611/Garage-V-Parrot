@@ -98,3 +98,36 @@ body {
     text-align: center;
     margin: 5px;
 }
+
+
+
+@media screen and (max-width: 1000px) {
+    .section-vehicules-occasions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vehicules div {
+        margin-bottom: 70px;
+    }
+
+    .vehicules-imgs {
+        display: none;
+    }
+
+    .vehicule-card {
+        background-color: white;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        border-radius: 0px 0px 15px 15px;
+        box-shadow: 5px 5px 30px 10px rgb(0, 0, 0);
+    }
+
+    .vehicule-img {
+        width: auto;
+        height: 50vw;
+        object-fit: cover;
+    }
+}
