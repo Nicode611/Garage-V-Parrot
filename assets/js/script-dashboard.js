@@ -68,14 +68,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const dashboardOverlay = document.querySelector('.dashboard-overlay');
 
     sidebarBtn.addEventListener('click', function() {
-        console.log('fait');
         sidebarBtn.classList.toggle('open');
         sidebarNav.classList.toggle('open');
         dashboardOverlay.classList.toggle('active');
     });
 
     dashboardOverlay.addEventListener('click', function() {
-        console.log('overlay');
         sidebarBtn.classList.remove('open');
         sidebarNav.classList.remove('open');
         dashboardOverlay.classList.remove('active');
