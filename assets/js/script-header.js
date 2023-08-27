@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", function () {
     var currentFileName = location.pathname.split("/").slice(-1)[0];
 
 // Récupere les ids
-    var accueil = document.getElementById("accueil");
-    var services = document.getElementById("services");
-    var occasions = document.getElementById("occasions");
-    var contact = document.getElementById("contact");
+    var accueil = document.querySelector(".accueil");
+    var services = document.querySelector(".services");
+    var occasions = document.querySelector(".occasions");
+    var contact = document.querySelector(".contact");
 
 // Met la classe active à l'element voulu selon la page chargée
     if (currentFileName === "index.php") {
@@ -37,3 +37,23 @@ document.addEventListener("DOMContentLoaded", function () {
     } 
 });
 
+
+// Menu hamburger
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuBtn = document.querySelector('.menu-btn');
+    const menu = document.querySelector('.menu');
+    const overlay = document.querySelector('.overlay');
+
+    menuBtn.addEventListener('click', function() {
+        menuBtn.classList.toggle('open');
+        menu.classList.toggle('open');
+        overlay.classList.toggle('active');
+    });
+
+    overlay.addEventListener('click', function() {
+        menuBtn.classList.remove('open');
+        menu.classList.remove('open');
+        overlay.classList.remove('active');
+    });
+});
