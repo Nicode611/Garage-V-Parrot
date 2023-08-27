@@ -208,6 +208,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     border: solid 1px #09A7A0;
     border-radius: 10px;
     padding: 20px;
@@ -276,6 +277,7 @@ main {
 .employe > div {
     width: 33.33%;
     height: 60%;
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -424,5 +426,97 @@ main {
     .dashboard-overlay.active {
         opacity: 1;
         pointer-events: auto;
+    }
+
+
+    /* Services */
+
+    .dashboard-services {
+        margin-top: 0px;
+    }
+
+    .services-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        flex-direction: column;
+        text-align: center;
+        min-width: 200px;
+        margin: 40px 0px 40px 0px;
+    }
+
+    .service-delete {
+        top: -15px;
+        right: 9%;
+    }
+
+    .service-img {
+        width: 70%;
+    }
+
+    .service * {
+        margin: 3px;
+    }
+
+    .service-infos {
+        width: 80%;
+    }
+
+    .service-form {
+        width: 70vw;
+    }
+
+
+    /* Occasions */
+
+    .vehicules-imgs {
+        flex-direction: column;
+    }
+    
+    .occasions-form {
+        width: 70vw;
+    }
+
+
+    /* Horaires */
+
+    .horaires-form {
+        width: 70vw;
+    }
+
+    .horaires-form1 {
+        flex-direction: column;
+    }
+
+
+    /* Employes */
+
+    .employe {
+        width: 90%;
+    }
+
+    .employe div h3 {
+        font-size: 1rem;
+    }
+
+    .employe div p {
+        font-size: 0.7rem;
+    }
+
+    .employe-form {
+        width: 80vw;
+    }
+
+    .employe-form div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .employe-form div * {
+        width: 80%;
+        margin: 10px 0px 10px 0px;
     }
 }
