@@ -1,11 +1,4 @@
-.occasions {
-    display: flex;
-    background-color: #24242B;
-    justify-content: space-around;
-    margin-top: 50px;
-    width: 100%;
-    height: 100%;
-}
+
 
 .vehicules-container {
     display: flex;
