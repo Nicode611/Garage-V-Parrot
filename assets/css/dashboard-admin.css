@@ -479,6 +479,10 @@ main {
         flex-direction: column;
     }
 
+    .horaires-form-matin, .horaires-form-apresmidi {
+        align-items: center;
+    }
+
 
     /* Employes */
 

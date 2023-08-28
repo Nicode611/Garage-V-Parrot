@@ -197,5 +197,6 @@ main {
 
     .infos-form {
         width: 60vw;
+        text-align: center;
     }
 }
