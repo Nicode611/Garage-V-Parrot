@@ -6,12 +6,14 @@ html {
 
 body {
     margin: 0px;
+    overflow: scroll;
 }
 
 main {
     position: relative;
     padding-bottom: 50px;
     min-height: 60vh;
+    overflow: hidden;
 }
 
 .glow {

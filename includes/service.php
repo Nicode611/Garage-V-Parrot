@@ -8,6 +8,7 @@
 
         <div class="glow"></div>
         <div class="services-section">
+        <div class="glow"></div>
             <div class="service">
                 <!-- Affiche le SVG si la page est dashboard-admin.php -->
                 <?php if ($_SERVER['SCRIPT_NAME'] == '/Garage-V-Parrot/pages/dashboard-admin.php') { ?>

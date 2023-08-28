@@ -13,10 +13,12 @@
     require "../includes/header.html";
 ?>
 
-<h2 class="main-title">Nos services</h2>
-<?php
-    require "../includes/service.php";
-?>
+<main>
+    <h2 class="main-title">Nos services</h2>
+    <?php
+        require "../includes/service.php";
+    ?>
+</main>
 
 <?php
     require "../includes/footer.php";
