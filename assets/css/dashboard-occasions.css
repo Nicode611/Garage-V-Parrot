@@ -102,3 +102,37 @@
     cursor: pointer;
     zoom: 105%;
 }
+
+
+
+@media screen and (max-width: 1000px) {
+    
+    .vehicules-imgs {
+        flex-direction: column;
+    }
+    
+    .occasions-form {
+        width: 70vw;
+    }
+
+    .occasions-form1 {
+        flex-direction: column;
+    }
+
+    .occasions-form1 > * {
+        width: 50%;
+    }
+
+    .occasions-form2 {
+        flex-direction: column;
+    }
+
+    #occasions-description {
+        width: 80%;
+    }
+
+    .occasions-form2 > * {
+        width: 80%;
+        margin: 10px 0px 10px 0px;
+    }
+}
