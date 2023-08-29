@@ -58,6 +58,12 @@ main {
 
 /* Services */
 
+.services-main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
 .dashboard-services {
     display: flex;
     justify-content: space-around;

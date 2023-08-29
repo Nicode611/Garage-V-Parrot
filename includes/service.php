@@ -6,7 +6,7 @@
         <title>Garage-V-Parrot</title>
     </head>
 
-        <main>
+        <main class="services-main">
             <div class="glow"></div>
             <h2 class="main-title">Nos services</h2>
             <div class="services-section">
