@@ -6,6 +6,7 @@ html {
 
 body {
     margin: 0px;
+    overflow-x: hidden;
 }
 
 main {
@@ -70,7 +71,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin: 50px 0px 50px 0px;
     padding: 20px;
     border: solid 1px #09A7A0;
     border-radius: 10px;

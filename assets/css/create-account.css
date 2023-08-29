@@ -70,6 +70,10 @@ h2 {
 
 
 @media screen and (max-width: 1000px) {
+    main {
+        margin: 50px 0px 50px 0px;
+    }
+
     .create-form {
         width: 90vw;
     }

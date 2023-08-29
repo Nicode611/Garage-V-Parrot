@@ -13,12 +13,9 @@
     require "../includes/header.html";
 ?>
 
-<main>
-    <h2 class="main-title">Nos services</h2>
     <?php
         require "../includes/service.php";
     ?>
-</main>
 
 <?php
     require "../includes/footer.php";

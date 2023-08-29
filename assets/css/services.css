@@ -6,13 +6,12 @@ html {
 
 body {
     margin: 0px;
-    overflow: scroll;
 }
 
 main {
-    position: relative;
     padding-bottom: 50px;
     min-height: 60vh;
+    position: relative;
     overflow: hidden;
 }
 
@@ -35,10 +34,12 @@ main {
 }
 
 .services-section {
+    position: relative;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 0px 70px 30px 70px;
+    overflow: hidden;
 }
 
 .service {
