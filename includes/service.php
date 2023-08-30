@@ -46,9 +46,9 @@
                 <?php if ($_SERVER['SCRIPT_NAME'] == '/Garage-V-Parrot/pages/dashboard-admin.php') { ?>
 
                 <?php
-                $validation = "null";
+                $validation = "";
                 // Vérifie si le formulaire a été soumis
-                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit_service"])) { 
     
                     // Vérifie si un fichier a été téléchargé
                     if(isset($_FILES["image"]) && $_FILES["image"]["error"] == 0) {
@@ -105,7 +105,7 @@
                 ?>
                 
                 <div class="validation-message">
-                    <?php echo $validation; ?>
+                <?php echo $validation; ?>
                 </div>
                     <form class="service-form" action="" method="post" enctype="multipart/form-data">
                         <h3>Ajouter un service :</h3>
@@ -114,11 +114,12 @@
                             <input placeholder="Titre" type="text" name="titre" id="service-titre" required>
                             <textarea placeholder="Texte" name="texte" id="service-texte" rows="4" cols="50" required></textarea>
                         </div>
-                        <input class="service-submit" type="submit" value="Valider">
+                        <input class="service-submit" type="submit" name="submit_service" value="Valider">
                     </form>
                 </div>
                 <?php } ?>
                 
             </div>
+
         </main>
 </html>
