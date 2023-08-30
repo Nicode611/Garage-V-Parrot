@@ -1,0 +1,2 @@
+INSERT INTO `vehicules` (`id`, `modele`, `année`, `kilométrage`, `prix`, `description`, `image`) 
+VALUES (NULL, 'Skoda Fabia', '2015', '150000', '6700', 'Skoda Fabia de 2015 en tres bon état', 'https://zebi/zebi.com');
