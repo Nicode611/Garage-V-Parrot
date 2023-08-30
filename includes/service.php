@@ -42,9 +42,72 @@
                     </div>
                 </div>
                 <!-- Affiche le form si la page est dashboard-admin.php -->
-                <?php if ($_SERVER['SCRIPT_NAME'] == '/Garage-V-Parrot/pages/dashboard-admin.php') { ?>
                 <div class="service-form-container">
-                    <form class="service-form" action="traitement.php" method="post" enctype="multipart/form-data">
+                <?php if ($_SERVER['SCRIPT_NAME'] == '/Garage-V-Parrot/pages/dashboard-admin.php') { ?>
+
+                <?php
+                $validation = "null";
+                // Vérifie si le formulaire a été soumis
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+                    // Vérifie si un fichier a été téléchargé
+                    if(isset($_FILES["image"]) && $_FILES["image"]["error"] == 0) {
+                        $target_directory = $_SERVER['DOCUMENT_ROOT'] . "/Garage-V-Parrot/assets/images/images-vehicules/"; // Le répertoire de destination de l'image
+                        $target_file = $target_directory . basename($_FILES["image"]["name"]);
+                        $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+                    
+                        // Vérifie si le fichier est une image
+                        $valid_extensions = array("jpg", "jpeg", "png", "gif");
+                        if(in_array($imageFileType, $valid_extensions)) {
+
+                            // Déplace l'image téléchargée vers le répertoire de destination
+                            if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+                                // Connexion à la base de données
+                                $db_host = "localhost";
+                                $db_user = "root";
+                                $db_pass = "";
+                                $db_name = "garage_v_parrot";
+
+                                $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
+                                if ($conn->connect_error) {
+                                    die("La connexion à la base de données a échoué : " . $conn->connect_error);
+                                }
+
+                                // Récupère les données du formulaire
+                                $image_path = $target_file;
+                                $nom = $_POST["titre"];
+                                $description = $_POST["texte"];
+
+                                // Prépare et exécute la requête SQL pour insérer les données
+                                $sql = "INSERT INTO services (image, nom, description) VALUES (?, ?, ?)";
+                                $stmt = $conn->prepare($sql);
+                                $stmt->bind_param("sss", $image_path, $nom, $description);
+                                // Si insertion
+                                if ($stmt->execute()) {
+                                    $validation = "Le service a été ajouté avec succès.";
+                                } else {
+                                    $validation = "Une erreur est survenue lors de l'ajout du service." . $stmt->error;
+                                }
+
+                                // Ferme la connexion à la base de données
+                                $stmt->close();
+                                $conn->close();
+                            } else {
+                                echo "Une erreur est survenue lors de l'upload de l'image.";
+                            }
+                        } else {
+                            echo "Seules les images au format JPG, JPEG, PNG et GIF sont autorisées.";
+                        }
+                    } else {
+                        echo "Veuillez sélectionner une image.";
+                    }
+                }
+                ?>
+                
+                <div class="validation-message">
+                    <?php echo $validation; ?>
+                </div>
+                    <form class="service-form" action="" method="post" enctype="multipart/form-data">
                         <h3>Ajouter un service :</h3>
                         <div class="service-form1">
                             <input type="file" name="image" id="service-image" accept="image/*" required>
@@ -58,5 +121,4 @@
                 
             </div>
         </main>
-
 </html>
