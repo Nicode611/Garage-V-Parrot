@@ -13,6 +13,29 @@
     require ("includes/header.html");
 ?>
 
+<?php
+// Informations de connexion à la base de données
+$db_host = "localhost";
+$db_user = "root";
+$db_pass = "";
+$db_name = "garage_v_parrot";
+
+// Établir la connexion
+$conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
+
+// Vérifier la connexion
+if ($conn->connect_error) {
+    die("La connexion à la base de données a échoué : " . $conn->connect_error);
+} else {
+    echo "La connexion à la base de données est établie avec succès.";
+    
+    // Vous pouvez exécuter des requêtes SQL ici...
+    
+    // Fermer la connexion lorsque vous avez terminé
+    $conn->close();
+}
+?>
+
 <main>
     <!-- Présentation -->
     <div class="section-presentation">
