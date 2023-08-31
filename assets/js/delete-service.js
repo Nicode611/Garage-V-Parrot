@@ -1,4 +1,4 @@
-document.querySelector(".service-delete").addEventListener("click", function() {
+document.getElementsByClassName("service-delete").addEventListener("click", function() {
     var id = this.nextElementSibling.textContent;
     var serviceElement = this.closest(".service");
 
