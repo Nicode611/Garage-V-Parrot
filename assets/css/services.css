@@ -52,6 +52,10 @@ main {
     min-width: 500px;
 }
 
+.id-service {
+    display: none;
+}
+
 .service-img {
     width: 250px;
     height: 150px;
@@ -72,4 +76,8 @@ main {
 
 .service-description {
     font-weight: 300;
+}
+
+.service-form-container {
+    display: none;
 }

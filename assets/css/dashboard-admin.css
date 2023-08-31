@@ -92,6 +92,10 @@ main {
     flex-wrap: wrap;
 }
 
+.id-service {
+    display: none;
+}
+
 .service {
     display: flex;
     position: relative;
