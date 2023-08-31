@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 30 août 2023 à 19:31
+-- Généré le : jeu. 31 août 2023 à 03:38
 -- Version du serveur : 10.4.28-MariaDB
 -- Version de PHP : 8.2.4
 
@@ -58,7 +58,10 @@ CREATE TABLE `services` (
 --
 
 INSERT INTO `services` (`id`, `image`, `nom`, `description`) VALUES
-(1, 'https://servzebi/zebi.com', 'Réparation de pare brise', 'On répare les pare brises ');
+(48, 'réparation auto.jpg', 'Réparation auto', 'Expert dans la réparation automobile'),
+(49, 'nettoyage voitures.jpg', 'Nettoyage voitures', 'On nettoie votre voiture'),
+(50, 'vente de véhicule d\'occasion.jpg', 'Vente de véhicules d\'occasion', 'Achetez nos véhicules d\'occasions'),
+(51, 'audi tt.png', 'Il faut combler', 'du coup je comble');
 
 -- --------------------------------------------------------
 
@@ -148,7 +151,7 @@ ALTER TABLE `avis`
 -- AUTO_INCREMENT pour la table `services`
 --
 ALTER TABLE `services`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT pour la table `users`
