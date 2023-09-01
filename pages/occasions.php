@@ -14,7 +14,7 @@
 ?>
 
 <?php
-    require "../includes/occasions.html";
+    require "../includes/occasions.php";
 ?>
 
 <?php

@@ -14,13 +14,40 @@
                     <p>Nos véhicules d’occasion disponibles à l’achat.</p>
                 </div>
                 <div class="vehicules-imgs">
-                    <img class="vehicules-img" src="/Garage-V-Parrot/assets/images/images-vehicules/peugeot 308.png">
-                    <img class="vehicules-img" src="/Garage-V-Parrot/assets/images/images-vehicules/audi rs4.png">
-                    <img class="vehicules-img" src="/Garage-V-Parrot/assets/images/images-vehicules/audi tt.png">
-                    <img class="vehicules-img" src="/Garage-V-Parrot/assets/images/images-vehicules/lamborghini urus.png">
-                    <img class="vehicules-img" src="/Garage-V-Parrot/assets/images/images-vehicules/mercedes amg.png">
-                    <img class="vehicules-img vehicule-active" src="/Garage-V-Parrot/assets/images/images-vehicules/skoda fabia.png">
-                </div>
+                    <!-- Script d'affichage du véhicule -->
+            <?php
+                $db_host = "localhost";
+                $db_user = "root";
+                $db_pass = "";
+                $db_name = "garage_v_parrot";
+                $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
+                // Vérification de la connection
+                if ($conn->connect_error) {
+                    die("La connexion à la base de données a échoué : " . $conn->connect_error);
+                }
+                // Récupération de tout les éléments de la table
+                $sql = "SELECT image FROM vehicules";
+                // Exécution de la requete
+                $result = $conn->query($sql);
+
+                // Si résultat plus grand que 0 lignes
+                if ($result->num_rows > 0) {
+                    // Crée un var a chaque éléments
+                    while ($row = $result->fetch_assoc()) {
+                        $image = $row["image"]; ?>
+
+                        <div class="vehicules">
+                            <img class="vehicules-img" src="/Garage-V-Parrot/assets/images/images-vehicules/<?php echo $image ?>">
+                        </div>
+                        <?php
+                    }
+                } else {
+                    echo "Aucun véhicule trouvé.";
+                }
+                $conn->close();
+            ?>        
+            </div>
+            
             </div>
             <div class="vehicule-card">
                 <img class="vehicule-img" src="/Garage-V-Parrot/assets/images/images-vehicules/skoda fabia.png" alt="">
@@ -37,4 +64,5 @@
                 </div>
             </div>
         </div>
+    </div>
 </html>
