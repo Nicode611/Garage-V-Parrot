@@ -172,7 +172,7 @@
         <div class="validation-message">
             <?php echo $validation; ?>
         </div>
-        <form class="occasions-form" action="" method="post" enctype="multipart/form-data">
+        <form class="occasions-form" method="post" enctype="multipart/form-data">
             <h3>Ajouter un véhicule :</h3>
             <div class="occasions-form1">
                 <input placeholder="Modèle" type="text" name="modele" id="occasions-modele" required>
