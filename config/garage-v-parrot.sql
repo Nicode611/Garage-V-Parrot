@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 31 août 2023 à 03:38
+-- Généré le : ven. 01 sep. 2023 à 23:29
 -- Version du serveur : 10.4.28-MariaDB
 -- Version de PHP : 8.2.4
 
@@ -43,6 +43,23 @@ INSERT INTO `avis` (`id`, `avis`, `nom`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `horaires`
+--
+
+CREATE TABLE `horaires` (
+  `id` int(11) NOT NULL,
+  `lundi` varchar(50) NOT NULL,
+  `mardi` varchar(50) NOT NULL,
+  `mercredi` varchar(50) NOT NULL,
+  `jeudi` varchar(50) NOT NULL,
+  `vendredi` varchar(50) NOT NULL,
+  `samedi` varchar(50) NOT NULL,
+  `dimanche` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `services`
 --
 
@@ -60,8 +77,8 @@ CREATE TABLE `services` (
 INSERT INTO `services` (`id`, `image`, `nom`, `description`) VALUES
 (48, 'réparation auto.jpg', 'Réparation auto', 'Expert dans la réparation automobile'),
 (49, 'nettoyage voitures.jpg', 'Nettoyage voitures', 'On nettoie votre voiture'),
-(50, 'vente de véhicule d\'occasion.jpg', 'Vente de véhicules d\'occasion', 'Achetez nos véhicules d\'occasions'),
-(51, 'audi tt.png', 'Il faut combler', 'du coup je comble');
+(87, 'vente de véhicule d\'occasion.jpg', 'Vente de véhicules d\'occasion', 'Nous revendons vos véhicules d\'occasions'),
+(88, 'lamborghini urus.png', 'N\'importe', ' ');
 
 -- --------------------------------------------------------
 
@@ -95,8 +112,8 @@ INSERT INTO `users` (`id`, `prénom`, `nom`, `email`, `mdp`, `telephone`, `code_
 CREATE TABLE `vehicules` (
   `id` int(11) NOT NULL,
   `modele` char(50) NOT NULL,
-  `année` int(4) NOT NULL,
-  `kilométrage` int(7) NOT NULL,
+  `annee` int(4) NOT NULL,
+  `kilometrage` int(7) NOT NULL,
   `prix` int(11) NOT NULL,
   `description` text NOT NULL,
   `image` text NOT NULL
@@ -106,8 +123,11 @@ CREATE TABLE `vehicules` (
 -- Déchargement des données de la table `vehicules`
 --
 
-INSERT INTO `vehicules` (`id`, `modele`, `année`, `kilométrage`, `prix`, `description`, `image`) VALUES
-(1, 'Skoda Fabia', 2015, 150000, 6700, 'Skoda Fabia de 2015 en tres bon état', 'https://zebi/zebi.com');
+INSERT INTO `vehicules` (`id`, `modele`, `annee`, `kilometrage`, `prix`, `description`, `image`) VALUES
+(17, 'Peugeot 206', 2006, 136000, 5000, 'vvefe', 'audi rs4.png'),
+(34, 'audi a1', 2023, 136000, 5000, 'hghhv', 'audi tt.png'),
+(35, 'fhdh', 2000, 525000, 7000, 'fff', 'mercedes amg.png'),
+(36, 'hk', 2023, 784000, 1300, '55', 'peugeot 308.png');
 
 --
 -- Index pour les tables déchargées
@@ -117,6 +137,12 @@ INSERT INTO `vehicules` (`id`, `modele`, `année`, `kilométrage`, `prix`, `desc
 -- Index pour la table `avis`
 --
 ALTER TABLE `avis`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `horaires`
+--
+ALTER TABLE `horaires`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -148,10 +174,16 @@ ALTER TABLE `avis`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT pour la table `horaires`
+--
+ALTER TABLE `horaires`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT pour la table `services`
 --
 ALTER TABLE `services`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
 
 --
 -- AUTO_INCREMENT pour la table `users`
@@ -163,7 +195,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `vehicules`
 --
 ALTER TABLE `vehicules`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
