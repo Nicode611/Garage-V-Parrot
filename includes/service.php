@@ -2,7 +2,7 @@
         <main class="services-main">
             <div class="glow"></div>
             <h2 class="main-title">Nos services</h2>
-            <div class="services-section">
+            <div class="services-section" id="services-section">
 
             <!-- Script d'affichage du service -->
             <?php
@@ -47,6 +47,27 @@
                 }
                 $conn->close();
             ?>
+
+            <script>
+                document.querySelector("#services-section").addEventListener("click", function(event) {
+                // Vérifie si la target de l'event est un bouton .service-delete contenu dans #services-section
+                if (event.target.classList.contains("service-delete")) {
+                    var id = event.target.nextElementSibling.textContent;
+                    var serviceElement = event.target.closest(".service");
+
+                    // Demande confirmation à l'utilisateur
+                    if (confirm("Êtes-vous sûr de vouloir supprimer cet élément ?")) {
+                        // Effectue une requête AJAX pour supprimer l'élément
+                        var xhr = new XMLHttpRequest();
+                        xhr.open("GET", "/Garage-V-Parrot/includes/service.php?execute_script=true&id=" + id, true);
+                        xhr.send();
+
+                        serviceElement.remove();
+                    }
+                }
+            });
+
+            </script>
 
         <?php
             // Script de supression du service
@@ -138,6 +159,33 @@
                                 // Ferme la connexion à la base de données
                                 $stmt->close();
                                 $conn->close();
+                                ?>
+
+                                <script>
+                                    var xhr = new XMLHttpRequest();
+xhr.open("GET", "dashboard-admin.php", true);
+xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+        // La requête AJAX est terminée et la réponse est prête
+        
+        // Créez un élément div temporaire pour contenir la réponse
+        var tempDiv = document.createElement("div");
+        tempDiv.innerHTML = xhr.responseText;
+
+        // Trouvez le contenu de la div #services-section dans le div temporaire
+        var servicesContent = tempDiv.querySelector("#services-section");
+
+        // Trouvez la div #services-section dans le document
+        var servicesSection = document.querySelector("#services-section");
+
+        // Remplacez le contenu de la div #services-section avec le nouveau contenu
+        servicesSection.innerHTML = servicesContent.innerHTML;
+    }
+};
+xhr.send();
+                                </script>
+
+                            <?php
                             } else {
                                 echo "Une erreur est survenue lors de l'upload de l'image.";
                             }
@@ -162,6 +210,5 @@
                 <?php } ?>
                 
             </div>
-            <script src="/Garage-V-Parrot/assets/js/delete-service.js"></script>
         </main>
 </html>
