@@ -14,7 +14,7 @@
     </div>
     <div class="horaires-footer-container">
         <h1 class="footer-titles">Horaires</h1>
-        <?php include "horaires.html"; ?>
+        <?php include "horaires.php"; ?>
     </div>
     <div class="infos-footer-container">
         <h1 class="footer-titles">Infos</h1>

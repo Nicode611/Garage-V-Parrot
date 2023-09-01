@@ -29,7 +29,7 @@
     <div class="dividing-bar"></div>    
     <!-- Occasions -->
     <?php
-        require("includes/occasions.php"); 
+        require("includes/vehicules.php"); 
     ?>
     <div class="dividing-bar"></div>
     <!-- Avis -->
