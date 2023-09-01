@@ -26,7 +26,7 @@
                     die("La connexion à la base de données a échoué : " . $conn->connect_error);
                 }
                 // Récupération de tout les éléments de la table
-                $sql = "SELECT image FROM vehicules";
+                $sql = "SELECT id, modele, annee, kilometrage, prix, image, description FROM vehicules";
                 // Exécution de la requete
                 $result = $conn->query($sql);
 
@@ -34,7 +34,13 @@
                 if ($result->num_rows > 0) {
                     // Crée un var a chaque éléments
                     while ($row = $result->fetch_assoc()) {
-                        $image = $row["image"]; ?>
+                        $id = $row["id"];
+                        $modele = $row["modele"];
+                        $annee = $row["annee"];
+                        $kilometrage = $row["kilometrage"];
+                        $prix = $row["prix"];
+                        $image = $row["image"];
+                        $description = $row["description"]; ?>
 
                         <div class="vehicules">
                             <img class="vehicules-img" src="/Garage-V-Parrot/assets/images/images-vehicules/<?php echo $image ?>">
@@ -47,7 +53,7 @@
                 $conn->close();
             ?>        
             </div>
-            
+
             </div>
             <div class="vehicule-card">
                 <img class="vehicule-img" src="/Garage-V-Parrot/assets/images/images-vehicules/skoda fabia.png" alt="">
