@@ -139,7 +139,7 @@
                 <input class="employe-submit" type="submit" value="Ajouter">
             </form>
         </div>
-    </main>
+</main>
 
     <script src="/Garage-V-Parrot/assets/js/script-dashboard.js"></script>
 </body>

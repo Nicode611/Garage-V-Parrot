@@ -1,5 +1,5 @@
 
-        <main class="services-main">
+        <div class="services-main">
             <div class="glow"></div>
             <h2 class="main-title">Nos services</h2>
             <div class="services-section" id="services-section">
@@ -210,5 +210,5 @@ xhr.send();
                 <?php } ?>
                 
             </div>
-        </main>
+            </div>
 </html>
