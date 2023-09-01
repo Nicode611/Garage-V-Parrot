@@ -49,7 +49,7 @@
 
         <!-- Horaires -->
         <div class="dashboard-horaires hide"> 
-            <form class="horaires-form" action="traitement.php" method="post">
+            <form class="horaires-form" method="post">
                 <h3>Modifier les horaires :</h3>
                 <label for="jour">Jour de la semaine :</label>
                 <select name="jour" id="jour">
