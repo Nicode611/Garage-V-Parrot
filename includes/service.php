@@ -163,26 +163,26 @@
 
                                 <script>
                                     var xhr = new XMLHttpRequest();
-xhr.open("GET", "dashboard-admin.php", true);
-xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-        // La requête AJAX est terminée et la réponse est prête
+                                    xhr.open("GET", "dashboard-admin.php", true);
+                                    xhr.onreadystatechange = function() {
+                                        if (xhr.readyState === 4 && xhr.status === 200) {
+                                            // La requête AJAX est terminée et la réponse est prête
         
-        // Créez un élément div temporaire pour contenir la réponse
-        var tempDiv = document.createElement("div");
-        tempDiv.innerHTML = xhr.responseText;
+                                            // Créez un élément div temporaire pour contenir la réponse
+                                            var tempDiv = document.createElement("div");
+                                            tempDiv.innerHTML = xhr.responseText;
 
-        // Trouvez le contenu de la div #services-section dans le div temporaire
-        var servicesContent = tempDiv.querySelector("#services-section");
+                                            // Trouvez le contenu de la div #services-section dans le div temporaire
+                                            var servicesContent = tempDiv.querySelector("#services-section");
 
-        // Trouvez la div #services-section dans le document
-        var servicesSection = document.querySelector("#services-section");
+                                            // Trouvez la div #services-section dans le document
+                                            var servicesSection = document.querySelector("#services-section");
 
-        // Remplacez le contenu de la div #services-section avec le nouveau contenu
-        servicesSection.innerHTML = servicesContent.innerHTML;
-    }
-};
-xhr.send();
+                                            // Remplacez le contenu de la div #services-section avec le nouveau contenu
+                                            servicesSection.innerHTML = servicesContent.innerHTML;
+                                        }
+                                    };
+                                    xhr.send();
                                 </script>
 
                             <?php

@@ -59,7 +59,7 @@
         <!-- Partie Occasions -->
         <div class="dashboard-occasions hide">
             <?php 
-                require "../includes/dashboard-occasions.html";
+                require "../includes/dashboard-occasions.php";
             ?>
         </div>
 
