@@ -16,41 +16,7 @@
                 <div class="vehicules-imgs">
                     <!-- Script d'affichage du véhicule -->
             <?php
-                $db_host = "localhost";
-                $db_user = "root";
-                $db_pass = "";
-                $db_name = "garage_v_parrot";
-                $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
-                // Vérification de la connection
-                if ($conn->connect_error) {
-                    die("La connexion à la base de données a échoué : " . $conn->connect_error);
-                }
-                // Récupération de tout les éléments de la table
-                $sql = "SELECT id, modele, annee, kilometrage, prix, image, description FROM vehicules";
-                // Exécution de la requete
-                $result = $conn->query($sql);
-
-                // Si résultat plus grand que 0 lignes
-                if ($result->num_rows > 0) {
-                    // Crée un var a chaque éléments
-                    while ($row = $result->fetch_assoc()) {
-                        $id = $row["id"];
-                        $modele = $row["modele"];
-                        $annee = $row["annee"];
-                        $kilometrage = $row["kilometrage"];
-                        $prix = $row["prix"];
-                        $image = $row["image"];
-                        $description = $row["description"]; ?>
-
-                        <div class="vehicules">
-                            <img class="vehicules-img" src="/Garage-V-Parrot/assets/images/images-vehicules/<?php echo $image ?>">
-                        </div>
-                        <?php
-                    }
-                } else {
-                    echo "Aucun véhicule trouvé.";
-                }
-                $conn->close();
+                include ("G:/Logiciels/XAMPP Serv/htdocs/Garage-V-Parrot/config/show-vehicules.php");
             ?>        
             </div>
 
@@ -71,4 +37,7 @@
             </div>
         </div>
     </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </html>
