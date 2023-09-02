@@ -49,6 +49,50 @@
 
         <!-- Horaires -->
         <div class="dashboard-horaires hide"> 
+
+        <?php
+            // Informations de connexion à la base de données (à adapter)
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "garage_v_parrot";
+
+            // Création de la connexion
+            $conn = new mysqli($servername, $username, $password, $dbname);
+
+            // Vérification de la connexion
+            if ($conn->connect_error) {
+                die("La connexion à la base de données a échoué : " . $conn->connect_error);
+            }
+
+            // Traitement du formulaire lorsque l'utilisateur soumet les données
+            if (isset($_POST["submit_horaires"])) {
+                // Récupération des valeurs du formulaire
+                $jour = $_POST["jour"];
+                $ouvertureMatin = $_POST["heureOuvertureMatin"];
+                $fermetureMatin = $_POST["heureFermetureMatin"];
+                $ouvertureApresMidi = $_POST["heureOuvertureApresMidi"];
+                $fermetureApresMidi = $_POST["heureFermetureApresMidi"];
+
+                // Formatage des heures au format demandé
+                $horaires = "$ouvertureMatin - $fermetureMatin / $ouvertureApresMidi - $fermetureApresMidi";
+
+                // Préparation de la requête SQL d'insertion
+                $sql = "INSERT INTO horaires ($jour) VALUES ('$horaires')";
+
+                // Exécution de la requête
+                if ($conn->query($sql) === TRUE) {
+                    echo "Données insérées avec succès.";
+                } else {
+                    echo "Erreur lors de l'insertion des données : " . $conn->error;
+                }
+            }
+
+            // Fermeture de la connexion à la base de données
+            $conn->close();
+        ?>
+
+
             <form class="horaires-form" method="post">
                 <h3>Modifier les horaires :</h3>
                 <label for="jour">Jour de la semaine :</label>
@@ -65,19 +109,19 @@
                     <div class="horaires-form-matin">
                         <h4>Matin</h4>
                         <label for="heureOuverture">Ouverture :</label>
-                        <input type="time" name="heureOuverture" id="heureOuverture">
+                        <input type="time" name="heureOuvertureMatin" id="heureOuverture">
                         <label for="heureFermeture">Fermeture :</label>
-                        <input type="time" name="heureFermeture" id="heureFermeture">
+                        <input type="time" name="heureFermetureMatin" id="heureFermeture">
                     </div>
                     <div class="horaires-form-apresmidi">
                         <h4>Après-midi</h4>
                         <label for="heureOuverture">Ouverture :</label>
-                        <input type="time" name="heureOuverture" id="heureOuverture">
+                        <input type="time" name="heureOuvertureApresMidi" id="heureOuverture">
                         <label for="heureFermeture">Fermeture :</label>
-                        <input type="time" name="heureFermeture" id="heureFermeture">
+                        <input type="time" name="heureFermetureApresMidi" id="heureFermeture">
                     </div>
                 </div>
-                <input class="horaires-submit" type="submit" value="Enregistrer">
+                <input class="horaires-submit" type="submit" name="submit_horaires" value="Enregistrer">
             </form>
         </div>
 
