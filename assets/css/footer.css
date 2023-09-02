@@ -56,7 +56,9 @@ button:hover {
     flex: 1;
 }
 
-.footer-horaires {
+
+li {
+    list-style-type: none;
     font-size: 0.9rem;
     font-weight: 200;
 }

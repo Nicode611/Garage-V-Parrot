@@ -49,7 +49,35 @@
 
         <!-- Horaires -->
         <div class="dashboard-horaires hide"> 
-
+            <form class="horaires-form" method="post">
+                <h3>Modifier les horaires :</h3>
+                <label for="jour">Jour de la semaine :</label>
+                <select name="jour" id="jour">
+                    <option value="lundi">Lundi</option>
+                    <option value="mardi">Mardi</option>
+                    <option value="mercredi">Mercredi</option>
+                    <option value="jeudi">Jeudi</option>
+                    <option value="vendredi">Vendredi</option>
+                </select>
+                <div class="horaires-form1">
+                    <div class="horaires-form-matin">
+                        <h4>Matin</h4>
+                        <label for="heureOuverture">Ouverture :</label>
+                        <input type="time" name="heureOuvertureMatin" id="heureOuverture" value="08:00">
+                        <label for="heureFermeture">Fermeture :</label>
+                        <input type="time" name="heureFermetureMatin" id="heureFermeture" value="11:30">
+                    </div>
+                    <div class="horaires-form-apresmidi">
+                        <h4>Après-midi</h4>
+                        <label for="heureOuverture">Ouverture :</label>
+                        <input type="time" name="heureOuvertureApresMidi" id="heureOuverture" value="12:00">
+                        <label for="heureFermeture">Fermeture :</label>
+                        <input type="time" name="heureFermetureApresMidi" id="heureFermeture" value="17:00">
+                    </div>
+                </div>
+                <input class="horaires-submit" type="submit" name="submit_horaires" value="Enregistrer">
+            </form>
+        </div>
         <?php
             // Informations de connexion à la base de données (à adapter)
             $servername = "localhost";
@@ -66,7 +94,7 @@
             }
 
             // Traitement du formulaire lorsque l'utilisateur soumet les données
-            if (isset($_POST["submit_horaires"])) {
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Récupération des valeurs du formulaire
                 $jour = $_POST["jour"];
                 $ouvertureMatin = $_POST["heureOuvertureMatin"];
@@ -78,7 +106,8 @@
                 $horaires = "$ouvertureMatin - $fermetureMatin / $ouvertureApresMidi - $fermetureApresMidi";
 
                 // Préparation de la requête SQL d'insertion
-                $sql = "INSERT INTO horaires ($jour) VALUES ('$horaires')";
+                $sql = "UPDATE horaires SET $jour = '$horaires'";
+                // $sql = "UPDATE horaires SET $jour = '$horaires'";
 
                 // Exécution de la requête
                 if ($conn->query($sql) === TRUE) {
@@ -92,38 +121,6 @@
             $conn->close();
         ?>
 
-
-            <form class="horaires-form" method="post">
-                <h3>Modifier les horaires :</h3>
-                <label for="jour">Jour de la semaine :</label>
-                <select name="jour" id="jour">
-                    <option value="lundi">Lundi</option>
-                    <option value="mardi">Mardi</option>
-                    <option value="mercredi">Mercredi</option>
-                    <option value="jeudi">Jeudi</option>
-                    <option value="vendredi">Vendredi</option>
-                    <option value="samedi">Samedi</option>
-                    <option value="dimanche">Dimanche</option>
-                </select>
-                <div class="horaires-form1">
-                    <div class="horaires-form-matin">
-                        <h4>Matin</h4>
-                        <label for="heureOuverture">Ouverture :</label>
-                        <input type="time" name="heureOuvertureMatin" id="heureOuverture">
-                        <label for="heureFermeture">Fermeture :</label>
-                        <input type="time" name="heureFermetureMatin" id="heureFermeture">
-                    </div>
-                    <div class="horaires-form-apresmidi">
-                        <h4>Après-midi</h4>
-                        <label for="heureOuverture">Ouverture :</label>
-                        <input type="time" name="heureOuvertureApresMidi" id="heureOuverture">
-                        <label for="heureFermeture">Fermeture :</label>
-                        <input type="time" name="heureFermetureApresMidi" id="heureFermeture">
-                    </div>
-                </div>
-                <input class="horaires-submit" type="submit" name="submit_horaires" value="Enregistrer">
-            </form>
-        </div>
 
 
         <!-- Employés -->
