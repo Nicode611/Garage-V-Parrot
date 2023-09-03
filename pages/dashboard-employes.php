@@ -8,8 +8,9 @@
 </head>
 <body>
     
-    <?php 
-        require "../includes/header.html";
+    <?php
+        $includeFile = "../includes/header.html";
+        if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
     ?>
 
     <main>
@@ -58,8 +59,9 @@
 
         <!-- Partie Occasions -->
         <div class="dashboard-occasions hide">
-            <?php 
-                require "../includes/dashboard-occasions.php";
+        <?php
+                $includeFile = "../includes/dashboard-occasions.php";
+                if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
             ?>
         </div>
 

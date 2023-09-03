@@ -10,15 +10,18 @@
 <body>
     
 <?php
-    require "../includes/header.html";
+    $includeFile = "../includes/header.html";
+    if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
 ?>
 
-    <?php
-        require "../includes/service.php";
-    ?>
+<?php
+    $includeFile = "../includes/service.php";
+    if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
+?>
 
 <?php
-    require "../includes/footer.php";
+    $includeFile = "../includes/footer.php";
+    if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
 ?>
 
 </body>

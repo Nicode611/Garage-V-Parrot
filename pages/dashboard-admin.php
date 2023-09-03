@@ -8,9 +8,15 @@
 </head>
 <body>
     
-    <?php 
-        require "../includes/header.html";
-    ?>
+<?php
+    $includeFile = "../includes/header.html";
+
+    if (file_exists($includeFile)) {
+        include($includeFile);
+    } else {
+        echo "Le fichier $includeFile n'a pas été trouvé.";
+    }
+?>
 
     <main>
         <div class="sidebar">
@@ -34,15 +40,17 @@
         <!-- Services -->
         <div class="dashboard-services">
             <?php
-                require("../includes/service.php");
+                $includeFile = "../includes/service.php";
+                if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
             ?>
         </div>
 
 
         <!-- Occasions -->
         <div class="dashboard-occasions hide">
-            <?php 
-                require ("../includes/dashboard-occasions.php");
+            <?php
+                $includeFile = "../includes/dashboard-occasions.php";
+                if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
             ?>
         </div>
 
@@ -79,7 +87,8 @@
             </form>
         </div>
         <?php
-            include ("../config/script-horaires.php");
+            $includeFile = "../config/script-horaires.php";
+            if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
         ?>
 
 
@@ -141,6 +150,12 @@
                 <input class="employe-submit" type="submit" value="Ajouter">
             </form>
         </div>
+        <?php
+            $includeFile = "../config/script-employes.php";
+            if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
+        ?>
+
+
 </main>
 
     <script src="/Garage-V-Parrot/assets/js/script-dashboard.js"></script>
