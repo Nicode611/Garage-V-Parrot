@@ -22,22 +22,21 @@
 
             </div>
             <div class="vehicule-card">
-                <img class="vehicule-img" src="/Garage-V-Parrot/assets/images/images-vehicules/skoda fabia.png" alt="">
+                <img class="vehicule-img" src="/Garage-V-Parrot/assets/images/images-vehicules/<?php echo $image ?>" alt="">
                 <div class="card-bottom">
                     <div>
-                        <h3 class="vehicule-model">Skoda Fabia</h3>
+                        <h3 class="vehicule-model"><?php echo $modele ?></h3>
                         <div>
-                            <h4 class="vehicule-infos vehicule-year">2015</h4>
-                            <h4 class="vehicule-infos vehicule-km">165 000 km</h4>
+                            <h4 class="vehicule-infos vehicule-year"><?php echo $annee ?></h4>
+                            <h4 class="vehicule-infos vehicule-km"><?php echo $kilometrage ?> km</h4>
                         </div>
                     </div>
-                    <p class="vehicule-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque libero urna, blandit pellentesque arcu at, ornare vehicula velit. Praesent tortor dolor, consequat at elementum ut, sollicitudin vitae enim.</p>
-                    <h3 class="vehicule-price">12 500 €</h3>
+                    <p class="vehicule-description"><?php echo $description ?></p>
+                    <h3 class="vehicule-price"><?php echo $prix ?> €</h3>
                 </div>
             </div>
         </div>
     </div>
 
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/Garage-V-Parrot/assets/js/script-selection-vehicule.js"></script>
 </html>
