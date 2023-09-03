@@ -145,10 +145,10 @@
                 <input class="employe-submit" type="submit" value="Ajouter">
             </form>
         </div>
-        <?php
+        <!-- <?php
             $includeFile = "../config/script-employes.php";
             if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
-        ?>
+        ?> -->
 
 
 </main>

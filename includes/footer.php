@@ -15,7 +15,7 @@
     <div class="horaires-footer-container">
         <h1 class="footer-titles">Horaires</h1>
         <?php
-            $includeFile = "./horaires.php";
+            $includeFile = "G:/Logiciels/XAMPP Serv/htdocs/Garage-V-Parrot/includes/horaires.php";
             if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
         ?>
     </div>
