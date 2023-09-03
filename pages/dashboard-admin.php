@@ -79,46 +79,7 @@
             </form>
         </div>
         <?php
-            // Informations de connexion à la base de données (à adapter)
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "garage_v_parrot";
-
-            // Création de la connexion
-            $conn = new mysqli($servername, $username, $password, $dbname);
-
-            // Vérification de la connexion
-            if ($conn->connect_error) {
-                die("La connexion à la base de données a échoué : " . $conn->connect_error);
-            }
-
-            // Traitement du formulaire lorsque l'utilisateur soumet les données
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                // Récupération des valeurs du formulaire
-                $jour = $_POST["jour"];
-                $ouvertureMatin = $_POST["heureOuvertureMatin"];
-                $fermetureMatin = $_POST["heureFermetureMatin"];
-                $ouvertureApresMidi = $_POST["heureOuvertureApresMidi"];
-                $fermetureApresMidi = $_POST["heureFermetureApresMidi"];
-
-                // Formatage des heures au format demandé
-                $horaires = "$ouvertureMatin - $fermetureMatin / $ouvertureApresMidi - $fermetureApresMidi";
-
-                // Préparation de la requête SQL d'insertion
-                $sql = "UPDATE horaires SET $jour = '$horaires'";
-                // $sql = "UPDATE horaires SET $jour = '$horaires'";
-
-                // Exécution de la requête
-                if ($conn->query($sql) === TRUE) {
-                    echo "Données insérées avec succès.";
-                } else {
-                    echo "Erreur lors de l'insertion des données : " . $conn->error;
-                }
-            }
-
-            // Fermeture de la connexion à la base de données
-            $conn->close();
+            include ("../config/script-horaires.php");
         ?>
 
 

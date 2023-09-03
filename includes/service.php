@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../assets/css/dashboard-admin.css">
 
         <div class="services-main">
             <div class="glow"></div>
@@ -112,7 +113,6 @@
                 <?php if ($_SERVER['SCRIPT_NAME'] == '/Garage-V-Parrot/pages/dashboard-admin.php') { ?>
 
                 <?php
-                $validation = "";
                 // Vérifie si le formulaire a été soumis
                 if (isset($_POST["submit_service"])) { 
 
@@ -151,9 +151,9 @@
                                 $stmt->bind_param("sss", $image_path, $nom, $description);
                                 // Si insertion
                                 if ($stmt->execute()) {
-                                    $validation = "Le service a été ajouté avec succès.";
+                                    ?> <span class="validation">Le service a été ajouté avec succès.</span> <?php ;
                                 } else {
-                                    $validation = "Une erreur est survenue lors de l'ajout du service." . $stmt->error;
+                                    ?> <span class="error">Erreur</span> <?php $stmt->error;
                                 }
 
                                 // Ferme la connexion à la base de données
@@ -194,9 +194,6 @@
                 }
                 ?>
                 
-                <div class="validation-message">
-                <?php echo $validation; ?>
-                </div>
                     <form class="service-form" action="" method="post" enctype="multipart/form-data">
                         <h3>Ajouter un service :</h3>
                         <div class="service-form1">
