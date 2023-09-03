@@ -56,6 +56,10 @@ button:hover {
     flex: 1;
 }
 
+ul {
+    padding: 0px;
+}
+
 
 li {
     list-style-type: none;
