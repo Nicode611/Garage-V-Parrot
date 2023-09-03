@@ -6,6 +6,16 @@
     <link rel="stylesheet" href="/Garage-V-Parrot/assets/css/header.css">
     <title>Garage V. Parrot</title>
 </head>
+
+<?php
+    session_start();
+?>
+
+<?php
+    $includeFile = "G:/Logiciels/XAMPP Serv/htdocs/Garage-V-Parrot/config/disconnect.php";
+    if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
+?>
+
 <header id="header">
     <div class="logo-container">
         <a href="/Garage-V-Parrot/index.php">
@@ -19,8 +29,6 @@
                 <a class="nav-element services" href="/Garage-V-Parrot/pages/services.php"><li>SERVICES</li></a>
                 <a class="nav-element occasions" href="/Garage-V-Parrot/pages/occasions.php"><li>OCCASIONS</li></a>
                 <a class="nav-element contact" href="/Garage-V-Parrot/pages/contact.php"><li>CONTACT</li></a>
-                <a class="nav-element admin" href="/Garage-V-Parrot/pages/dashboard-admin.php"><li>Admin</li></a>
-                <a class="nav-element employes" href="/Garage-V-Parrot/pages/dashboard-employes.php"><li>Employes</li></a>
             </ul>
         </nav>
     </div>
@@ -45,11 +53,32 @@
         <div class="overlay"></div>
     </div>
     <div class="connect-container">
+    <?php
+    if (!isset($_SESSION["user_role"]) || $_SESSION["user_role"] == "") { ?>
         <div class="connect-btns">
             <a class="connect-btn log-in" href="/Garage-V-Parrot/pages/connection.php">Log in</a>
             <a class="connect-btn sign-in" href="/Garage-V-Parrot/pages/create-account.php">Sign in</a>
         </div>
-        <img class="connect-icon hide" src="/Garage-V-Parrot/assets/images/user-icon.png">
+    <?php } ?>
+
+
+        <?php
+        if (isset($_SESSION["user_role"]) && $_SESSION["user_role"] == "Admin") { ?>
+            <form method="post"><input class="deco" type="submit" name="deco" value="Déconnection"></form>
+            <div class="connect-icon-container">
+                <a href="/Garage-V-Parrot/pages/dashboard-employes.php"><img class="connect-icon" src="/Garage-V-Parrot/assets/images/user-icon.png"></a>
+                <p><?php echo $_SESSION["user_role"]; ?></p>
+            </div>
+            <?php } ?>
+
+        <?php
+        if (isset($_SESSION["user_role"]) && $_SESSION["user_role"] == "Employé") { ?>
+            <form method="post"><input class="deco" type="submit" name="deco" value="Déconnection"></form>
+            <div class="connect-icon-container">
+                <a href="/Garage-V-Parrot/pages/dashboard-employes.php"><img class="connect-icon" src="/Garage-V-Parrot/assets/images/user-icon.png"></a>
+                <p><?php echo $_SESSION["user_role"]; ?></p>
+            </div>
+            <?php } ?>
     </div>
 </header>
 

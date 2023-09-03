@@ -10,13 +10,13 @@
 <body>
     
 <?php
-    $includeFile = "../includes/header.html";
+    $includeFile = "../includes/header.php";
     if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
 ?>
 
     <main>
         <h2>Connectez vous</h2>
-        <form class="connect-form" action="traitement.php" method="post">
+        <form class="connect-form" method="post">
             <input class="connect-fields" placeholder="Email" type="email" name="email" id="connectEmail">
             <input class="connect-fields" placeholder="Mot de passe" type="password" name="password" id="connectPassword">
             <input class="connect-submit" type="submit" name="submit_connect" value="Se connecter">
