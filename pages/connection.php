@@ -19,9 +19,14 @@
         <form class="connect-form" action="traitement.php" method="post">
             <input class="connect-fields" placeholder="Email" type="email" name="email" id="connectEmail">
             <input class="connect-fields" placeholder="Mot de passe" type="password" name="password" id="connectPassword">
-            <input class="connect-submit" type="submit" value="Se connecter">
+            <input class="connect-submit" type="submit" name="submit_connect" value="Se connecter">
         </form>
     </main>
+
+    <?php
+        $includeFile = "../config/script-connection.php";
+        if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
+    ?>
 
 </body>
 </html>
