@@ -82,12 +82,15 @@ a {
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin-left: 15px;
 }
 
 .connect-icon-container > * {
     margin: 0px;
     font-weight: 300;
 }
+
+
 
 
 /* Menu hamburger */
@@ -187,5 +190,17 @@ a {
     
     .menu-hamburger {
         display: block;
+    }
+
+    .connect-infos-elements {
+        display: none;
+    }
+
+    .connect-infos-container-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0px 20px 0px;
     }
 }

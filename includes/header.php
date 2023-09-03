@@ -39,46 +39,74 @@
             <div class="btn-line"></div>
         </div>
         <nav class="menu">
+        <?php
+        if (isset($_SESSION["user_role"]) && $_SESSION["user_role"] == "Admin") { ?>
+            <div class="connect-infos-container-mobile">
+                <div class="connect-icon-container">
+                    <a href="/Garage-V-Parrot/pages/dashboard-employes.php"><img class="connect-icon" src="/Garage-V-Parrot/assets/images/user-icon.png"></a>
+                    <p><?php echo $_SESSION["user_role"]; ?></p>
+                    <form method="post"><input class="deco" type="submit" name="deco" value="Déconnection"></form>
+                </div>
+            </div>
+        <?php } ?>
+
+        <?php
+        if (isset($_SESSION["user_role"]) && $_SESSION["user_role"] == "Employé") { ?>
+            <div class="connect-infos-container-mobile">
+                <div class="connect-icon-container">
+                    <a href="/Garage-V-Parrot/pages/dashboard-employes.php"><img class="connect-icon" src="/Garage-V-Parrot/assets/images/user-icon.png"></a>
+                    <p><?php echo $_SESSION["user_role"]; ?></p>
+                    <form method="post"><input class="deco" type="submit" name="deco" value="Déconnection"></form>
+                </div>
+            </div>
+        <?php } ?>
             <ul>
                 <li class="accueil"><a class="accueil" href="/Garage-V-Parrot/index.php">Accueil</a></li>
                 <li class="services"><a class="services" href="/Garage-V-Parrot/pages/services.php">Services</a></li>
                 <li class="occasions"><a class="occasions" href="/Garage-V-Parrot/pages/occasions.php">Occasions</a></li>
                 <li class="contact"><a class="contact" href="/Garage-V-Parrot/pages/contact.php">Contact</a></li>
+                <?php if (!isset($_SESSION["user_role"]) || $_SESSION["user_role"] == "") { ?>
                 <li><a href="/Garage-V-Parrot/pages/connection.php">Log in</a></li>
                 <li><a href="/Garage-V-Parrot/pages/create-account.php">Sign in</a></li>
-                <li><a href="/Garage-V-Parrot/pages/dashboard-admin.php">Admin</a></li>
-                <li><a href="/Garage-V-Parrot/pages/dashboard-employes.php">Employes</a></li>
+                <?php } ?>
+                <?php
+                if (isset($_SESSION["user_role"]) && $_SESSION["user_role"] == "Admin") { ?>
+                <li><a href="/Garage-V-Parrot/pages/dashboard-admin.php">Dashboard</a></li>
+                <?php } ?>
+                <?php
+                if (isset($_SESSION["user_role"]) && $_SESSION["user_role"] == "Employé") { ?>
+                <li><a href="/Garage-V-Parrot/pages/dashboard-employes.php">Dashboard</a></li>
+                <?php } ?>
             </ul>
         </nav>
         <div class="overlay"></div>
     </div>
     <div class="connect-container">
-    <?php
-    if (!isset($_SESSION["user_role"]) || $_SESSION["user_role"] == "") { ?>
-        <div class="connect-btns">
-            <a class="connect-btn log-in" href="/Garage-V-Parrot/pages/connection.php">Log in</a>
-            <a class="connect-btn sign-in" href="/Garage-V-Parrot/pages/create-account.php">Sign in</a>
-        </div>
-    <?php } ?>
-
+        <?php
+        if (!isset($_SESSION["user_role"]) || $_SESSION["user_role"] == "") { ?>
+            <div class="connect-btns">
+                <a class="connect-btn log-in" href="/Garage-V-Parrot/pages/connection.php">Log in</a>
+                <a class="connect-btn sign-in" href="/Garage-V-Parrot/pages/create-account.php">Sign in</a>
+            </div>
+        <?php } ?>
 
         <?php
         if (isset($_SESSION["user_role"]) && $_SESSION["user_role"] == "Admin") { ?>
-            <form method="post"><input class="deco" type="submit" name="deco" value="Déconnection"></form>
-            <div class="connect-icon-container">
-                <a href="/Garage-V-Parrot/pages/dashboard-employes.php"><img class="connect-icon" src="/Garage-V-Parrot/assets/images/user-icon.png"></a>
-                <p><?php echo $_SESSION["user_role"]; ?></p>
-            </div>
-            <?php } ?>
+                <form class="connect-infos-elements" method="post"><input class="deco" type="submit" name="deco" value="Déconnection"></form>
+                <div class="connect-infos-elements connect-icon-container">
+                    <a href="/Garage-V-Parrot/pages/dashboard-employes.php"><img class="connect-icon" src="/Garage-V-Parrot/assets/images/user-icon.png"></a>
+                    <p><?php echo $_SESSION["user_role"]; ?></p>
+                </div>
+        <?php } ?>
 
         <?php
         if (isset($_SESSION["user_role"]) && $_SESSION["user_role"] == "Employé") { ?>
-            <form method="post"><input class="deco" type="submit" name="deco" value="Déconnection"></form>
-            <div class="connect-icon-container">
-                <a href="/Garage-V-Parrot/pages/dashboard-employes.php"><img class="connect-icon" src="/Garage-V-Parrot/assets/images/user-icon.png"></a>
-                <p><?php echo $_SESSION["user_role"]; ?></p>
-            </div>
-            <?php } ?>
+                <form class="connect-infos-elements" method="post"><input class="deco" type="submit" name="deco" value="Déconnection"></form>
+                <div class="connect-infos-elements connect-icon-container">
+                    <a href="/Garage-V-Parrot/pages/dashboard-employes.php"><img class="connect-icon" src="/Garage-V-Parrot/assets/images/user-icon.png"></a>
+                    <p><?php echo $_SESSION["user_role"]; ?></p>
+                </div>
+        <?php } ?>
     </div>
 </header>
 
