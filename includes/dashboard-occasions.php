@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/dashboard-occasions.css">
+    <link rel="stylesheet" href="../assets/css/dashboard-admin.css">
     <title>occasions</title>
 </head>
 
@@ -107,7 +108,6 @@
 
             <!-- Script de soumission du formulaire -->
             <?php
-                $validation = "";
                 // Vérifie si le formulaire a été soumis
                 if (isset($_POST["submit_occasions"])) { 
 
@@ -149,9 +149,9 @@
                                 $stmt->bind_param("ssssss", $modele, $annee, $kilometrage, $prix, $image, $description);
                                 // Si insertion
                                 if ($stmt->execute()) {
-                                    $validation = "Le vehicule à été ajouté avec succès.";
+                                    ?> <span class="validation">Le vehicule à été ajouté avec succès.</span> <?php ;
                                 } else {
-                                    $validation = "Une erreur est survenue lors de l'ajout du service." . $stmt->error;
+                                    ?> <span class="error">Erreur</span> <?php $stmt->error;
                                 }
 
                                 // Ferme la connexion à la base de données
@@ -168,10 +168,6 @@
                 }
                 ?>
                 
-                
-        <div class="validation-message">
-            <?php echo $validation; ?>
-        </div>
         <form class="occasions-form" method="post" enctype="multipart/form-data">
             <h3>Ajouter un véhicule :</h3>
             <div class="occasions-form1">

@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="../assets/css/dashboard-admin.css">
-
 <?php
             $servername = "localhost";
             $username = "root";

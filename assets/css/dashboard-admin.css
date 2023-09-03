@@ -16,6 +16,7 @@ main {
 }
 
 .validation {
+    display: block !important;
     position: fixed;
     top: 109px;
     right: 5px;
@@ -28,6 +29,7 @@ main {
 }
 
 .error {
+    display: block !important;
     position: fixed;
     top: 109px;
     right: 5px;
