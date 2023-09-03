@@ -82,7 +82,7 @@
             </form>
         </div>
         <?php
-            $includeFile = "../config/script-horaires.php";
+            $includeFile = "../config/script-submit-horaires.php";
             if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
         ?>
 

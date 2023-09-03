@@ -24,7 +24,7 @@
     </main>
 
     <?php
-        $includeFile = "../config/script-connection.php";
+        $includeFile = "../config/script-submit-connect.php";
         if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
     ?>
 

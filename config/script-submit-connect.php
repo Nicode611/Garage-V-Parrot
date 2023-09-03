@@ -32,6 +32,12 @@ if (isset($_POST["submit_connect"])) {
             // Stockez des informations de l'utilisateur dans la session
             $_SESSION["user_id"] = $row["id"]; // Vous devez avoir un identifiant d'utilisateur unique dans votre table
             $_SESSION["user_role"] = $row["role"];
+            $_SESSION["user_prénom"] = $row["prénom"];
+            $_SESSION["user_nom"] = $row["nom"];
+            $_SESSION["user_email"] = $row["email"];
+            $_SESSION["user_mdp"] = $row["mdp"];
+            $_SESSION["user_telephone"] = $row["telephone"];
+            $_SESSION["user_code_employé"] = $row["code_employé"];
             // Vous pouvez maintenant utiliser $userType pour gérer les autorisations et les affichages spécifiques en fonction du type de compte.
             // Par exemple, vous pouvez utiliser des instructions conditionnelles pour afficher des fonctionnalités spécifiques en fonction du type de compte.
             
