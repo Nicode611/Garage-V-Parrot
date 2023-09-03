@@ -15,11 +15,11 @@
                 </div>
                 <div class="vehicules-imgs">
                     <!-- Script d'affichage du véhicule -->
-            <?php
-                include ("G:/Logiciels/XAMPP Serv/htdocs/Garage-V-Parrot/config/show-vehicules.php");
-            ?>        
-            </div>
-
+                    <?php
+                        $includeFile = "G:/Logiciels/XAMPP Serv/htdocs/Garage-V-Parrot/config/show-vehicules.php";
+                        if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
+                    ?>     
+                </div>
             </div>
             <div class="vehicule-card">
                 <img class="vehicule-img" src="/Garage-V-Parrot/assets/images/images-vehicules/<?php echo $image ?>" alt="">

@@ -9,9 +9,10 @@
 </head>
 <body>
     
-    <?php
-        require "../includes/header.html";
-    ?>
+<?php
+    $includeFile = "../includes/header.html";
+    if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
+?>
 
     <main>
         <h2>Créez votre compte</h2>

@@ -10,12 +10,7 @@
     
 <?php
     $includeFile = "../includes/header.html";
-
-    if (file_exists($includeFile)) {
-        include($includeFile);
-    } else {
-        echo "Le fichier $includeFile n'a pas été trouvé.";
-    }
+    if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
 ?>
 
     <main>

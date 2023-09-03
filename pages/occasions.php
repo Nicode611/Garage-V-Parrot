@@ -10,17 +10,20 @@
 <body>
     
 <?php
-    require "../includes/header.html";
+    $includeFile = "../includes/header.html";
+    if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
 ?>
 
 <?php
-    require "../includes/vehicules.php";
+    $includeFile = "../includes/vehicules.php";
+    if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
 ?>
 
 <?php
-    require "../includes/footer.php";
+    $includeFile = "../includes/footer.php";
+    if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
 ?>
 
-    <script src="../assets/js/script-selection-vehicule.js"></script>
+<script src="../assets/js/script-selection-vehicule.js"></script>
 </body>
 </html>

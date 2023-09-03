@@ -14,7 +14,10 @@
     </div>
     <div class="horaires-footer-container">
         <h1 class="footer-titles">Horaires</h1>
-        <?php include "horaires.php"; ?>
+        <?php
+            $includeFile = "horaires.php";
+            if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
+        ?>
     </div>
     <div class="infos-footer-container">
         <h1 class="footer-titles">Infos</h1>
