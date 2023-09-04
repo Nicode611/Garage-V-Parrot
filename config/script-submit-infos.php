@@ -31,6 +31,13 @@
                     // Exécution de la requête
                     if ($conn->query($sql) === TRUE) {
                         ?> <span class="validation">Infos modifiées</span> <?php
+
+                        $_SESSION["user_prénom"] = $prenom;
+                        $_SESSION["user_nom"] = $nom;
+                        $_SESSION["user_email"] = $email;
+                        $_SESSION["user_mdp"] = $hash_mdp;
+                        $_SESSION["user_telephone"] = $telephone;
+
                     } else {
                         ?> <span class="error">Erreur</span> <?php $conn->error;
                     }

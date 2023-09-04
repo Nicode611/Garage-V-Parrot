@@ -43,7 +43,7 @@
         if (isset($_SESSION["user_role"]) && $_SESSION["user_role"] == "Admin") { ?>
             <div class="connect-infos-container-mobile">
                 <div class="connect-icon-container">
-                    <a href="/Garage-V-Parrot/pages/dashboard-employes.php"><img class="connect-icon" src="/Garage-V-Parrot/assets/images/user-icon.png"></a>
+                    <a href="/Garage-V-Parrot/pages/dashboard-admin.php"><img class="connect-icon" src="/Garage-V-Parrot/assets/images/user-icon.png"></a>
                     <p><?php echo $_SESSION["user_role"]; ?></p>
                     <form method="post"><input class="deco" type="submit" name="deco" value="Déconnection"></form>
                 </div>
