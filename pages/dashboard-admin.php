@@ -38,6 +38,10 @@
                 $includeFile = "../includes/service.php";
                 if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
             ?>
+            <?php
+                $includeFile = "../config/script-submit-service.php";
+                if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
+            ?>
         </div>
 
 

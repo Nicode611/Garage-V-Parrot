@@ -1,5 +1,3 @@
-
-
         <div class="services-main">
             <div class="glow"></div>
             <h2 class="main-title">Nos services</h2>
@@ -110,91 +108,9 @@
 
                 <!-- Script de soumission du formulaire -->
                 <div class="service-form-container">
-                <?php if ($_SERVER['SCRIPT_NAME'] == '/Garage-V-Parrot/pages/dashboard-admin.php') { ?>
-
-                <?php
-                // Vérifie si le formulaire a été soumis
-                if (isset($_POST["submit_service"])) { 
-
-                    $db_host = "localhost";
-                    $db_user = "root";
-                    $db_pass = "";
-                    $db_name = "garage_v_parrot";
-                    $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
-
-                    if ($conn->connect_error) {
-                        die("La connexion à la base de données a échoué : " . $conn->connect_error);
-                    }
-    
-                    // Vérifie si un fichier a été téléchargé
-                    if(isset($_FILES["image"]) && $_FILES["image"]["error"] == 0) {
-                        $target_directory =  $_SERVER['DOCUMENT_ROOT'] . "/Garage-V-Parrot/assets/images/images-services/"; // Le répertoire de destination de l'image
-                        $target_file = $target_directory . basename($_FILES["image"]["name"]);
-                        $imageFileName = basename($_FILES["image"]["name"]);
-                        $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-                    
-                        // Vérifie si le fichier est une image
-                        $valid_extensions = array("jpg", "jpeg", "png", "gif");
-                        if(in_array($imageFileType, $valid_extensions)) {
-
-                            // Déplace l'image téléchargée vers le répertoire de destination
-                            if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-                                
-                                // Récupère les données du formulaire
-                                $image_path = $imageFileName;
-                                $nom = $_POST["titre"];
-                                $description = $_POST["texte"];
-
-                                // Prépare et exécute la requête SQL pour insérer les données
-                                $sql = "INSERT INTO services (image, nom, description) VALUES (?, ?, ?)";
-                                $stmt = $conn->prepare($sql);
-                                $stmt->bind_param("sss", $image_path, $nom, $description);
-                                // Si insertion
-                                if ($stmt->execute()) {
-                                    ?> <span class="validation">Le service a été ajouté avec succès.</span> <?php ;
-                                } else {
-                                    ?> <span class="error">Erreur</span> <?php $stmt->error;
-                                }
-
-                                // Ferme la connexion à la base de données
-                                $stmt->close();
-                                $conn->close();
-                                ?>
-
-                                <script>
-                                    var xhr = new XMLHttpRequest();
-                                    xhr.open("GET", "dashboard-admin.php", true);
-                                    xhr.onreadystatechange = function() {
-                                        if (xhr.readyState === 4 && xhr.status === 200) {
-                                            // La requête AJAX est terminée et la réponse est prête
-        
-                                            // Créez un élément div temporaire pour contenir la réponse
-                                            var tempDiv = document.createElement("div");
-                                            tempDiv.innerHTML = xhr.responseText;
-
-                                            // Trouvez le contenu de la div #services-section dans le div temporaire
-                                            var servicesContent = tempDiv.querySelector("#services-section");
-
-                                            // Trouvez la div #services-section dans le document
-                                            var servicesSection = document.querySelector("#services-section");
-
-                                            // Remplacez le contenu de la div #services-section avec le nouveau contenu
-                                            servicesSection.innerHTML = servicesContent.innerHTML;
-                                        }
-                                    };
-                                    xhr.send();
-                                </script>
-
-                            <?php
-                            } else {
-                                echo "Une erreur est survenue lors de l'upload de l'image.";
-                            }
-                        }
-                    }
-                }
-                ?>
                 
-                    <form class="service-form" action="" method="post" enctype="multipart/form-data">
+                
+                    <form class="service-form" action="../config/script-submit-service.php" method="post" enctype="multipart/form-data">
                         <h3>Ajouter un service :</h3>
                         <div class="service-form1">
                             <input type="file" name="image" id="service-image" accept="image/*" required>
@@ -204,8 +120,11 @@
                         <input class="service-submit" type="submit" name="submit_service" value="Valider">
                     </form>
                 </div>
-                <?php } ?>
+                
                 
             </div>
             </div>
 </html>
+
+
+
