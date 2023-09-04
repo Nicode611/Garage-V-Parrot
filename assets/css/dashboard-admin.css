@@ -20,7 +20,7 @@ main {
     position: fixed;
     top: 109px;
     right: 5px;
-    width: 150px;
+    width: auto;
     border: solid 1px #2b8004;
     border-radius: 5px;
     text-align: center;
@@ -33,7 +33,7 @@ main {
     position: fixed;
     top: 109px;
     right: 5px;
-    width: 50px;
+    width: auto;
     border: solid 1px #800404;
     border-radius: 5px;
     text-align: center;
