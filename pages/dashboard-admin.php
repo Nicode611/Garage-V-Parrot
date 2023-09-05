@@ -36,6 +36,12 @@
 
         <!-- Infos -->
         <div class="dashboard-infos">
+            <?php 
+                if (isset($_SESSION["success_message"])) {
+                echo $_SESSION["success_message"];
+                unset($_SESSION["success_message"]); // Pour supprimer le message après l'affichage 
+                }
+            ?>
             <?php
                 $includeFile = "../includes/infos.php";
                 if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }

@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
             $servername = "localhost";
             $username = "root";
             $password = "";
@@ -11,6 +13,16 @@
 
             // Traitement du formulaire lorsque l'utilisateur soumet les données
             if (isset($_POST["submit_infos"])) {
+
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "garage_v_parrot";
+                $conn = new mysqli($servername, $username, $password, $dbname);
+
+                if ($conn->connect_error) {
+                    die("La connexion à la base de données a échoué : " . $conn->connect_error);
+                }
                 // Récupération des valeurs du formulaire
                 $id = $_SESSION["user_id"];
                 $prenom = $_POST["prenom"];
@@ -37,16 +49,21 @@
                         $_SESSION["user_email"] = $email;
                         $_SESSION["user_mdp"] = $hash_mdp;
                         $_SESSION["user_telephone"] = $telephone;
+                        
+                        $_SESSION["success_message"] = "<p class='validation'>Le formulaire a été soumis avec succès.</p>";
 
+                        $conn->close();
+                        header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
+                        exit();
                     } else {
                         ?> <span class="error">Erreur</span> <?php $conn->error;
                     }
 
                     } else {
-                        ?> <span class="error">Les MDP ne correspondent pas</span> <?php
+                        ?> <span class="error">Les MDP ne correspondent pas</span> <?php $conn->error;
                     }
             }
 
             // Fermeture de la connexion à la base de données
-            $conn->close();
+            
         ?>

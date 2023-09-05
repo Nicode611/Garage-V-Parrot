@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="../assets/css/infos.css">
 
-<form class="infos-form" method="post">
+<form class="infos-form" action="../scripts/submit/submit-infos.php" method="post">
     <img class="user-icon" src="/Garage-V-Parrot/assets/images/user-icon.png"><br>
     <label for="prenom">Prénom :</label>
     <input class="infos-fields" type="text" name="prenom" id="prenom" value="<?php echo $_SESSION["user_prénom"]; ?>">
@@ -15,10 +15,10 @@
     <input class="infos-fields" type="email" name="email" id="email" value="<?php echo $_SESSION["user_email"]; ?>">
     <br>
     <label for="password">Mot de passe :</label>
-    <input class="infos-fields" type="password" name="password" id="password">
+    <input class="infos-fields" type="password" name="password" id="password" required>
     <br>
     <label for="confirm_password">Confirmation du mot de passe :</label>
-    <input class="infos-fields" type="password" name="confirm_password" id="confirm_password">
+    <input class="infos-fields" type="password" name="confirm_password" id="confirm_password" required>
     <br>
     <input class="infos-submit" type="submit" name="submit_infos" value="Modifier les informations">
 </form>
