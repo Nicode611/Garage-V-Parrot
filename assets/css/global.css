@@ -9,6 +9,9 @@
     text-align: center;
     overflow: hidden;
     background-color:#24242B;
+    opacity: 1;
+    transition: opacity 2s ease;
+    animation: fadeOut 2s ease 2s forwards;
     z-index: 999;
 }
 
@@ -23,11 +26,28 @@
     text-align: center;
     overflow: hidden;
     background-color:#24242B;
+    opacity: 1;
+    transition: opacity 2s ease;
+    animation: fadeOut 2s ease 2s forwards;
     z-index: 999;
 }
 
 .hide {
     display: none;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 0;
+    }
+
+    100% {
+        display: none;
+    }
 }
 
 

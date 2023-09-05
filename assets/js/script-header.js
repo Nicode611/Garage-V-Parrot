@@ -58,19 +58,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-setTimeoutValidation(function() {
-    var validation = document.querySelector("#validation");
-    if (validation) {
-        validation.classList.add = "hide";
-
-    }
-}, 1000);
-
-setTimeoutError(function() {
-    var error = document.querySelector("#error");
-    if (error) {
-        error.style.display = "none";
-
-    }
-}, 5000);
