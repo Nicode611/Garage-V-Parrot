@@ -34,9 +34,54 @@ $db_host = "localhost";
                 </div>
             </div> <?php
         }
-        
+
         $conn->close();
     } else {
         echo "Pas de messages";
     }
 ?>
+
+
+<script> // Script de sélection de la croix de supression (en AJAX)
+    document.querySelector(".dashboard-contacts").addEventListener("click", function(event) {
+    // Vérifie si la target de l'event est un bouton .service-delete contenu dans #services-section
+    if (event.target.classList.contains("delete")) {
+        var id = event.target.nextElementSibling.textContent;
+        var contact = event.target.closest(".dashboard-contact");
+
+        // Demande confirmation à l'utilisateur
+        if (confirm("Êtes-vous sûr de vouloir supprimer cet élément ?")) {
+            // Effectue une requête AJAX pour supprimer l'élément
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "/Garage-V-Parrot/scripts/affichage/affichage-contacts.php?action=delete-contact&id=" + id, true);
+            xhr.send();
+
+            contact.remove();
+        }
+    }
+});
+</script>
+
+<?php // Script de supression employes
+    // Vérifie si la requete a été efectuée
+    if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET["action"]) && $_GET["action"] === "delete-contact" && isset($_GET["id"])) {
+        
+        $db_host = "localhost";
+        $db_user = "root";
+        $db_pass = "";
+        $db_name = "garage_v_parrot";
+        $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
+
+        if ($conn->connect_error) {
+            die("La connexion à la base de données a échoué : " . $conn->connect_error);
+        }
+
+        // Récupére l'ID de la ligne de l'élément à supprimer depuis la requête GET
+        $id = $_GET["id"];
+
+        $sql = "DELETE FROM contacts WHERE id = $id";
+        if ($conn->query($sql) === TRUE) {
+            echo "requete effectuée";
+            $conn->close();
+        }
+    }
