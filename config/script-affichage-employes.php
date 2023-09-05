@@ -75,7 +75,7 @@
 
 <?php // Script de supression employes
     // Vérifie si la requete a été efectuée
-    if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET["action"]) && $_GET["action"] === "delete" && isset($_GET["id"])) {
+    if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET["action"]) && $_GET["action"] === "delete-employe" && isset($_GET["id"])) {
         
         $db_host = "localhost";
         $db_user = "root";
@@ -91,8 +91,10 @@
         $id = $_GET["id"];
 
         $sql = "DELETE FROM users WHERE id = $id";
-        $conn->query($sql);
-            
-        $conn->close();
+        if ($conn->query($sql) === TRUE) {
+            echo "requete effectuée";
+            $conn->close();
+        }
     }
+
 ?>
