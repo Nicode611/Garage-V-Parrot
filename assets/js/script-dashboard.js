@@ -11,7 +11,7 @@ function setActive(event) {
     let sectionEmployes = document.querySelector('.dashboard-employes');
     let sectionInfos = document.querySelector('.dashboard-infos');
     let sectionAvis = document.querySelector('.dashboard-avis');
-    let sectionContact = document.querySelector('.dashboard-contact');
+    let sectionContact = document.querySelector('.dashboard-contacts');
 
     tabs.forEach(function(tab) {
         tab.classList.remove("sidebar-active");
@@ -35,6 +35,13 @@ function setActive(event) {
     if (sectionInfos) {
         sectionInfos.classList.add("hide");
     }
+    if (sectionAvis) {
+        sectionAvis.classList.add("hide");
+    }
+    if (sectionContact) {
+        sectionContact.classList.add("hide");
+    }
+
 
     // Affiche les sections
     if (event.currentTarget.classList.contains("sidebar-services") && sectionServices) {
@@ -54,8 +61,13 @@ function setActive(event) {
     }
 
     if (event.currentTarget.classList.contains("sidebar-infos") && sectionInfos) {
-        console.log("La fonction setActive a été appelée.");
         sectionInfos.classList.remove("hide");
+    }
+    if (event.currentTarget.classList.contains("sidebar-avis") && sectionAvis) {
+        sectionAvis.classList.remove("hide");
+    }
+    if (event.currentTarget.classList.contains("sidebar-contact") && sectionContact) {
+        sectionContact.classList.remove("hide");
     }
 }
 
