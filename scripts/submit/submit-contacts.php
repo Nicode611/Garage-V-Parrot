@@ -1,5 +1,5 @@
 <?php session_start();
-            if (isset($_POST["submit_contactr"])) {
+            if (isset($_POST["submit_contact"])) {
 
                 $servername = "localhost";
                 $username = "root";
@@ -11,7 +11,7 @@
                     die("La connexion à la base de données a échoué : " . $conn->connect_error);
                 }
 
-                $date = date("Y-m-d H:i:s");
+                $date = date("d-m-Y H:i");
                 $nom = $_POST["nom"];
                 $telephone = $_POST["telephone"];
                 $email = $_POST["email"];
@@ -35,10 +35,5 @@
                     exit();
                 }
 
-            } else {
-                $_SESSION["error"] = "<p class='error'>Le formulaire n'a pas été soumis avec succès.</p>";
-                header("Location: /Garage-V-Parrot/pages/contact.php");
-                exit();
             }
-            
         ?>

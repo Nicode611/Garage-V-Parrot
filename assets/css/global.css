@@ -24,6 +24,10 @@
     background-color:#24242B;
 }
 
+.hide {
+    display: none;
+}
+
 
 @media screen and (max-width: 1000px) {
     .validation, .error {
