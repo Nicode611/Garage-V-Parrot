@@ -43,14 +43,12 @@ if (isset($_POST["submit_service"])) {
                 }
 
                 // Ferme la connexion à la base de données
+                
                 $stmt->close();
                 $conn->close();
-                ?>
-                <?php
-                header('Location: ../pages/dashboard-admin.php');
+                header('Location: /Garage-V-Parrot/pages/dashboard-admin.php');
                 exit;
-                ?>
-            <?php
+
             } else {
                 echo "Une erreur est survenue lors de l'upload de l'image.";
             }

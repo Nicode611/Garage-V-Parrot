@@ -35,7 +35,7 @@
 
                 $conn->close();
 
-                header('Location: ../pages/dashboard-admin.php');
+                header('Location: /Garage-V-Parrot/pages/dashboard-admin.php');
                 exit;
                 
             }
