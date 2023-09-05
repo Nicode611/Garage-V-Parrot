@@ -17,7 +17,7 @@
 
     <main>
         <h2>Connectez vous</h2>
-        <form class="connect-form" method="post">
+        <form class="connect-form" action="../scripts/submit/submit-connect.php" method="post">
             <input class="connect-fields" placeholder="Email" type="email" name="email" id="connectEmail">
             <input class="connect-fields" placeholder="Mot de passe" type="password" name="password" id="connectPassword">
             <input class="connect-submit" type="submit" name="submit_connect" value="Se connecter">

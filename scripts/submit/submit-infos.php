@@ -45,7 +45,7 @@
                     }
 
                     } else {
-                        $_SESSION["error_message"] = "<p class='error'>Les mdps ne corrspondent pas.</p>";
+                        $_SESSION["error"] = "<p class='error'>Les mdps ne corrspondent pas.</p>";
                         $conn->close();
                         header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
                         exit();

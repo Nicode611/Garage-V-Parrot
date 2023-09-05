@@ -31,7 +31,7 @@ if (isset($_POST["submit_create"])) {
             ?> <span class="validation">Compte crée, connectez vous</span> <?php
 
             sleep(3);
-            header("Location: ../pages/connection.php");
+            header("Location: /Garage-V-Parrot/pages/connection.php");
             exit();
 
         } else {

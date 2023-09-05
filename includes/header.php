@@ -12,7 +12,7 @@
 ?>
 
 <div id="validation"><?php if (isset($_SESSION["success"])) { echo $_SESSION["success"]; unset($_SESSION["success"]); } ?></div>
-<div id="error"><?php if (isset($_SESSION["error"])) echo $_SESSION["error"]; unset($_SESSION["error"]); ?></div>
+<div id="error"><?php if (isset($_SESSION["error"])) { echo $_SESSION["error"]; unset($_SESSION["error"]); } ?></div>
 
 <?php
     $includeFile = "G:/Logiciels/XAMPP Serv/htdocs/Garage-V-Parrot/scripts/disconnect.php";

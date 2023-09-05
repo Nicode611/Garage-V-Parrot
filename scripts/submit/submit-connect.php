@@ -23,8 +23,7 @@ if (isset($_POST["submit_connect"])) {
         $row = $result->fetch_assoc();
         $hashMdp = $row["mdp"];
 
-        if ($mdp = $hashMdp) {
-            echo "Authentification réussie ! Bienvenue, " . $row["prénom"];
+        if (password_verify($mdp, $hashMdp)) {
 
             session_destroy();
             session_start();
@@ -41,7 +40,7 @@ if (isset($_POST["submit_connect"])) {
             
             $_SESSION["success"] = "<p class='validation'>Connecté !</p>";
             $conn->close();
-            header("Location: ../index.php");
+            header("Location: /Garage-V-Parrot/index.php");
             exit();
             
         } else {

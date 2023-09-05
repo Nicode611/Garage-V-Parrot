@@ -59,11 +59,17 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-setTimeout(function() {
+setTimeoutValidation(function() {
     var validation = document.querySelector("#validation");
-    var error = document.querySelector("#error");
-    if (validation || error) {
+    if (validation) {
         validation.style.display = "none";
+
+    }
+}, 5000);
+
+setTimeoutError(function() {
+    var error = document.querySelector("#error");
+    if (error) {
         error.style.display = "none";
 
     }
