@@ -54,6 +54,10 @@ h2 {
     margin-bottom: 40px;
 }
 
+#createCode {
+    width: 50px;
+}
+
 .create-submit {
     height: 38px;
     background-color: #09A7A0;

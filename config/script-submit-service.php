@@ -31,7 +31,7 @@ if (isset($_POST["submit_service"])) {
                 $nom = $_POST["titre"];
                 $description = $_POST["texte"];
 
-                // Prépare et exécute la requête SQL pour insérer les données
+                // Prépare et exécute la requête SQL pour insérer les données (les marqueurs de position servent a éviter les injections SQL)
                 $sql = "INSERT INTO services (image, nom, description) VALUES (?, ?, ?)";
                 $stmt = $conn->prepare($sql);
                 $stmt->bind_param("sss", $image_path, $nom, $description);

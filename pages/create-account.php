@@ -25,6 +25,7 @@
             <input class="create-fields" type="email" placeholder="Email" id="createEmail" name="email" required><br><br>
             <input class="create-fields" type="password" placeholder="Mot de passe" id="createMdp" name="motdepasse" required><br><br>
             <input class="create-fields" type="password" placeholder="Confirmez le mot de passe" id="createConfirmationMdp" name="confirmationmdp" required><br><br>
+            <input class="create-fields" type="text" placeholder="Code" id="createCode" name="code" required><br><br>
 
             <input class="create-submit" type="submit" value="Créer le compte">
         </form>

@@ -10,7 +10,7 @@
                 $db_pass = "";
                 $db_name = "garage_v_parrot";
                 $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
-                // Vérification de la connection
+
                 if ($conn->connect_error) {
                     die("La connexion à la base de données a échoué : " . $conn->connect_error);
                 }
@@ -65,7 +65,6 @@
                     }
                 }
             });
-
             </script>
 
         <?php
