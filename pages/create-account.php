@@ -17,7 +17,7 @@
 
     <main>
         <h2>Créez votre compte</h2>
-        <form class="create-form" action="../config/script-submit-create-account.php" method="POST">
+        <form class="create-form" action="../scripts/submit/submit-create-account.php" method="POST">
             <div class="create-form1">
                 <input class="create-fields" type="text" placeholder="Nom" id="createNom" name="nom" required>
                 <input class="create-fields" type="text" placeholder="Prénom" id="createPrenom" name="prenom" required>
@@ -36,6 +36,6 @@
 </html>
 
 <?php
-    $includeFile = "../config/script-submit-create-account.php";
+    $includeFile = "../scripts/submit/submit-create-account.php";
     if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
 ?>

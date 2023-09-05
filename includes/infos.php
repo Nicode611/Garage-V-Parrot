@@ -24,6 +24,6 @@
 </form>
 
 <?php
-    $includeFile = "../config/script-submit-infos.php";
+    $includeFile = "../scripts/submit/submit-infos.php";
     if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
 ?>

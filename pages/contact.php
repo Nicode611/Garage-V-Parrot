@@ -18,7 +18,7 @@
     <h2>Contactez nous</h2>
     <div class="form-container">
         <div class="glow"></div>
-        <form class="contact-form" action="traitement.php" method="POST">
+        <form class="contact-form" action="../scripts/submit/submit-contacts.php" method="POST">
             <div class="first-line">
                 <input type="text" placeholder="Nom" id="contactNom" name="nom" required>
                 <input type="tel" placeholder="Téléphone" id="contactTelephone" name="telephone">
@@ -37,3 +37,8 @@
 
 </body>
 </html>
+
+<?php
+    $includeFile = "../script/submit/submit-contacts.php";
+    if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
+?>

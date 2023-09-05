@@ -12,7 +12,7 @@
 ?>
 
 <?php
-    $includeFile = "G:/Logiciels/XAMPP Serv/htdocs/Garage-V-Parrot/config/disconnect.php";
+    $includeFile = "G:/Logiciels/XAMPP Serv/htdocs/Garage-V-Parrot/scripts/disconnect.php";
     if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
 ?>
 

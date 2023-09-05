@@ -107,9 +107,7 @@
 
                 <!-- Script de soumission du formulaire -->
                 <div class="service-form-container">
-                
-                
-                    <form class="service-form" action="../config/script-submit-service.php" method="post" enctype="multipart/form-data">
+                    <form class="service-form" action="../scripts/submit/submit-service.php" method="post" enctype="multipart/form-data">
                         <h3>Ajouter un service :</h3>
                         <div class="service-form1">
                             <input type="file" name="image" id="service-image" accept="image/*" required>
@@ -119,8 +117,6 @@
                         <input class="service-submit" type="submit" name="submit_service" value="Valider">
                     </form>
                 </div>
-                
-                
             </div>
             </div>
 </html>
