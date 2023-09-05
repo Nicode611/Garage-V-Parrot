@@ -42,6 +42,6 @@
 </html>
 
 <?php
-    $includeFile = "../script/submit/submit-contacts.php";
+    $includeFile = "../scripts/submit/submit-contacts.php";
     if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
 ?>

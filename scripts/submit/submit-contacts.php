@@ -1,4 +1,4 @@
-<?php session_start();
+<?php
             if (isset($_POST["submit_contact"])) {
 
                 $servername = "localhost";
@@ -27,7 +27,6 @@
                     $_SESSION["success"] = "<p class='validation'>Votre message a été envoyé.</p>";
                     $conn->close();
                     header("Location: /Garage-V-Parrot/pages/contact.php");
-                    exit();
                 } else {
                     $_SESSION["error"] = "<p class='error'>Votre message n'a pas été envoyé.</p>";
                     $conn->close();

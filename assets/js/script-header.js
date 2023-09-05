@@ -62,10 +62,10 @@ document.addEventListener('DOMContentLoaded', function() {
 setTimeoutValidation(function() {
     var validation = document.querySelector("#validation");
     if (validation) {
-        validation.style.display = "none";
+        validation.classList.add = "hide";
 
     }
-}, 5000);
+}, 1000);
 
 setTimeoutError(function() {
     var error = document.querySelector("#error");
