@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/dashboard-employes.css">
     <link rel="stylesheet" href="../assets/css/dashboard-admin.css">
+    <link rel="stylesheet" href="../assets/css/global.css">
     <title>Garage V. Parrot</title>
 </head>
 <body>
@@ -33,6 +34,15 @@
 
         <!-- Partie infos -->
         <div class="dashboard-infos">
+        <?php
+                if (isset($_SESSION["success"])) {
+                    echo $_SESSION["success"];
+                    unset($_SESSION["success"]);
+                } else { if (isset($_SESSION["error"]))
+                    echo $_SESSION["error"];
+                    unset($_SESSION["error"]);
+                }
+            ?>
             <?php
                 $includeFile = "../includes/infos.php";
                 if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }

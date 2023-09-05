@@ -1,0 +1,44 @@
+<?php session_start();
+            if (isset($_POST["submit_contactr"])) {
+
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "garage_v_parrot";
+                $conn = new mysqli($servername, $username, $password, $dbname);
+            
+                if ($conn->connect_error) {
+                    die("La connexion à la base de données a échoué : " . $conn->connect_error);
+                }
+
+                $date = date("Y-m-d H:i:s");
+                $nom = $_POST["nom"];
+                $telephone = $_POST["telephone"];
+                $email = $_POST["email"];
+                $message = $_POST["message"];
+
+                $sql = "INSERT INTO contacts (date, message, nom, telephone, email) VALUES (?, ?, ?, ?, ?)";
+                $stmt = $conn->prepare($sql);
+                $stmt->bind_param("sssss", $date, $message, $nom, $telephone, $email);
+
+                    
+                if ($stmt->execute()) {
+
+                    $_SESSION["success"] = "<p class='validation'>Le formulaire a été soumis avec succès.</p>";
+                    $conn->close();
+                    header("Location: /Garage-V-Parrot/pages/contact.php");
+                    exit();
+                } else {
+                    $_SESSION["error"] = "<p class='error'>Le formulaire n'a pas été soumis avec succès.</p>";
+                    $conn->close();
+                    header("Location: /Garage-V-Parrot/pages/contact.php");
+                    exit();
+                }
+
+            } else {
+                $_SESSION["error"] = "<p class='error'>Le formulaire n'a pas été soumis avec succès.</p>";
+                header("Location: /Garage-V-Parrot/pages/contact.php");
+                exit();
+            }
+            
+        ?>

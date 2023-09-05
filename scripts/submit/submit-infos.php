@@ -1,17 +1,5 @@
 <?php
     session_start();
-
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "garage_v_parrot";
-            $conn = new mysqli($servername, $username, $password, $dbname);
-
-            if ($conn->connect_error) {
-                die("La connexion à la base de données a échoué : " . $conn->connect_error);
-            }
-
-            // Traitement du formulaire lorsque l'utilisateur soumet les données
             if (isset($_POST["submit_infos"])) {
 
                 $servername = "localhost";
@@ -42,7 +30,6 @@
 
                     // Exécution de la requête
                     if ($conn->query($sql) === TRUE) {
-                        ?> <span class="validation">Infos modifiées</span> <?php
 
                         $_SESSION["user_prénom"] = $prenom;
                         $_SESSION["user_nom"] = $nom;
@@ -50,20 +37,24 @@
                         $_SESSION["user_mdp"] = $hash_mdp;
                         $_SESSION["user_telephone"] = $telephone;
                         
-                        $_SESSION["success_message"] = "<p class='validation'>Le formulaire a été soumis avec succès.</p>";
-
+                        $_SESSION["success"] = "<p class='validation'>Le formulaire a été soumis avec succès.</p>";
                         $conn->close();
                         header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
                         exit();
                     } else {
-                        ?> <span class="error">Erreur</span> <?php $conn->error;
+                        $_SESSION["error"] = "<p class='error'>Le formulaire n'a pas été soumis avec succès.</p>";
+                        $conn->close();
+                        header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
+                        exit();
                     }
 
                     } else {
-                        ?> <span class="error">Les MDP ne correspondent pas</span> <?php $conn->error;
+                        $_SESSION["error_message"] = "<p class='error'>Le formulaire n'a pas été soumis avec succès.</p>";
+                        $conn->close();
+                        header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
+                        exit();
                     }
             }
-
-            // Fermeture de la connexion à la base de données
             
         ?>
+
