@@ -1,0 +1,32 @@
+.validation {
+    display: block !important;
+    position: fixed;
+    top: 109px;
+    right: 5px;
+    width: auto;
+    border: solid 1px #2b8004;
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+    background-color:#24242B;
+}
+
+.error {
+    display: block !important;
+    position: fixed;
+    top: 109px;
+    right: 5px;
+    width: auto;
+    border: solid 1px #800404;
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+    background-color:#24242B;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .validation, .error {
+        top: 151px;
+        }
+}

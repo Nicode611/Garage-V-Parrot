@@ -53,4 +53,6 @@ if (isset($_POST["submit_connect"])) {
         echo "Aucun utilisateur trouvé avec cet email.";
     }
 }
+
+$conn->close();
 ?>
