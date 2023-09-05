@@ -9,6 +9,7 @@
     text-align: center;
     overflow: hidden;
     background-color:#24242B;
+    z-index: 999;
 }
 
 .error {
@@ -22,6 +23,7 @@
     text-align: center;
     overflow: hidden;
     background-color:#24242B;
+    z-index: 999;
 }
 
 .hide {

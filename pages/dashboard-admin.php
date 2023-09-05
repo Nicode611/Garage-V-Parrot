@@ -38,15 +38,6 @@
         <!-- Infos -->
         <div class="dashboard-infos">
             <?php
-                if (isset($_SESSION["success"])) {
-                    echo $_SESSION["success"];
-                    unset($_SESSION["success"]);
-                } else { if (isset($_SESSION["error"]))
-                    echo $_SESSION["error"];
-                    unset($_SESSION["error"]);
-                }
-            ?>
-            <?php
                 $includeFile = "../includes/infos.php";
                 if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
             ?>

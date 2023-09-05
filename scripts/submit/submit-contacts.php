@@ -24,12 +24,12 @@
                     
                 if ($stmt->execute()) {
 
-                    $_SESSION["success"] = "<p class='validation'>Le formulaire a été soumis avec succès.</p>";
+                    $_SESSION["success"] = "<p class='validation'>Votre message a été envoyé.</p>";
                     $conn->close();
                     header("Location: /Garage-V-Parrot/pages/contact.php");
                     exit();
                 } else {
-                    $_SESSION["error"] = "<p class='error'>Le formulaire n'a pas été soumis avec succès.</p>";
+                    $_SESSION["error"] = "<p class='error'>Votre message n'a pas été envoyé.</p>";
                     $conn->close();
                     header("Location: /Garage-V-Parrot/pages/contact.php");
                     exit();

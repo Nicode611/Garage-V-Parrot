@@ -57,3 +57,14 @@ document.addEventListener('DOMContentLoaded', function() {
         overlay.classList.remove('active');
     });
 });
+
+
+setTimeout(function() {
+    var validation = document.querySelector("#validation");
+    var error = document.querySelector("#error");
+    if (validation || error) {
+        validation.style.display = "none";
+        error.style.display = "none";
+
+    }
+}, 5000);
