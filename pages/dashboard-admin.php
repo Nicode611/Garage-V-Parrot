@@ -22,18 +22,29 @@
             </div>
             <nav class="sidebar-nav">
                 <ul class="sidebar-ul">
-                    <li class="sidebar-li sidebar-services sidebar-active">Services</li>
+                    <li class="sidebar-li sidebar-infos sidebar-active">Infos personelles</li>
+                    <li class="sidebar-li sidebar-services ">Services</li>
                     <li class="sidebar-li sidebar-occasions">Occasions</li>
                     <li class="sidebar-li sidebar-horaires">Horaires</li>
                     <li class="sidebar-li sidebar-employes">Employés</li>
+                    <li class="sidebar-li sidebar-avis">Avis</li>
+                    <li class="sidebar-li sidebar-contact">Contact</li>
                 </ul>
             </nav>
             <div class="dashboard-overlay"></div>
         </div>
 
+        <!-- Infos -->
+        <div class="dashboard-infos">
+            <?php
+                $includeFile = "../includes/infos.php";
+                if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
+            ?>
+        </div>
+
 
         <!-- Services -->
-        <div class="dashboard-services">
+        <div class="dashboard-services hide">
             <?php
                 $includeFile = "../includes/service.php";
                 if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }

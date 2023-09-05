@@ -10,6 +10,8 @@ function setActive(event) {
     let sectionHoraires = document.querySelector('.dashboard-horaires');
     let sectionEmployes = document.querySelector('.dashboard-employes');
     let sectionInfos = document.querySelector('.dashboard-infos');
+    let sectionAvis = document.querySelector('.dashboard-avis');
+    let sectionContact = document.querySelector('.dashboard-contact');
 
     tabs.forEach(function(tab) {
         tab.classList.remove("sidebar-active");
@@ -44,7 +46,6 @@ function setActive(event) {
     }
 
     if (event.currentTarget.classList.contains("sidebar-horaires") && sectionHoraires) {
-        console.log("La fonction setActive a été appelée.");
         sectionHoraires.classList.remove("hide");
     }
 
