@@ -72,6 +72,52 @@ body {
     overflow: hidden;
 }
 
+#prevBtn {
+    width: 10px;
+    height: 20px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    z-index: 3;
+}
+
+#nextBtn {
+    width: 10px;
+    height: 20px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    z-index: 3;
+}
+
+.avis-caroussel {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    width: 100%;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    position: relative;
+  }
+
+  .avis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 200px;
+    height: 150px;
+    background-color: #09A7A0;
+    color: black;
+    text-align: center;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+    transition: transform 0.3s ease; /* Ajoutez une transition de 0.3 seconde sur la transformation */
+
+} 
+
 .shadow-left {
     position: absolute;
     top: 0px;
@@ -100,27 +146,6 @@ body {
 
 .section-avis h2, .section-avis p {
     margin: 0px;
-}
-
-.avis-caroussel {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 50px;
-    width: 100%;
-}
-
-.avis {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 200px;
-    height: 150px;
-    background-color: #09A7A0;
-    color: black;
-    text-align: center;
-    border-radius: 15px;
-    padding: 10px;
-    margin: 10px;
 }
 
 .avis-text {

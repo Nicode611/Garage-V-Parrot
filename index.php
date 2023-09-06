@@ -39,6 +39,7 @@
     <div class="dividing-bar"></div>
     <!-- Avis -->
     <div class="avis-container">
+        <button id="prevBtn"></button>
         <div class="shadow-left"></div>
         <div class="section-avis">
             <h2>Avis</h2>
@@ -50,15 +51,20 @@
                 </div>
                 <div class="avis">
                     <p class="avis-text">Super garage ils ont bien réparé ma voiture ! C’était pas gagné </p>
-                    <p class="avis-name">Monique L.</p>
+                    <p class="avis-name">Thomas L.</p>
                 </div>
                 <div class="avis">
                     <p class="avis-text">Super garage ils ont bien réparé ma voiture ! C’était pas gagné </p>
-                    <p class="avis-name">Monique L.</p>
+                    <p class="avis-name">Mathieu L.</p>
+                </div>
+                <div class="avis">
+                    <p class="avis-text">Super garage ils ont bien réparé ma voiture ! C’était pas gagné </p>
+                    <p class="avis-name">Mathieu L.</p>
                 </div>
             </div>
         </div>
         <div class="shadow-right"></div>
+        <button id="nextBtn"></button>
     </div>
 </main>
 
@@ -68,5 +74,6 @@
 ?>
 
 <script src="assets/js/script-selection-vehicule.js"></script>
+<script src="assets/js/script-carousel.js"></script>
 </body>
 </html>
