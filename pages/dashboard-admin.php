@@ -23,13 +23,13 @@
             </div>
             <nav class="sidebar-nav">
                 <ul class="sidebar-ul">
-                    <li class="sidebar-li sidebar-infos sidebar-active">Infos personelles</li>
-                    <li class="sidebar-li sidebar-services ">Services</li>
-                    <li class="sidebar-li sidebar-occasions">Occasions</li>
-                    <li class="sidebar-li sidebar-horaires">Horaires</li>
-                    <li class="sidebar-li sidebar-employes">Employés</li>
-                    <li class="sidebar-li sidebar-avis">Avis</li>
-                    <li class="sidebar-li sidebar-contact">Contact</li>
+                    <li class="sidebar-li sidebar-infos sidebar-active" id="sidebar-element">Infos personelles</li>
+                    <li class="sidebar-li sidebar-services" id="sidebar-element">Services</li>
+                    <li class="sidebar-li sidebar-occasions" id="sidebar-element">Occasions</li>
+                    <li class="sidebar-li sidebar-horaires" id="sidebar-element">Horaires</li>
+                    <li class="sidebar-li sidebar-employes" id="sidebar-element">Employés</li>
+                    <li class="sidebar-li sidebar-avis" id="sidebar-element">Avis</li>
+                    <li class="sidebar-li sidebar-contact" id="sidebar-element">Contact</li>
                 </ul>
             </nav>
             <div class="dashboard-overlay"></div>

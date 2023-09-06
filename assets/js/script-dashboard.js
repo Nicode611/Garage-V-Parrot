@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', function() {
+    
+
+
 let tabs = document.querySelectorAll(".sidebar-li");
 
 tabs.forEach(function(tab) {
@@ -16,8 +20,25 @@ function setActive(event) {
     tabs.forEach(function(tab) {
         tab.classList.remove("sidebar-active");
     });
-
     event.currentTarget.classList.add("sidebar-active");
+
+    
+    // localStorage.setItem('activeTab', event.currentTarget.id);
+    // const activeTabId = localStorage.getItem('activeTab');
+
+    // if (activeTabId) {
+    //     console.log(activeTab);
+    //     const activeTab = document.getElementById(activeTabId);
+    //     if (activeTab) {
+    //         activeTab.classList.add('sidebar-active');
+    //         tabs.forEach(function(tab) {
+    //             tab.classList.remove("sidebar-active");
+    //         });
+    //         event.currentTarget.classList.add("sidebar-active");
+    //     }
+    // }
+
+        
 
     // Vérifie si les sections existent puis les cachent
     if (sectionServices) {
@@ -69,7 +90,7 @@ function setActive(event) {
     if (event.currentTarget.classList.contains("sidebar-contact") && sectionContact) {
         sectionContact.classList.remove("hide");
     }
-}
+}});
 
 
 
