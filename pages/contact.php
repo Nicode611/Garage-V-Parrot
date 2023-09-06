@@ -24,7 +24,7 @@
         <form class="contact-form" action="../scripts/submit/submit-contacts.php" method="POST">
             <div class="first-line">
                 <input type="text" placeholder="Nom" id="contactNom" name="nom" required>
-                <input type="tel" placeholder="Téléphone" id="contactTelephone" name="telephone">
+                <input type="tel" placeholder="Téléphone" id="contactTelephone" name="telephone" pattern="[0-9]{10}" required >
             </div>
             <input type="email" placeholder="Email" id="contactEmail" name="email" required>
             <textarea id="contactMessage" placeholder="Message" name="message" rows="4" cols="50" required></textarea>

@@ -11,6 +11,7 @@
                     die("La connexion à la base de données a échoué : " . $conn->connect_error);
                 }
 
+                session_start();
                 $date = date("d-m-Y H:i");
                 $nom = $_POST["nom"];
                 $telephone = $_POST["telephone"];
@@ -27,6 +28,7 @@
                     $_SESSION["success"] = "<p class='validation'>Votre message a été envoyé.</p>";
                     $conn->close();
                     header("Location: /Garage-V-Parrot/pages/contact.php");
+                    exit();
                 } else {
                     $_SESSION["error"] = "<p class='error'>Votre message n'a pas été envoyé.</p>";
                     $conn->close();
