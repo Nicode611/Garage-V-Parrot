@@ -2,6 +2,7 @@
 // Vérifie si le formulaire a été soumis
 if (isset($_POST["submit_service"])) { 
 
+    session_start();
     $db_host = "localhost";
     $db_user = "root";
     $db_pass = "";
