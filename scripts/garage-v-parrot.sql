@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : ven. 01 sep. 2023 à 23:29
+-- Généré le : mer. 06 sep. 2023 à 20:35
 -- Version du serveur : 10.4.28-MariaDB
 -- Version de PHP : 8.2.4
 
@@ -43,19 +43,50 @@ INSERT INTO `avis` (`id`, `avis`, `nom`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `contacts`
+--
+
+CREATE TABLE `contacts` (
+  `id` int(11) NOT NULL,
+  `date` varchar(20) NOT NULL,
+  `message` text NOT NULL,
+  `nom` varchar(50) NOT NULL,
+  `telephone` varchar(10) NOT NULL,
+  `email` varchar(125) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `contacts`
+--
+
+INSERT INTO `contacts` (`id`, `date`, `message`, `nom`, `telephone`, `email`) VALUES
+(3, '05-09-2023 20:09', 'dsfqsdfqsgddsgdsqg', 'sdqfdsqfsd', '0627201444', 'nico-du-64@outlook.fr'),
+(5, '06-09-2023 00:03', 'dsgsqgdgqsgdsgsdqg', 'nicoooo', '0627201444', 'nicolas.guigay.ng@gmail.com'),
+(9, '06-09-2023 19:38', 'reyzzzzzzzzzzzzzz', 'guigay nicolas', '0627201444', 'nicolas.guigay.ng@gmail.com'),
+(10, '06-09-2023 19:40', 'dfsfqd', 'Sarrance', '0627201444', 'nico-du-64@outlook.fr');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `horaires`
 --
 
 CREATE TABLE `horaires` (
   `id` int(11) NOT NULL,
-  `lundi` varchar(50) NOT NULL,
-  `mardi` varchar(50) NOT NULL,
-  `mercredi` varchar(50) NOT NULL,
-  `jeudi` varchar(50) NOT NULL,
-  `vendredi` varchar(50) NOT NULL,
-  `samedi` varchar(50) NOT NULL,
-  `dimanche` varchar(50) NOT NULL
+  `lundi` varchar(50) DEFAULT NULL,
+  `mardi` varchar(50) DEFAULT NULL,
+  `mercredi` varchar(50) DEFAULT NULL,
+  `jeudi` varchar(50) DEFAULT NULL,
+  `vendredi` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `horaires`
+--
+
+INSERT INTO `horaires` (`id`, `lundi`, `mardi`, `mercredi`, `jeudi`, `vendredi`) VALUES
+(23, '10:00 - 11:30 / 12:00 - 17:00', '09:00 - 11:30 / 12:00 - 17:00', '08:00 - 11:30 / 12:00 - 17:00', '08:00 - 11:30 / 12:00 - 17:00', '08:00 - 11:30 / 12:00 - 17:00'),
+(24, '10:00 - 11:30 / 12:00 - 17:00', '09:00 - 11:30 / 12:00 - 17:00', '08:00 - 11:30 / 12:00 - 17:00', '08:00 - 11:30 / 12:00 - 17:00', '08:00 - 11:30 / 12:00 - 17:00');
 
 -- --------------------------------------------------------
 
@@ -88,20 +119,22 @@ INSERT INTO `services` (`id`, `image`, `nom`, `description`) VALUES
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
+  `role` varchar(15) NOT NULL,
   `prénom` varchar(50) NOT NULL,
   `nom` varchar(50) NOT NULL,
   `email` varchar(250) NOT NULL,
-  `mdp` varchar(50) NOT NULL,
-  `telephone` int(10) NOT NULL,
-  `code_employé` int(5) NOT NULL
+  `mdp` varchar(5000) NOT NULL,
+  `telephone` varchar(15) NOT NULL,
+  `code_employé` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `users`
 --
 
-INSERT INTO `users` (`id`, `prénom`, `nom`, `email`, `mdp`, `telephone`, `code_employé`) VALUES
-(1, 'Nicolas', 'Guigay', 'nicolas.guigay@gmail.com', 'Nicolas6789?', 658741255, 78451);
+INSERT INTO `users` (`id`, `role`, `prénom`, `nom`, `email`, `mdp`, `telephone`, `code_employé`) VALUES
+(1, 'Admin', 'Nico', 'Guigay', 'nicolas.guigay@gmail.com', '0', '0658741255', '78451'),
+(9, 'Employé', 'Jean', 'Emploi', 'jean.emploi@gmail.com', '0', '0627201444', '00003');
 
 -- --------------------------------------------------------
 
@@ -126,8 +159,7 @@ CREATE TABLE `vehicules` (
 INSERT INTO `vehicules` (`id`, `modele`, `annee`, `kilometrage`, `prix`, `description`, `image`) VALUES
 (17, 'Peugeot 206', 2006, 136000, 5000, 'vvefe', 'audi rs4.png'),
 (34, 'audi a1', 2023, 136000, 5000, 'hghhv', 'audi tt.png'),
-(35, 'fhdh', 2000, 525000, 7000, 'fff', 'mercedes amg.png'),
-(36, 'hk', 2023, 784000, 1300, '55', 'peugeot 308.png');
+(44, 'Mercedes AMG', 2015, 150000, 15201, 'dsgqgdsqgds', 'peugeot 308.png');
 
 --
 -- Index pour les tables déchargées
@@ -137,6 +169,12 @@ INSERT INTO `vehicules` (`id`, `modele`, `annee`, `kilometrage`, `prix`, `descri
 -- Index pour la table `avis`
 --
 ALTER TABLE `avis`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `contacts`
+--
+ALTER TABLE `contacts`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -174,28 +212,34 @@ ALTER TABLE `avis`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT pour la table `contacts`
+--
+ALTER TABLE `contacts`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- AUTO_INCREMENT pour la table `horaires`
 --
 ALTER TABLE `horaires`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT pour la table `services`
 --
 ALTER TABLE `services`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
 
 --
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT pour la table `vehicules`
 --
 ALTER TABLE `vehicules`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
