@@ -87,16 +87,16 @@
                     <div class="horaires-form-matin">
                         <h4>Matin</h4>
                         <label for="heureOuverture">Ouverture :</label>
-                        <input type="time" name="heureOuvertureMatin" id="heureOuverture" value="08:00">
+                        <input type="time" name="heureOuvertureMatin" value="08:00">
                         <label for="heureFermeture">Fermeture :</label>
-                        <input type="time" name="heureFermetureMatin" id="heureFermeture" value="11:30">
+                        <input type="time" name="heureFermetureMatin" value="11:30">
                     </div>
                     <div class="horaires-form-apresmidi">
                         <h4>Après-midi</h4>
                         <label for="heureOuverture">Ouverture :</label>
-                        <input type="time" name="heureOuvertureApresMidi" id="heureOuverture" value="12:00">
+                        <input type="time" name="heureOuvertureApresMidi" value="12:00">
                         <label for="heureFermeture">Fermeture :</label>
-                        <input type="time" name="heureFermetureApresMidi" id="heureFermeture" value="17:00">
+                        <input type="time" name="heureFermetureApresMidi" value="17:00">
                     </div>
                 </div>
                 <input class="horaires-submit" type="submit" name="submit_horaires" value="Enregistrer">
@@ -119,8 +119,8 @@
                 <div>
                     <input type="text" placeholder="Role" id="role" name="role" pattern="^(Admin|Employé)$" required title="Le rôle doit être 'Admin' ou 'Employé'">
                     <input type="text" placeholder="Code a 5 chiffres" id="code" name="code" pattern="[0-9]{5}" required title="Le code doit contenir 5 chiffres">
-                    <input type="text" placeholder="Nom" id="nom" name="nom" required>
-                    <input type="text" placeholder="Prénom" id="prenom" name="prenom" required>
+                    <input type="text" placeholder="Nom" id="employeNom" name="nom" required>
+                    <input type="text" placeholder="Prénom" id="employéPrenom" name="prenom" required>
                 </div>
                 <input class="employe-submit" type="submit" name="submit_employe" value="Ajouter">
             </form>

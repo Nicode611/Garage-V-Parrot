@@ -1,6 +1,7 @@
-<?php // Soumission du formulaire
+<?php
 if (isset($_POST["submit_employe"])) { 
 
+    session_start();
     $db_host = "localhost";
     $db_user = "root";
     $db_pass = "";
@@ -16,21 +17,23 @@ if (isset($_POST["submit_employe"])) {
     $nom = $_POST["nom"];
     $prenom = $_POST["prenom"];
 
-    // Prépare et exécute la requête SQL pour insérer les données (les marqueurs de position servent a éviter les injections SQL)
+    // Les marqueurs de position servent a éviter les injections SQL
     $sql = "INSERT INTO users (role, prénom, nom, code_employé) VALUES (?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("ssss", $role, $prenom, $nom, $code);
-    // Si insertion
-    if ($stmt->execute()) {
-        ?> <span class="validation">L'employé à été ajouté avec succès.</span> <?php ;
-    } else {
-        ?> <span class="error">Erreur</span> <?php $stmt->error;
-    }
 
-    // Ferme la connexion à la base de données
-    $stmt->close();
-    $conn->close();
-    header('Location: /Garage-V-Parrot/pages/dashboard-admin.php');
-    exit;
+    if ($stmt->execute()) {
+        $_SESSION["success"] = "<p class='validation'>Employé ajouté.</p>";
+        $conn->close();
+        $stmt->close();
+        header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
+        exit();
+    } else {
+        $_SESSION["success"] = "<p class='validation'>L'employé n'a pas été ajouté.</p>";
+        $conn->close();
+        $stmt->close();
+        header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
+        exit();
     }
+}
 ?>

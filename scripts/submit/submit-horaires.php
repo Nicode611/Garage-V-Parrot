@@ -1,7 +1,7 @@
 <?php
-            // Traitement du formulaire lorsque l'utilisateur soumet les données
             if (isset($_POST["submit_horaires"])) {
 
+                session_start();
                 $servername = "localhost";
                 $username = "root";
                 $password = "";
@@ -12,7 +12,6 @@
                     die("La connexion à la base de données a échoué : " . $conn->connect_error);
                 }
 
-                // Récupération des valeurs du formulaire
                 $jour = $_POST["jour"];
                 $ouvertureMatin = $_POST["heureOuvertureMatin"];
                 $fermetureMatin = $_POST["heureFermetureMatin"];
@@ -22,21 +21,18 @@
                 // Formatage des heures au format demandé
                 $horaires = "$ouvertureMatin - $fermetureMatin / $ouvertureApresMidi - $fermetureApresMidi";
 
-                // Préparation de la requête SQL d'insertion
                 $sql = "UPDATE horaires SET $jour = '$horaires'";
-                // $sql = "UPDATE horaires SET $jour = '$horaires'";
 
-                // Exécution de la requête
                 if ($conn->query($sql) === TRUE) {
-                    ?> <span class="validation">Horaires inséré avec succés !</span> <?php
+                    $_SESSION["success"] = "<p class='validation'>Les horaires ont été modifiés.</p>";
+                    $conn->close();
+                    header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
+                    exit();
                 } else {
-                    ?> <span class="error">Erreur</span> <?php $conn->error;
+                    $_SESSION["error"] = "<p class='error'>Les horaires n'ont pas été modifiés.</p>";
+                    $conn->close();
+                    header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
+                    exit();
                 }
-
-                $conn->close();
-
-                header('Location: /Garage-V-Parrot/pages/dashboard-admin.php');
-                exit;
-                
             }
         ?>
