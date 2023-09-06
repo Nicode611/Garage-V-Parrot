@@ -45,12 +45,14 @@ if (isset($_POST["submit_connect"])) {
             exit();
             
         } else {
+            session_start();
             $_SESSION["error"] = "<p class='error'>Mot de passe incorect</p>";
             $conn->close();
             header("Location: /Garage-V-Parrot/pages/connection.php");
             exit();
         }
     } else {
+        session_start();
         $_SESSION["error"] = "<p class='error'>Mot de passe incorect</p>";
         $conn->close();
         header("Location: /Garage-V-Parrot/pages/connection.php");

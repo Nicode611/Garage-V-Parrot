@@ -41,6 +41,10 @@
                 $includeFile = "../includes/infos.php";
                 if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
             ?>
+            <?php
+                $includeFile = "../scripts/submit/submit-infos.php";
+                if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
+            ?>
         </div>
 
 

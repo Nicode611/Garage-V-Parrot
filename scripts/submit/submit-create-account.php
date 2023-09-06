@@ -22,24 +22,44 @@ if (isset($_POST["submit_create"])) {
     $confirmMdp = $_POST["confirmationmdp"];
 
     if ($mdp == $confirmMdp) {
+        
         $validPassword = $mdp;
         $hash_mdp = password_hash($validPassword, PASSWORD_DEFAULT);
 
-        $sql = "UPDATE users SET prénom = '$prenom', nom = '$nom', email = '$email', mdp = '$hash_mdp', telephone = '$telephone' WHERE code_employé = '$code'";
+        $sqlSelect = "SELECT * FROM users WHERE code_employé = '$code'";
+        $result = $conn->query($sqlSelect);
+        if ($result->num_rows > 0) {
+            $sql = "UPDATE users SET prénom = '$prenom', nom = '$nom', email = '$email', mdp = '$hash_mdp', telephone = '$telephone' WHERE code_employé = '$code'";
 
-        if ($conn->query($sql) === TRUE) {
-            ?> <span class="validation">Compte crée, connectez vous</span> <?php
+            if ($conn->query($sql) === TRUE) {
+                ?> <span class="validation">Compte crée, connectez vous</span> <?php
 
-            sleep(3);
-            header("Location: /Garage-V-Parrot/pages/connection.php");
-            exit();
+                $_SESSION["success"] = "<p class='validation'>Compte crée !</p>";
+                $conn->close();
+                header("Location: /Garage-V-Parrot/pages/connection.php");
+                exit();
 
+            } else {
+                session_start();
+                $_SESSION["error"] = "<p class='error'>Erreur</p>";
+                $conn->close();
+                header("Location: /Garage-V-Parrot/pages/create-account.php");
+                exit();
+            }
         } else {
-            ?> <span class="error">Erreur</span> <?php $conn->error;
+            session_start();
+            $_SESSION["error"] = "<p class='error'>Code incorrect.</p>";
+            $conn->close();
+            header("Location: /Garage-V-Parrot/pages/create-account.php");
+            exit();
         }
+    } else {
+        session_start();
+        $_SESSION["error"] = "<p class='error'>Mot de passe incorect.</p>";
+        $conn->close();
+        header("Location: /Garage-V-Parrot/pages/create-account.php");
+        exit();
     }
-
-    $conn->close();
 }
 
 ?>
