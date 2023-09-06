@@ -1,5 +1,5 @@
 .validation {
-    display: block !important;
+    display: block;
     position: fixed;
     top: 109px;
     right: 5px;
@@ -16,7 +16,7 @@
 }
 
 .error {
-    display: block !important;
+    display: block;
     position: fixed;
     top: 109px;
     right: 5px;
@@ -41,11 +41,8 @@
         opacity: 1;
     }
 
-    99% {
-        opacity: 0;
-    }
-
     100% {
+        opacity: 0;
         display: none;
     }
 }

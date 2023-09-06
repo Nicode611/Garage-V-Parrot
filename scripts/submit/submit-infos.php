@@ -1,4 +1,4 @@
-<?php session_start();
+<?php
             if (isset($_POST["submit_infos"])) {
 
                 $servername = "localhost";
@@ -10,7 +10,8 @@
                 if ($conn->connect_error) {
                     die("La connexion à la base de données a échoué : " . $conn->connect_error);
                 }
-
+                
+                session_start();
                 $id = $_SESSION["user_id"];
                 $prenom = $_POST["prenom"];
                 $nom = $_POST["nom"];

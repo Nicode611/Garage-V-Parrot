@@ -15,32 +15,6 @@ main {
     overflow: hidden;
 }
 
-.validation {
-    display: block !important;
-    position: fixed;
-    top: 109px;
-    right: 5px;
-    width: auto;
-    border: solid 1px #2b8004;
-    border-radius: 5px;
-    text-align: center;
-    overflow: hidden;
-    background-color:#24242B;
-}
-
-.error {
-    display: block !important;
-    position: fixed;
-    top: 109px;
-    right: 5px;
-    width: auto;
-    border: solid 1px #800404;
-    border-radius: 5px;
-    text-align: center;
-    overflow: hidden;
-    background-color:#24242B;
-}
-
 ::placeholder {
     font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     color: #000;
@@ -384,8 +358,9 @@ main {
 /* Contact */
 .dashboard-contacts {
     display: flex;
+    flex-direction: column-reverse;
     flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     margin: 50px 0px 50px 0px;
@@ -446,10 +421,6 @@ main {
         flex-direction: column;
         align-items: center;
         width: 100%;
-    }
-
-    .validation, .erreur {
-    top: 151px;
     }
 
     .sidebar {

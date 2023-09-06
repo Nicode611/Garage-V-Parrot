@@ -37,21 +37,28 @@ if (isset($_POST["submit_service"])) {
                 $stmt->bind_param("sss", $image_path, $nom, $description);
                 // Si insertion
                 if ($stmt->execute()) {
-                    ?> <span class="validation">Le service a été ajouté avec succès.</span> <?php ;
+                    $_SESSION["success"] = "<p class='validation'>Le service a été ajouté.</p>";
+                    $conn->close();
+                    header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
+                    exit();
                 } else {
-                    ?> <span class="error">Erreur</span> <?php $stmt->error;
+                    $_SESSION["error"] = "<p class='error'>Le service n'a pas été ajouté.</p>";
+                    $conn->close();
+                    header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
+                    exit();
                 }
 
-                // Ferme la connexion à la base de données
-                
-                $stmt->close();
-                $conn->close();
-                header('Location: /Garage-V-Parrot/pages/dashboard-admin.php');
-                exit;
-
             } else {
-                echo "Une erreur est survenue lors de l'upload de l'image.";
+                $_SESSION["error"] = "<p class='error'>Une erreur est survenue lors de l'upload de l'image.</p>";
+                $conn->close();
+                header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
+                exit();
             }
+        } else {
+            $_SESSION["error"] = "<p class='error'>Mauvais format de l'image.</p>";
+            $conn->close();
+            header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
+            exit();
         }
     }
 }
