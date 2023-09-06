@@ -1,6 +1,6 @@
 <?php
 if (isset($_POST["submit_connect"])) {
-
+    
     $servername = "localhost";
     $username = "root";
     $password = "";
