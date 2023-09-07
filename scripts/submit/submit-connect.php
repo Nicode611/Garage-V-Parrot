@@ -26,7 +26,6 @@ if (isset($_POST["submit_connect"])) {
         // if (password_verify($mdp, $hashMdp)) {
         if ($mdp == $hashMdp) {
 
-            session_destroy();
             session_start();
 
             // Stocker les informations de l'utilisateur dans la session

@@ -9,12 +9,13 @@
     <title>Garage V. Parrot</title>
 </head>
 <body>
+    
 
 <?php
-    $includeFile = "includes/header.php";
+    $includeFile = "root.php";
     if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
 
-    $includeFile = "root.php";
+    $includeFile = "includes/header.php";
     if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
 ?>
 
@@ -31,7 +32,8 @@
         Nous sommes là pour vous et votre voiture.
         </p>
     </div>
-    <div class="dividing-bar"></div>    
+    <div class="dividing-bar"></div>   
+    <?php echo $_SESSION["user_role"]; ?>
     <!-- Occasions -->
     <?php
         $includeFile = "includes/vehicules.php";
