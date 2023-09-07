@@ -33,7 +33,7 @@
         </p>
     </div>
     <div class="dividing-bar"></div>  
-    <?php echo __FILE__; ?> 
+    <?php echo __DIR__; ?> 
     <!-- Occasions -->
     <?php
         $includeFile = "includes/vehicules.php";
