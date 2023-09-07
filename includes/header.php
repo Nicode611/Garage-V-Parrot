@@ -30,10 +30,11 @@
     <div class="nav-container">
         <nav>
             <ul class="nav-ul">
-                <a class="nav-element accueil" href=<?php ROOT . "/index.php" ?>><li>ACCUEIL</li></a>
-                <a class="nav-element services" href= <?php ROOT . "/pages/services.php" ?> ><li>SERVICES</li></a>
-                <a class="nav-element occasions" href=<?php ROOT . "/pages/occasions.php" ?>><li>OCCASIONS</li></a>
-                <a class="nav-element contact" href=<?php ROOT . "/pages/contact.php" ?>><li>CONTACT</li></a>
+                <a class="nav-element accueil" href=<?php (ROOT . "/index.php") ?>><li>ACCUEIL</li></a>
+                <a class="nav-element services" href= <?php (ROOT . "/pages/services.php") ?> ><li>SERVICES</li></a>
+                <a class="nav-element occasions" href=<?php (ROOT . "/pages/occasions.php") ?>><li>OCCASIONS</li></a>
+                <a class="nav-element contact" href=<?php (ROOT . "/pages/contact.php") ?>><li>CONTACT</li></a>
+                <?php echo (ROOT . "/pages/contact.php") ?>
             </ul>
         </nav>
     </div>
