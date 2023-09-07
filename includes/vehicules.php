@@ -16,7 +16,7 @@
                 <div class="vehicules-imgs">
                     <!-- Script d'affichage du véhicule -->
                     <?php
-                        $includeFile = "G:/Logiciels/XAMPP Serv/htdocs/Garage-V-Parrot/scripts/affichage/show-vehicules.php";
+                        $includeFile = ( ROOT . "/scripts/affichage/show-vehicules.php");
                         if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
                     ?>     
                 </div>
