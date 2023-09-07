@@ -32,8 +32,8 @@
         Nous sommes là pour vous et votre voiture.
         </p>
     </div>
-    <div class="dividing-bar"></div>   
-    <?php echo $_SESSION["user_role"]; ?>
+    <div class="dividing-bar"></div>  
+    <?php echo $_SERVER['DOCUMENT_ROOT'] . "/Garage-V-Parrot/assets/images/images-services/"; ?> 
     <!-- Occasions -->
     <?php
         $includeFile = "includes/vehicules.php";
