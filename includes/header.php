@@ -28,24 +28,12 @@
         </a>
     </div>
     <div class="nav-container">
-    <?php
-// Obtenez le chemin complet du script en cours d'exécution
-$cheminComplet = $_SERVER["SCRIPT_FILENAME"];
-
-// Supprimez le préfixe "app/" du chemin
-$cheminSansApp = preg_replace('/\/app\//', '/', $cheminComplet);
-
-// Affichez le chemin absolu complet sans le préfixe "app/"
-echo "Chemin absolu complet : " . $cheminSansApp;
-?>
-
         <nav>
             <ul class="nav-ul">
-                <a class="nav-element accueil" href="<?php echo ($_SERVER["HTTP_HOST"] . "index.php"); ?>"><li>ACCUEIL</li></a>
-                <a class="nav-element services" href="pages/services.php"><li>SERVICES</li></a>
-                <a class="nav-element occasions" href="<?php echo ($_SERVER["DOCUMENT_ROOT"] . "/pages/occasions.php"); ?>"><li>OCCASIONS</li></a>
-                <a class="nav-element contact" href="<?php echo ($_SERVER["HTTP_HOST"] . "/pages/contact.php"); ?>"><li>CONTACT</li></a>
-                <?php echo ($_SERVER["HTTP_HOST"] . "/pages/contact.php"); ?>
+                <a class="nav-element accueil" href="<?php echo ($_SERVER["DOCUMENT_ROOT"] . "index.php"); ?>"><li>ACCUEIL</li></a>
+                <a class="nav-element services" href="<?php echo ($_SERVER["DOCUMENT_ROOT"] . "pages/index.php"); ?>"><li>SERVICES</li></a>
+                <a class="nav-element occasions" href="<?php echo ($_SERVER["DOCUMENT_ROOT"] . "pages/index.php"); ?>"><li>OCCASIONS</li></a>
+                <a class="nav-element contact" href="<?php echo ($_SERVER["DOCUMENT_ROOT"] . "pages/index.php"); ?>"><li>CONTACT</li></a>
             </ul>
         </nav>
     </div>
