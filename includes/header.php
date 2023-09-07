@@ -8,6 +8,7 @@
 </head>
 
 <?php
+    session_start();
     $includeFile = ( ROOT . "/root.php");
     if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
 ?>

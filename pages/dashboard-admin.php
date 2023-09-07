@@ -40,7 +40,11 @@
 
         <!-- Infos -->
         <div class="dashboard-infos">
+            
             <?php
+            $target_directory = ROOT . "/assets/images/images-services";
+            echo $target_directory;
+
                 $includeFile = "../includes/infos.php";
                 if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
             ?>

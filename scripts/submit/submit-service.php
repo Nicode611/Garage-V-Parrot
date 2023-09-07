@@ -15,7 +15,7 @@ if (isset($_POST["submit_service"])) {
 
     // Vérifie si un fichier a été téléchargé
     if(isset($_FILES["image"]) && $_FILES["image"]["error"] == 0) {
-        $target_directory =  $_SERVER['DOCUMENT_ROOT'] . "/Garage-V-Parrot/assets/images/images-services/"; // Le répertoire de destination de l'image
+        $target_directory = ROOT . "/assets/images/images-services";
         $target_file = $target_directory . basename($_FILES["image"]["name"]);
         $imageFileName = basename($_FILES["image"]["name"]);
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
@@ -50,10 +50,21 @@ if (isset($_POST["submit_service"])) {
                 }
 
             } else {
-                $_SESSION["error"] = "<p class='error'>Une erreur est survenue lors de l'upload de l'image.</p>";
-                $conn->close();
-                header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
-                exit();
+                // Vérifie si le répertoire de destination existe
+                if (!is_dir($target_directory)) {
+                        // La création du répertoire a échoué
+                        $_SESSION["error"] = "<p class='error'>Le répertoire de destination existe.</p>";
+                        $conn->close();
+                        header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
+                        exit();
+                    } else {
+                        $_SESSION["error"] = "<p class='error'>Le répertoire de destination n'existe pas et n'a pas pu être créé.</p>";
+                        $conn->close();
+                        header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
+                        exit();
+                    }
+}
+
             }
         } else {
             $_SESSION["error"] = "<p class='error'>Mauvais format de l'image.</p>";
@@ -62,5 +73,5 @@ if (isset($_POST["submit_service"])) {
             exit();
         }
     }
-}
+
 ?>
