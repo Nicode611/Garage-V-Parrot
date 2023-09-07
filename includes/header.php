@@ -28,6 +28,17 @@
         </a>
     </div>
     <div class="nav-container">
+    <?php
+// Obtenez le chemin complet du script en cours d'exécution
+$cheminComplet = $_SERVER["SCRIPT_FILENAME"];
+
+// Supprimez le préfixe "app/" du chemin
+$cheminSansApp = preg_replace('/\/app\//', '/', $cheminComplet);
+
+// Affichez le chemin absolu complet sans le préfixe "app/"
+echo "Chemin absolu complet : " . $cheminSansApp;
+?>
+
         <nav>
             <ul class="nav-ul">
                 <a class="nav-element accueil" href="<?php echo ($_SERVER["HTTP_HOST"] . "index.php"); ?>"><li>ACCUEIL</li></a>
