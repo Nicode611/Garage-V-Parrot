@@ -34,7 +34,7 @@
                 <a class="nav-element services" href="pages/services.php"><li>SERVICES</li></a>
                 <a class="nav-element occasions" href="pages/occasions.php"><li>OCCASIONS</li></a>
                 <a class="nav-element contact" href="/app/pages/contact.php"><li>CONTACT</li></a>
-                <?php echo ($_SERVER["DOCUMENT_ROOT"] . "/pages/contact.php"); ?>
+                <?php echo ($_SERVER["HTTP_HOST"] . "/pages/contact.php"); ?>
             </ul>
         </nav>
     </div>
