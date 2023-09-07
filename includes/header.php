@@ -31,7 +31,7 @@
         <nav>
             <ul class="nav-ul">
                 <a class="nav-element accueil" href="/Garage-V-Parrot/index.php"><li>ACCUEIL</li></a>
-                <a class="nav-element services" href="/Garage-V-Parrot/pages/services.php"><li>SERVICES</li></a>
+                <a class="nav-element services" href="pages/services.php"><li>SERVICES</li></a>
                 <a class="nav-element occasions" href="/Garage-V-Parrot/pages/occasions.php"><li>OCCASIONS</li></a>
                 <a class="nav-element contact" href="/Garage-V-Parrot/pages/contact.php"><li>CONTACT</li></a>
             </ul>
