@@ -23,7 +23,7 @@
     <!-- Présentation -->
     <div class="section-presentation">
         <div class="presentation-glow"></div>
-        <h2>Bienvenue au Garage V. Parrot !</h2>
+        <h2>Bienvenue au Garooge V. Parrot !</h2>
         <p class="presentation-text">
         Nous sommes votre destination de confiance pour tout ce qui concerne votre voiture.<br><br>
         Avec 15 ans d'expertise, nous offrons des services de réparation, d'entretien et de vente de véhicules d'occasion. Chez nous, votre voiture est entre de bonnes mains.<br><br>
