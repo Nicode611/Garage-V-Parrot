@@ -30,10 +30,10 @@
     <div class="nav-container">
         <nav>
             <ul class="nav-ul">
-                <a class="nav-element accueil" href="index.php"><li>ACCUEIL</li></a>
+                <a class="nav-element accueil" href="<?php echo ($_SERVER["HTTP_HOST"] . "index.php"); ?>"><li>ACCUEIL</li></a>
                 <a class="nav-element services" href="pages/services.php"><li>SERVICES</li></a>
-                <a class="nav-element occasions" href="pages/occasions.php"><li>OCCASIONS</li></a>
-                <a class="nav-element contact" href="/app/pages/contact.php"><li>CONTACT</li></a>
+                <a class="nav-element occasions" href="<?php echo ($_SERVER["HTTP_HOST"] . "/pages/occasions.php"); ?>"><li>OCCASIONS</li></a>
+                <a class="nav-element contact" href="<?php echo ($_SERVER["HTTP_HOST"] . "/pages/contact.php"); ?>"><li>CONTACT</li></a>
                 <?php echo ($_SERVER["HTTP_HOST"] . "/pages/contact.php"); ?>
             </ul>
         </nav>
