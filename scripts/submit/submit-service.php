@@ -63,7 +63,7 @@ if (isset($_POST["submit_service"])) {
                         header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
                         exit();
                     }
-}
+} 
 
             }
         } else {
