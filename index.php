@@ -33,7 +33,7 @@
         </p>
     </div>
     <div class="dividing-bar"></div>  
-    <?php echo $_SERVER['DOCUMENT_ROOT'] . "/Garage-V-Parrot/assets/images/images-services/"; ?> 
+    <?php echo __FILE__; ?> 
     <!-- Occasions -->
     <?php
         $includeFile = "includes/vehicules.php";
