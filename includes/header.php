@@ -9,17 +9,12 @@
 
 <?php
     session_start();
-    $includeFile = ( ROOT . "/root.php");
+    $includeFile = ( ROOT . "/scripts/disconnect.php");
     if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
 ?>
 
 <div id="validation"><?php if (isset($_SESSION["success"])) { echo $_SESSION["success"]; unset($_SESSION["success"]); } ?></div>
 <div id="error"><?php if (isset($_SESSION["error"])) { echo $_SESSION["error"]; unset($_SESSION["error"]); } ?></div>
-
-<?php
-    $includeFile = ( ROOT . "/scripts/disconnect.php");
-    if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
-?>
 
 <header id="header">
     <div class="logo-container">
@@ -30,10 +25,10 @@
     <div class="nav-container">
         <nav>
             <ul class="nav-ul">
-                <a class="nav-element accueil" href="<?php echo ($_SERVER["DOCUMENT_ROOT"] . "index.php"); ?>"><li>ACCUEIL</li></a>
-                <a class="nav-element services" href="<?php echo ($_SERVER["DOCUMENT_ROOT"] . "pages/index.php"); ?>"><li>SERVICES</li></a>
-                <a class="nav-element occasions" href="<?php echo ($_SERVER["DOCUMENT_ROOT"] . "pages/index.php"); ?>"><li>OCCASIONS</li></a>
-                <a class="nav-element contact" href="<?php echo ($_SERVER["DOCUMENT_ROOT"] . "pages/index.php"); ?>"><li>CONTACT</li></a>
+                <a class="nav-element accueil" href="/Garage-V-Parrot/index.php"><li>ACCUEIL</li></a>
+                <a class="nav-element services" href="/Garage-V-Parrot/pages/services.php"><li>SERVICES</li></a>
+                <a class="nav-element occasions" href="/Garage-V-Parrot/pages/occasions.php"><li>OCCASIONS</li></a>
+                <a class="nav-element contact" href="/Garage-V-Parrot/pages/contact.php"><li>CONTACT</li></a>
             </ul>
         </nav>
     </div>

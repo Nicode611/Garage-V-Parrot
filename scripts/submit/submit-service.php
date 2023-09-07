@@ -15,7 +15,7 @@ if (isset($_POST["submit_service"])) {
 
     // Vérifie si un fichier a été téléchargé
     if(isset($_FILES["image"]) && $_FILES["image"]["error"] == 0) {
-        $target_directory = ROOT . "/assets/images/images-services";
+        $target_directory = "../assets/images/images-services";
         $target_file = $target_directory . basename($_FILES["image"]["name"]);
         $imageFileName = basename($_FILES["image"]["name"]);
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
@@ -25,7 +25,7 @@ if (isset($_POST["submit_service"])) {
         if(in_array($imageFileType, $valid_extensions)) {
 
             // Déplace l'image téléchargée vers le répertoire de destination
-            if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+            if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_directory)) {
                 
                 // Récupère les données du formulaire
                 $image_path = $imageFileName;

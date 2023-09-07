@@ -32,8 +32,7 @@
         Nous sommes là pour vous et votre voiture.
         </p>
     </div>
-    <div class="dividing-bar"></div>  
-    <?php echo __DIR__; ?> 
+    <div class="dividing-bar"></div>
     <!-- Occasions -->
     <?php
         $includeFile = "includes/vehicules.php";
