@@ -62,17 +62,17 @@
                             } else {
                                 
                                 if ($_SESSION["user_role"] == "Admin") {
-                                    $_SESSION["error"] = "<p class='error'Une erreur est survenue lors de l'upload de l'image</p>";
+                                    $_SESSION["error"] = "<p class='error'>Une erreur est survenue lors de l'upload de l'image</p>";
                                     $conn->close();
                                     header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
                                 } else {
-                                    $_SESSION["error"] = "<p class='error'Une erreur est survenue lors de l'upload de l'image</p>";
+                                    $_SESSION["error"] = "<p class='error'>Une erreur est survenue lors de l'upload de l'image</p>";
                                     $conn->close();
                                     header("Location: /Garage-V-Parrot/pages/dashboard-employes.php");
                                 }
                             }
                         } else {  
-                            $_SESSION["error"] = "<p class='error'Une erreur est survenue lors de l'upload de l'image</p>";
+                            $_SESSION["error"] = "<p class='error'>Une erreur est survenue lors de l'upload de l'image</p>";
                             $conn->close();
                             if ($_SESSION["user_role"] == "Admin") {
                                 header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
