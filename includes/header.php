@@ -25,10 +25,10 @@
     <div class="nav-container">
         <nav>
             <ul class="nav-ul">
-                <a class="nav-element accueil" href="/Garage-V-Parrot/index.php"><li>ACCUEIL</li></a>
-                <a class="nav-element services" href="/Garage-V-Parrot/pages/services.php"><li>SERVICES</li></a>
-                <a class="nav-element occasions" href="/Garage-V-Parrot/pages/occasions.php"><li>OCCASIONS</li></a>
-                <a class="nav-element contact" href="/Garage-V-Parrot/pages/contact.php"><li>CONTACT</li></a>
+                <a class="nav-element accueil" href="https://garage-v-parrot-ecf-2df12643cc00.herokuapp.com/index.php"><li>ACCUEIL</li></a>
+                <a class="nav-element services" href="https://garage-v-parrot-ecf-2df12643cc00.herokuapp.com/pages/services.php"><li>SERVICES</li></a>
+                <a class="nav-element occasions" href="https://garage-v-parrot-ecf-2df12643cc00.herokuapp.com/pages/occasions.php"><li>OCCASIONS</li></a>
+                <a class="nav-element contact" href="https://garage-v-parrot-ecf-2df12643cc00.herokuapp.com/pages/contact.php"><li>CONTACT</li></a>
             </ul>
         </nav>
     </div>
