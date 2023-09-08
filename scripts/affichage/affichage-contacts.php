@@ -41,6 +41,17 @@
     }
 ?>
 
+<?php
+    // Obtenir le protocole (HTTP ou HTTPS)
+    $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
+
+    // Obtenir le nom de domaine complet (y compris le .com)
+    $host = $_SERVER['HTTP_HOST'];
+
+    // Construire l'URL complète du HTTPS jusqu'au .com
+    $url = $protocol . '://' . $host;
+?>
+
 
 <script> // Script de sélection de la croix de supression (en AJAX)
     document.querySelector(".dashboard-contacts").addEventListener("click", function(event) {
@@ -57,7 +68,7 @@
 
             // Effectue une requête AJAX pour supprimer l'élément
             var xhr = new XMLHttpRequest();
-            xhr.open("GET", url + "/scripts/affichage/affichage-contacts.php?action=delete-contact&id=" + id, true);
+            xhr.open("GET", url + "/pages/dashboard-admin.php?action=delete-contact&id=" + id, true);
             xhr.send();
 
             contact.remove();
