@@ -14,7 +14,7 @@
                     <p>Nos véhicules d’occasion disponibles à l’achat.</p>
                 </div>
                 <div class="vehicules-imgs">
-                    <!-- Script d'affichage du véhicule -->
+                    
                     <?php
                         $current_page = $_SERVER['REQUEST_URI'];
                         $page_name = basename($current_page);

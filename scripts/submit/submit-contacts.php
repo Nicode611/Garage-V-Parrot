@@ -11,6 +11,7 @@
                     die("La connexion à la base de données a échoué : " . $conn->connect_error);
                 }
 
+                session_set_cookie_params(3600);
                 session_start();
                 $date = date("d-m-Y H:i");
                 $nom = $_POST["nom"];

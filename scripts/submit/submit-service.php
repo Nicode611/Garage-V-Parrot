@@ -2,6 +2,7 @@
 // Vérifie si le formulaire a été soumis
 if (isset($_POST["submit_service"])) { 
 
+    session_set_cookie_params(3600);
     session_start();
     $db_host = "mysql-garage-v-parrot.alwaysdata.net";
     $db_user = "326283";

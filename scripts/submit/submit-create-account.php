@@ -3,6 +3,7 @@
  
 if (isset($_POST["submit_create"])) {
 
+    session_set_cookie_params(3600);
     session_start();
     $db_host = "mysql-garage-v-parrot.alwaysdata.net";
     $db_user = "326283";
@@ -41,21 +42,18 @@ if (isset($_POST["submit_create"])) {
                 exit();
 
             } else {
-                session_start();
                 $_SESSION["error"] = "<p class='error'>Erreur</p>";
                 $conn->close();
                 header("Location: ../../pages/create-account.php");
                 exit();
             }
         } else {
-            session_start();
             $_SESSION["error"] = "<p class='error'>Code incorrect.</p>";
             $conn->close();
             header("Location: ../../pages/create-account.php");
             exit();
         }
     } else {
-        session_start();
         $_SESSION["error"] = "<p class='error'>Mot de passe incorect.</p>";
         $conn->close();
         header("Location: ../../pages/create-account.php");

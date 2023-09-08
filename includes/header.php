@@ -8,6 +8,7 @@
 </head>
 
 <?php
+    session_set_cookie_params(3600);
     session_start();
     $includeFile = ("../scripts/disconnect.php");
     if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
