@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Garage-V-Parrot/assets/css/header.css">
+    <link rel="stylesheet" href="https://garage-v-parrot-ecf-2df12643cc00.herokuapp.com/assets/css/header.css">
     <title>Garage V. Parrot</title>
 </head>
 
 <?php
     session_start();
-    $includeFile = ( ROOT . "/scripts/disconnect.php");
+    $includeFile = ("https://garage-v-parrot-ecf-2df12643cc00.herokuapp.com/scripts/disconnect.php");
     if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
 ?>
 
@@ -18,8 +18,8 @@
 
 <header id="header">
     <div class="logo-container">
-        <a href="/Garage-V-Parrot/index.php">
-            <img class="logo" src="/Garage-V-Parrot/assets/images/logo.png">
+        <a href="https://garage-v-parrot-ecf-2df12643cc00.herokuapp.com/index.php">
+            <img class="logo" src="https://garage-v-parrot-ecf-2df12643cc00.herokuapp.com/assets/images/logo.png">
         </a>
     </div>
     <div class="nav-container">
@@ -43,7 +43,7 @@
         if (isset($_SESSION["user_role"]) && $_SESSION["user_role"] == "Admin") { ?>
             <div class="connect-infos-container-mobile">
                 <div class="connect-icon-container">
-                    <a href="/Garage-V-Parrot/pages/dashboard-admin.php"><img class="connect-icon" src="/Garage-V-Parrot/assets/images/user-icon.png"></a>
+                    <a href="/Garage-V-Parrot/pages/dashboard-admin.php"><img class="connect-icon" src="https://garage-v-parrot-ecf-2df12643cc00.herokuapp.com/assets/images/user-icon.png"></a>
                     <p><?php echo $_SESSION["user_role"]; ?></p>
                     <form method="post"><input class="deco" type="submit" name="deco" value="Déconnection"></form>
                 </div>
@@ -54,28 +54,28 @@
         if (isset($_SESSION["user_role"]) && $_SESSION["user_role"] == "Employé") { ?>
             <div class="connect-infos-container-mobile">
                 <div class="connect-icon-container">
-                    <a href="/Garage-V-Parrot/pages/dashboard-employes.php"><img class="connect-icon" src="/Garage-V-Parrot/assets/images/user-icon.png"></a>
+                    <a href="/Garage-V-Parrot/pages/dashboard-employes.php"><img class="connect-icon" src="https://garage-v-parrot-ecf-2df12643cc00.herokuapp.com/assets/images/user-icon.png"></a>
                     <p><?php echo $_SESSION["user_role"]; ?></p>
                     <form method="post"><input class="deco" type="submit" name="deco" value="Déconnection"></form>
                 </div>
             </div>
         <?php } ?>
             <ul>
-                <li class="accueil"><a class="accueil" href="/Garage-V-Parrot/index.php">Accueil</a></li>
-                <li class="services"><a class="services" href="/Garage-V-Parrot/pages/services.php">Services</a></li>
-                <li class="occasions"><a class="occasions" href="/Garage-V-Parrot/pages/occasions.php">Occasions</a></li>
-                <li class="contact"><a class="contact" href="/Garage-V-Parrot/pages/contact.php">Contact</a></li>
+                <li class="accueil"><a class="accueil" href="https://garage-v-parrot-ecf-2df12643cc00.herokuapp.com/index.php">Accueil</a></li>
+                <li class="services"><a class="services" href="https://garage-v-parrot-ecf-2df12643cc00.herokuapp.com/pages/services.php">Services</a></li>
+                <li class="occasions"><a class="occasions" href="https://garage-v-parrot-ecf-2df12643cc00.herokuapp.com/pages/occasions.php">Occasions</a></li>
+                <li class="contact"><a class="contact" href="https://garage-v-parrot-ecf-2df12643cc00.herokuapp.com/pages/contact.php">Contact</a></li>
                 <?php if (!isset($_SESSION["user_role"]) || $_SESSION["user_role"] == "") { ?>
-                <li><a href="/Garage-V-Parrot/pages/connection.php">Log in</a></li>
-                <li><a href="/Garage-V-Parrot/pages/create-account.php">Sign in</a></li>
+                <li><a href="https://garage-v-parrot-ecf-2df12643cc00.herokuapp.com/pages/connection.php">Log in</a></li>
+                <li><a href="https://garage-v-parrot-ecf-2df12643cc00.herokuapp.com/pages/create-account.php">Sign in</a></li>
                 <?php } ?>
                 <?php
                 if (isset($_SESSION["user_role"]) && $_SESSION["user_role"] == "Admin") { ?>
-                <li><a href="/Garage-V-Parrot/pages/dashboard-admin.php">Dashboard</a></li>
+                <li><a href="https://garage-v-parrot-ecf-2df12643cc00.herokuapp.com/pages/dashboard-admin.php">Dashboard</a></li>
                 <?php } ?>
                 <?php
                 if (isset($_SESSION["user_role"]) && $_SESSION["user_role"] == "Employé") { ?>
-                <li><a href="/Garage-V-Parrot/pages/dashboard-employes.php">Dashboard</a></li>
+                <li><a href="https://garage-v-parrot-ecf-2df12643cc00.herokuapp.com/pages/dashboard-employes.php">Dashboard</a></li>
                 <?php } ?>
             </ul>
         </nav>
@@ -85,8 +85,8 @@
         <?php
         if (!isset($_SESSION["user_role"]) || $_SESSION["user_role"] == "") { ?>
             <div class="connect-btns">
-                <a class="connect-btn log-in" href="/Garage-V-Parrot/pages/connection.php">Log in</a>
-                <a class="connect-btn sign-in" href="/Garage-V-Parrot/pages/create-account.php">Sign in</a>
+                <a class="connect-btn log-in" href="https://garage-v-parrot-ecf-2df12643cc00.herokuapp.com/pages/connection.php">Log in</a>
+                <a class="connect-btn sign-in" href="https://garage-v-parrot-ecf-2df12643cc00.herokuapp.com/pages/create-account.php">Sign in</a>
             </div>
         <?php } ?>
 
@@ -94,7 +94,7 @@
         if (isset($_SESSION["user_role"]) && $_SESSION["user_role"] == "Admin") { ?>
                 <form class="connect-infos-elements" method="post"><input class="deco" type="submit" name="deco" value="Déconnection"></form>
                 <div class="connect-infos-elements connect-icon-container">
-                    <a href="/Garage-V-Parrot/pages/dashboard-admin.php"><img class="connect-icon" src="/Garage-V-Parrot/assets/images/user-icon.png"></a>
+                    <a href="https://garage-v-parrot-ecf-2df12643cc00.herokuapp.com/pages/dashboard-admin.php"><img class="connect-icon" src="https://garage-v-parrot-ecf-2df12643cc00.herokuapp.com/assets/images/user-icon.png"></a>
                     <p><?php echo $_SESSION["user_role"]; ?></p>
                 </div>
         <?php } ?>
@@ -103,13 +103,13 @@
         if (isset($_SESSION["user_role"]) && $_SESSION["user_role"] == "Employé") { ?>
                 <form class="connect-infos-elements" method="post"><input class="deco" type="submit" name="deco" value="Déconnection"></form>
                 <div class="connect-infos-elements connect-icon-container">
-                    <a href="/Garage-V-Parrot/pages/dashboard-employes.php"><img class="connect-icon" src="/Garage-V-Parrot/assets/images/user-icon.png"></a>
+                    <a href="https://garage-v-parrot-ecf-2df12643cc00.herokuapp.com/pages/dashboard-employes.php"><img class="connect-icon" src="https://garage-v-parrot-ecf-2df12643cc00.herokuapp.com/assets/images/user-icon.png"></a>
                     <p><?php echo $_SESSION["user_role"]; ?></p>
                 </div>
         <?php } ?>
     </div>
 </header>
 
-<script src="/Garage-V-Parrot/assets/js/script-header.js"></script>
+<script src="https://garage-v-parrot-ecf-2df12643cc00.herokuapp.com/assets/js/script-header.js"></script>
 
 </html>
