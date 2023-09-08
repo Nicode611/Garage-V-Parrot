@@ -60,6 +60,7 @@
             xhr.send();
 
             contact.remove();
+            console.log(url + "/scripts/affichage/affichage-contacts.php?action=delete-contact&id=");
         }
     }
 });
@@ -67,7 +68,9 @@
 
 <?php // Script de supression employes
     // Vérifie si la requete a été efectuée
-    if ($_SERVER["REQUEST_METHOD"] === "GET") {
+    if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET["id"])) {
+
+        echo "oui";
         
         $db_host = "localhost";
         $db_user = "root";
@@ -87,4 +90,4 @@
             echo "requete effectuée";
             $conn->close();
         }
-    } else { echo "pas suprimé"; }
+    }
