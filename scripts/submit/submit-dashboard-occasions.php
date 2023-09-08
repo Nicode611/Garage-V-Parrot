@@ -47,7 +47,11 @@
                                     if ($_SESSION["user_role"] == "Admin") {
                                         header("Location: ../../pages/dashboard-admin.php");
                                     } else {
-                                        header("Location: ../../pages/dashboard-employes.php");
+                                        if ($_SESSION["user_role"] == "Employé") {
+                                            header("Location: ../../pages/dashboard-employes.php");
+                                        } else {
+                                            header("Location: ../../index.php");
+                                        }
                                     }
                                 } else {
                                     $_SESSION["error"] = "<p class='error'>Le véhicule n'a pas été ajouté.</p>";
@@ -56,28 +60,37 @@
                                     if ($_SESSION["user_role"] == "Admin") {
                                         header("Location: ../../pages/dashboard-admin.php");
                                     } else {
-                                        header("Location: ../../pages/dashboard-employes.php");
+                                        if ($_SESSION["user_role"] == "Employé") {
+                                            header("Location: ../../pages/dashboard-employes.php");
+                                        } else {
+                                            header("Location: ../../index.php");
+                                        }
                                     }
                                 }
                             } else {
-                                
+                                $_SESSION["error"] = "<p class='error'>Erreur lors de l'upload de l'image</p>";
+                                $conn->close();
                                 if ($_SESSION["user_role"] == "Admin") {
-                                    $_SESSION["error"] = "<p class='error'>Une erreur est survenue lors de l'upload de l'image</p>";
-                                    $conn->close();
                                     header("Location: ../../pages/dashboard-admin.php");
                                 } else {
-                                    $_SESSION["error"] = "<p class='error'>Une erreur est survenue lors de l'upload de l'image</p>";
-                                    $conn->close();
-                                    header("Location: ../../pages/dashboard-employes.php");
+                                    if ($_SESSION["user_role"] == "Employé") {
+                                        header("Location: ../../pages/dashboard-employes.php");
+                                    } else {
+                                        header("Location: ../../index.php");
+                                    }
                                 }
                             }
                         } else {  
-                            $_SESSION["error"] = "<p class='error'>Une erreur est survenue lors de l'upload de l'image</p>";
+                            $_SESSION["error"] = "<p class='error'>Le format de l'image n'est pas valide</p>";
                             $conn->close();
                             if ($_SESSION["user_role"] == "Admin") {
                                 header("Location: ../../pages/dashboard-admin.php");
                             } else {
-                                header("Location: ../../pages/dashboard-employes.php");
+                                if ($_SESSION["user_role"] == "Employé") {
+                                    header("Location: ../../pages/dashboard-employes.php");
+                                } else {
+                                    header("Location: ../../index.php");
+                                }
                             }
                         }
                     }
