@@ -67,7 +67,7 @@
 
 <?php // Script de supression employes
     // Vérifie si la requete a été efectuée
-    if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET["action"]) && $_GET["action"] === "delete-contact" && isset($_GET["id"])) {
+    if ($_SERVER["REQUEST_METHOD"] === "GET") {
         
         $db_host = "localhost";
         $db_user = "root";
