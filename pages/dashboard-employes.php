@@ -1,3 +1,6 @@
+<?php 
+    if ($_SESSION["user_role"] == "Employé") { ?>
+                                    
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -56,3 +59,11 @@
     <script src="../assets/js/script-dashboard.js"></script>
 </body>
 </html>
+
+<?php } else {
+    if ($_SESSION["user_role"] == "Admin") {
+        header("Location: pages/dashboard-admin.php");
+    } else {
+        header("Location: ../index.php");
+    }
+}
