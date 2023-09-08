@@ -54,26 +54,30 @@
             ?>
 
 
-            <script>
-                document.querySelector("#services-section").addEventListener("click", function(event) {
-                // Vérifie si la target de l'event est un bouton .service-delete contenu dans #services-section
-                if (event.target.classList.contains("service-delete")) {
-                    var id = event.target.nextElementSibling.textContent;
-                    var serviceElement = event.target.closest(".service");
+<script>
+    document.querySelector("#services-section").addEventListener("click", function(event) {
+        // Vérifie si la target de l'event est un bouton .service-delete contenu dans #services-section
+        if (event.target.classList.contains("service-delete")) {
+            var id = event.target.nextElementSibling.textContent;
+            var serviceElement = event.target.closest(".service");
 
-                    // Demande confirmation à l'utilisateur
-                    if (confirm("Êtes-vous sûr de vouloir supprimer cet élément ?")) {
-                        // Effectue une requête AJAX pour supprimer l'élément
-                        console.log("<?php echo $url; ?>");
-                        var xhr = new XMLHttpRequest();
-                        xhr.open("GET", "<?php echo $url; ?>/includes/service.php?execute_script=true&id=" + id, true);
-                        xhr.send();
+            // Demande confirmation à l'utilisateur
+            if (confirm("Êtes-vous sûr de vouloir supprimer cet élément ?")) {
+                // Utilise l'URL actuelle avec le même protocole que la page
+                var currentProtocol = window.location.protocol;
+                var url = currentProtocol + "//" + window.location.host;
 
-                        serviceElement.remove();
-                    }
-                }
-            });
-            </script>
+                // Effectue une requête AJAX pour supprimer l'élément
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", url + "/includes/service.php?execute_script=true&id=" + id, true);
+                xhr.send();
+
+                serviceElement.remove();
+            }
+        }
+    });
+</script>
+
 
         <?php
             // Script de supression du service
