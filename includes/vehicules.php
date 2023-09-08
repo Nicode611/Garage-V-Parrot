@@ -16,8 +16,16 @@
                 <div class="vehicules-imgs">
                     <!-- Script d'affichage du véhicule -->
                     <?php
-                        $includeFile = ( ROOT . "/scripts/affichage/show-vehicules.php");
-                        if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
+                        $current_page = $_SERVER['REQUEST_URI'];
+                        $page_name = basename($current_page);
+                        if ($page_name == "index.php") {
+                            $includeFile = ("scripts/affichage/show-vehicules.php");
+                            if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
+                        } else {
+                            $includeFile = ("../scripts/affichage/show-vehicules.php");
+                            if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
+                        }
+                        
                     ?>     
                 </div>
             </div>
