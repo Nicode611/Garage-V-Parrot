@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="logo.ico" type="image/x-icon">
+    <link rel="icon" href="../logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/dashboard-admin.css">
     <link rel="stylesheet" href="../assets/css/global.css">
     <title>Garage V. Parrot</title>
