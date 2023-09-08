@@ -87,4 +87,4 @@
             echo "requete effectuée";
             $conn->close();
         }
-    }
+    } else { echo "pas suprimé"; }
