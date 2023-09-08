@@ -25,13 +25,12 @@ if (isset($_POST["submit_create"])) {
     if ($mdp == $confirmMdp) {
         
         $validPassword = $mdp;
-        // $hash_mdp = password_hash($validPassword, PASSWORD_DEFAULT);(Pour quand le password_verify sera réglé)
+        $hash_mdp = password_hash($validPassword, PASSWORD_DEFAULT);
 
         $sqlSelect = "SELECT * FROM users WHERE code_employé = '$code'";
         $result = $conn->query($sqlSelect);
         if ($result->num_rows > 0) {
-            // $sql = "UPDATE users SET prénom = '$prenom', nom = '$nom', email = '$email', mdp = '$hash_mdp', telephone = '$telephone' WHERE code_employé = '$code'";(Pour quand le password_verify sera réglé)
-            $sql = "UPDATE users SET prénom = '$prenom', nom = '$nom', email = '$email', mdp = '$validPassword', telephone = '$telephone' WHERE code_employé = '$code'";
+            $sql = "UPDATE users SET prénom = '$prenom', nom = '$nom', email = '$email', mdp = '$hash_mdp', telephone = '$telephone' WHERE code_employé = '$code'";
 
             if ($conn->query($sql) === TRUE) {
                 ?> <span class="validation">Compte crée, connectez vous</span> <?php
