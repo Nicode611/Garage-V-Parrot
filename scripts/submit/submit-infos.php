@@ -41,7 +41,11 @@
                         if ($_SESSION["user_role"] == "Admin") {
                             header("Location: ../../pages/dashboard-admin.php");
                         } else {
-                            header("Location: ../../pages/dashboard-employes.php");
+                            if ($_SESSION["user_role"] == "Employé") {
+                                header("Location: ../../pages/dashboard-employes.php");
+                            } else {
+                                header("Location: ../../index.php");
+                            }
                         }
                     } else {
                         $_SESSION["error"] = "<p class='error'>Les modifications n'ont pas été enregistrées.</p>";
@@ -49,7 +53,11 @@
                         if ($_SESSION["user_role"] == "Admin") {
                             header("Location: ../../pages/dashboard-admin.php");
                         } else {
-                            header("Location: ../../pages/dashboard-employes.php");
+                            if ($_SESSION["user_role"] == "Employé") {
+                                header("Location: ../../pages/dashboard-employes.php");
+                            } else {
+                                header("Location: ../../index.php");
+                            }
                         }
                     }
 
@@ -59,7 +67,11 @@
                         if ($_SESSION["user_role"] == "Admin") {
                             header("Location: ../../pages/dashboard-admin.php");
                         } else {
-                            header("Location: ../../pages/dashboard-employes.php");
+                            if ($_SESSION["user_role"] == "Employé") {
+                                header("Location: ../../pages/dashboard-employes.php");
+                            } else {
+                                header("Location: ../../index.php");
+                            }
                         }
                     }
             }

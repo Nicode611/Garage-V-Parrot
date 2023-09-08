@@ -23,8 +23,8 @@ if (isset($_POST["submit_connect"])) {
         $row = $result->fetch_assoc();
         $hashMdp = $row["mdp"];
 
-        // if (password_verify($mdp, $hashMdp)) {
-        if ($mdp == $hashMdp) {
+        if (password_verify($mdp, $hashMdp)) {
+        //if ($mdp == $hashMdp) {
 
             session_start();
 
