@@ -87,7 +87,7 @@
                 if ($imageResult->num_rows === 1) {
                     $imageRow = $imageResult->fetch_assoc();
                     $image = $imageRow["image"];
-                    $imageLink = "../assets/images/images-services/" . $image; 
+                    $imageLink = "../../assets/images/images-services/" . $image; 
                     unlink($imageLink);
                 }
 
