@@ -1,11 +1,11 @@
 <?php
             if (isset($_POST["submit_contact"])) {
 
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "garage_v_parrot";
-                $conn = new mysqli($servername, $username, $password, $dbname);
+                $db_host = "mysql-garage-v-parrot.alwaysdata.net";
+                $db_user = "326283";
+                $db_pass = "Beta2k15";
+                $db_name = "garage-v-parrot_ecf";
+                $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
             
                 if ($conn->connect_error) {
                     die("La connexion à la base de données a échoué : " . $conn->connect_error);
