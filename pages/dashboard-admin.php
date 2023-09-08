@@ -148,10 +148,8 @@
             if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
         ?>
         </div>
-
+        <script src="../assets/js/script-dashboard.js"></script>
 </main>
-
-    <script src="../assets/js/script-dashboard.js"></script>
 </body>
 </html>
 
