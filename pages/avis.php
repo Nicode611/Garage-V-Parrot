@@ -15,13 +15,13 @@
 
 <main>
     <div class="avis-form-container">
-        <form class="avis-form" action="../scripts/submit/submit-horaires.php" method="post">
+        <form class="avis-form" action="../scripts/submit/submit-avis.php" method="post">
             <h3>Ajoutez votre avis :</h3>
             <label for="jour">Avis :</label>
             <textarea class="avis" name="avis" required></textarea><br>
             <label for="nom">Votre nom :</label>
             <input type="text" class="nom" name="nom" required><br>
-            <input class="avis-submit" type="submit" name="submit-avis" value="Envoyer">
+            <input class="avis-submit" type="submit" name="submit_avis" value="Envoyer">
         </form> 
     </div>
 </main>
