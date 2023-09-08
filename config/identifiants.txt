@@ -1,9 +1,3 @@
-admin mdp : baba
-admin toki mdp: toki
+admin mdp : nico
 
-employé mdp : toto
-
-
-
-
-/Applications/XAMPP/xamppfiles/htdocs
+employé mdp : emploi
