@@ -1,4 +1,7 @@
-<?php 
+<?php
+    $includeFile = "../includes/header.php";
+    if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
+    
     if ($_SESSION["user_role"] == "Admin") { ?>
 
 <!DOCTYPE html>
@@ -11,11 +14,6 @@
     <title>Garage V. Parrot</title>
 </head>
 <body>
-    
-<?php
-    $includeFile = "../includes/header.php";
-    if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
-?>
 
     <main>
         <div class="sidebar">
