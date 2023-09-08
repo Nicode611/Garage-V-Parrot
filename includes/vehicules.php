@@ -45,6 +45,4 @@
             </div>
         </div>
     </div>
-
-    <script src="/Garage-V-Parrot/assets/js/script-selection-vehicule.js"></script>
 </html>

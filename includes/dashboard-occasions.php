@@ -45,6 +45,4 @@
     </div>
 </div>
 
-<script src="/Garage-V-Parrot/assets/js/script-dashboard.js"></script>
-
 </html>
