@@ -64,6 +64,7 @@
                     // Demande confirmation à l'utilisateur
                     if (confirm("Êtes-vous sûr de vouloir supprimer cet élément ?")) {
                         // Effectue une requête AJAX pour supprimer l'élément
+                        console.log("<?php echo $url; ?>");
                         var xhr = new XMLHttpRequest();
                         xhr.open("GET", "<?php echo $url; ?>/includes/service.php?execute_script=true&id=" + id, true);
                         xhr.send();
