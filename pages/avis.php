@@ -11,10 +11,7 @@
 </head>
 <body>
     
-<?php
-    $includeFile = "../includes/header.php";
-    if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
-?>
+
 
 <main>
     <div class="avis-form-container">
@@ -28,6 +25,11 @@
         </form> 
     </div>
 </main>
+
+<?php
+    $includeFile = "../scripts/submit/submit-avis.php";
+    if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
+?>
 
 <?php
     $includeFile = "../includes/footer.php";
