@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="vehicule-card">
-                <img class="vehicule-img" src="/Garage-V-Parrot/assets/images/images-vehicules/<?php echo $image ?>" alt="">
+                <img class="vehicule-img" src="../assets/images/images-vehicules/<?php echo $image ?>" alt="">
                 <div class="card-bottom">
                     <div>
                         <h3 class="vehicule-model"><?php echo $modele ?></h3>
