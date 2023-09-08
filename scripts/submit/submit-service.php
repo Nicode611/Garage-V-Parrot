@@ -40,12 +40,12 @@ if (isset($_POST["submit_service"])) {
                 if ($stmt->execute()) {
                     $_SESSION["success"] = "<p class='validation'>Le service a été ajouté.</p>";
                     $conn->close();
-                    header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
+                    header("Location: ../../pages/dashboard-admin.php");
                     exit();
                 } else {
                     $_SESSION["error"] = "<p class='error'>Le service n'a pas été ajouté.</p>";
                     $conn->close();
-                    header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
+                    header("Location: ../../pages/dashboard-admin.php");
                     exit();
                 }
 
@@ -55,12 +55,12 @@ if (isset($_POST["submit_service"])) {
                         // La création du répertoire a échoué
                         $_SESSION["error"] = "<p class='error'>Le répertoire de destination existe.</p>";
                         $conn->close();
-                        header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
+                        header("Location: ../../pages/dashboard-admin.php");
                         exit();
                     } else {
                         $_SESSION["error"] = "<p class='error'>Le répertoire de destination n'existe pas et n'a pas pu être créé.</p>";
                         $conn->close();
-                        header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
+                        header("Location: ../../pages/dashboard-admin.php");
                         exit();
                     }
 } 
@@ -69,7 +69,7 @@ if (isset($_POST["submit_service"])) {
         } else {
             $_SESSION["error"] = "<p class='error'>Mauvais format de l'image.</p>";
             $conn->close();
-            header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
+            header("Location: ../../pages/dashboard-admin.php");
             exit();
         }
     }

@@ -26,13 +26,13 @@ if (isset($_POST["submit_employe"])) {
         $_SESSION["success"] = "<p class='validation'>Employé ajouté.</p>";
         $stmt->close();
         $conn->close();
-        header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
+        header("Location: ../../pages/dashboard-admin.php");
         exit();
     } else {
         $_SESSION["success"] = "<p class='validation'>L'employé n'a pas été ajouté.</p>";
         $stmt->close();
         $conn->close();
-        header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
+        header("Location: ../../pages/dashboard-admin.php");
         exit();
     }
 }

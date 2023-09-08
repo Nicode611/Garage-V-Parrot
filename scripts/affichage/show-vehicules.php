@@ -27,7 +27,14 @@ if ($result->num_rows > 0) {
             $description = $row["description"]; ?>
 
             <div class="vehicules">
-                <img class="vehicules-img" src="/Garage-V-Parrot/assets/images/images-vehicules/<?php echo $image ?>">
+                <img class="vehicules-img" src="<?php
+                        $current_page = $_SERVER['REQUEST_URI'];
+                        $page_name = basename($current_page);
+                        if ($page_name == "index.php") {
+                            echo 'assets/images/images-vehicules/' . $image;
+                        } else {
+                            echo '../assets/images/images-vehicules/' . $image;
+                        } ?>">
                     <div class="hided-infos" style="display: none;">
                         <span class="vehicules-model"><?php echo $modele ?></span>
                         <span class="vehicules-infos vehicules-year"><?php echo $annee ?></span>
