@@ -34,17 +34,6 @@
                 $conn->close();
             ?>
 
-<?php
-    // Obtenir le protocole (HTTP ou HTTPS)
-    $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
-
-    // Obtenir le nom de domaine complet (y compris le .com)
-    $host = $_SERVER['HTTP_HOST'];
-
-    // Construire l'URL complète du HTTPS jusqu'au .com
-    $url = $protocol . '://' . $host;
-?>
-
             <script>
                 document.querySelector("#vehicules-imgs").addEventListener("click", function(event) {
                 // Vérifie si la target de l'event est un bouton .service-delete contenu dans #services-section
