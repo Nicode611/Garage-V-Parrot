@@ -42,6 +42,17 @@
                 }
                 $conn->close();
             ?>
+            <?php
+                // Obtenir le protocole (HTTP ou HTTPS)
+                $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
+
+                // Obtenir le nom de domaine complet (y compris le .com)
+                $host = $_SERVER['HTTP_HOST'];
+
+                // Construire l'URL complète du HTTPS jusqu'au .com
+                $url = $protocol . '://' . $host;
+            ?>
+
 
             <script>
                 document.querySelector("#services-section").addEventListener("click", function(event) {
@@ -54,7 +65,7 @@
                     if (confirm("Êtes-vous sûr de vouloir supprimer cet élément ?")) {
                         // Effectue une requête AJAX pour supprimer l'élément
                         var xhr = new XMLHttpRequest();
-                        if (xhr.open("GET", "https://garage-v-parrot-ecf-2df12643cc00.herokuapp.com/includes/service.php?execute_script=true&id=" + id, true)) { console.log('ouais');} else { console.log('non');}
+                        xhr.open("GET", "<?php echo $url; ?>/includes/service.php?execute_script=true&id=" + id, true);
                         xhr.send();
 
                         serviceElement.remove();
