@@ -61,6 +61,7 @@
                     <p class="avis-name">Mathieu L.</p>
                 </div>
             </div>
+            <a href="pages/avis.php"><button id="ajoutAvis">Ajouter un avis</button></a>
         </div>
         <div class="shadow-right"></div>
         <button id="nextBtn"></button>
