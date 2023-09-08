@@ -52,7 +52,6 @@
     $url = $protocol . '://' . $host;
 ?>
 
-
 <script> // Script de sélection de la croix de supression (en AJAX)
     document.querySelector(".dashboard-contacts").addEventListener("click", function(event) {
     // Vérifie si la target de l'event est un bouton .service-delete contenu dans #services-section
@@ -68,7 +67,7 @@
 
             // Effectue une requête AJAX pour supprimer l'élément
             var xhr = new XMLHttpRequest();
-            xhr.open("GET", url + "/pages/dashboard-admin.php?action=delete-contact&id=" + id, true);
+            xhr.open("GET", url + "/scripts/affichage/affichage-contacts.php?action=delete-contact&id=" + id, true);
             xhr.send();
 
             contact.remove();
