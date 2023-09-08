@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="../assets/css/infos.css">
 
 <form class="infos-form" action="../scripts/submit/submit-infos.php" method="post">
-    <img class="user-icon" src="/Garage-V-Parrot/assets/images/user-icon.png"><br>
+    <img class="user-icon" src="../assets/images/user-icon.png"><br>
     <label for="prenom">Prénom :</label>
     <input class="infos-fields" type="text" name="prenom" id="prenom" value="<?php echo $_SESSION["user_prénom"]; ?>">
     <br>

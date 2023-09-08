@@ -153,6 +153,6 @@
 
 </main>
 
-    <script src="/Garage-V-Parrot/assets/js/script-dashboard.js"></script>
+    <script src="../assets/js/script-dashboard.js"></script>
 </body>
 </html>
