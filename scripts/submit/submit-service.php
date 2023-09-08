@@ -26,7 +26,7 @@ if (isset($_POST["submit_service"])) {
         if(in_array($imageFileType, $valid_extensions)) {
 
             // Déplace l'image téléchargée vers le répertoire de destination
-            if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_directory)) {
+            if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
                 
                 // Récupère les données du formulaire
                 $image_path = $imageFileName;
