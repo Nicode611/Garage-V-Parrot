@@ -15,7 +15,7 @@
     $includeFile = "root.php";
     if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
 
-    $includeFile = "includes/header.php";
+    $includeFile = "includes/header-index.php";
     if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
 ?>
 
