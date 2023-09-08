@@ -53,7 +53,7 @@
         if (confirm("Êtes-vous sûr de vouloir supprimer cet élément ?")) {
             // Effectue une requête AJAX pour supprimer l'élément
             var xhr = new XMLHttpRequest();
-            xhr.open("GET", "../../scripts/affichage/affichage-contacts.php?action=delete-contact&id=" + id, true);
+            if (xhr.open("GET", "../scripts/affichage/affichage-contacts.php?action=delete-contact&id=" + id, true)) { console.log('ouais');} else { console.log('non');}
             xhr.send();
 
             contact.remove();

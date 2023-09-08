@@ -54,7 +54,7 @@
                     if (confirm("Êtes-vous sûr de vouloir supprimer cet élément ?")) {
                         // Effectue une requête AJAX pour supprimer l'élément
                         var xhr = new XMLHttpRequest();
-                        if (xhr.open("GET", "/Garage-V-Parrot/includes/service.php?execute_script=true&id=" + id, true)) { console.log('ouais');} else { console.log('non');}
+                        if (xhr.open("GET", "../includes/service.php?execute_script=true&id=" + id, true)) { console.log('ouais');} else { console.log('non');}
                         xhr.send();
 
                         serviceElement.remove();
