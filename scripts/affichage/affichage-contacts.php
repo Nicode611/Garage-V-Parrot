@@ -56,11 +56,11 @@
 
             // Effectue une requête AJAX pour supprimer l'élément
             var xhr = new XMLHttpRequest();
-            xhr.open("GET", url + "/scripts/affichage/affichage-contacts.php?execute_script=true&id=" + id, true);
+            xhr.open("GET", url + "/includes/dashboard-contact.php?execute_script=true&id=" + id, true);
             xhr.send();
 
             contact.remove();
-            console.log(url + "/scripts/affichage/affichage-contacts.php?execute_script=true&id=");
+            console.log(url + "/includes/dashboard-contact.php?execute_script=true&id=");
         }
     }
 });
