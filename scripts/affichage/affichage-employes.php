@@ -64,7 +64,7 @@
         if (confirm("Êtes-vous sûr de vouloir supprimer cet élément ?")) {
             // Effectue une requête AJAX pour supprimer l'élément
             var xhr = new XMLHttpRequest();
-            xhr.open("GET", "/Garage-V-Parrot/scripts/affichage/affichage-employes.php?action=delete-employe&id=" + id, true);
+            xhr.open("GET", "../scripts/affichage/affichage-employes.php?action=delete-employe&id=" + id, true);
             xhr.send();
 
             employe.remove();

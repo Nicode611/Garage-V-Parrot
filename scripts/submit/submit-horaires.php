@@ -26,12 +26,12 @@
                 if ($conn->query($sql) === TRUE) {
                     $_SESSION["success"] = "<p class='validation'>Les horaires ont été modifiés.</p>";
                     $conn->close();
-                    header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
+                    header("Location: ../../pages/dashboard-admin.php");
                     exit();
                 } else {
                     $_SESSION["error"] = "<p class='error'>Les horaires n'ont pas été modifiés.</p>";
                     $conn->close();
-                    header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
+                    header("Location: ../../pages/dashboard-admin.php");
                     exit();
                 }
             }

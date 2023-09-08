@@ -39,17 +39,17 @@
                         $_SESSION["success"] = "<p class='validation'>Les modifications ont été enregistrées.</p>";
                         $conn->close();
                         if ($_SESSION["user_role"] == "Admin") {
-                            header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
+                            header("Location: ../../pages/dashboard-admin.php");
                         } else {
-                            header("Location: /Garage-V-Parrot/pages/dashboard-employes.php");
+                            header("Location: ../../pages/dashboard-employes.php");
                         }
                     } else {
                         $_SESSION["error"] = "<p class='error'>Les modifications n'ont pas été enregistrées.</p>";
                         $conn->close();
                         if ($_SESSION["user_role"] == "Admin") {
-                            header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
+                            header("Location: ../../pages/dashboard-admin.php");
                         } else {
-                            header("Location: /Garage-V-Parrot/pages/dashboard-employes.php");
+                            header("Location: ../../pages/dashboard-employes.php");
                         }
                     }
 
@@ -57,9 +57,9 @@
                         $_SESSION["error"] = "<p class='error'>Les mdps ne corrspondent pas.</p>";
                         $conn->close();
                         if ($_SESSION["user_role"] == "Admin") {
-                            header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
+                            header("Location: ../../pages/dashboard-admin.php");
                         } else {
-                            header("Location: /Garage-V-Parrot/pages/dashboard-employes.php");
+                            header("Location: ../../pages/dashboard-employes.php");
                         }
                     }
             }

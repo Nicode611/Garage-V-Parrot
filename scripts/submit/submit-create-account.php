@@ -38,28 +38,28 @@ if (isset($_POST["submit_create"])) {
 
                 $_SESSION["success"] = "<p class='validation'>Compte crée !</p>";
                 $conn->close();
-                header("Location: /Garage-V-Parrot/pages/connection.php");
+                header("Location: ../../pages/connection.php");
                 exit();
 
             } else {
                 session_start();
                 $_SESSION["error"] = "<p class='error'>Erreur</p>";
                 $conn->close();
-                header("Location: /Garage-V-Parrot/pages/create-account.php");
+                header("Location: ../../pages/create-account.php");
                 exit();
             }
         } else {
             session_start();
             $_SESSION["error"] = "<p class='error'>Code incorrect.</p>";
             $conn->close();
-            header("Location: /Garage-V-Parrot/pages/create-account.php");
+            header("Location: ../../pages/create-account.php");
             exit();
         }
     } else {
         session_start();
         $_SESSION["error"] = "<p class='error'>Mot de passe incorect.</p>";
         $conn->close();
-        header("Location: /Garage-V-Parrot/pages/create-account.php");
+        header("Location: ../../pages/create-account.php");
         exit();
     }
 }

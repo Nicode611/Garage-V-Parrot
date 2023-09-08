@@ -15,7 +15,7 @@
     
                     // Vérifie si un fichier a été téléchargé
                     if(isset($_FILES["image"]) && $_FILES["image"]["error"] == 0) {
-                        $target_directory =  $_SERVER['DOCUMENT_ROOT'] . "/Garage-V-Parrot/assets/images/images-vehicules/"; // Le répertoire de destination de l'image
+                        $target_directory =  "../../assets/images/images-vehicules/"; // Le répertoire de destination de l'image
                         $target_file = $target_directory . basename($_FILES["image"]["name"]);
                         $imageFileName = basename($_FILES["image"]["name"]);
                         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
@@ -45,18 +45,18 @@
                                     $stmt->close();
                                     $conn->close();
                                     if ($_SESSION["user_role"] == "Admin") {
-                                        header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
+                                        header("Location: ../../pages/dashboard-admin.php");
                                     } else {
-                                        header("Location: /Garage-V-Parrot/pages/dashboard-employes.php");
+                                        header("Location: ../../pages/dashboard-employes.php");
                                     }
                                 } else {
                                     $_SESSION["error"] = "<p class='error'>Le véhicule n'a pas été ajouté.</p>";
                                     $stmt->close();
                                     $conn->close();
                                     if ($_SESSION["user_role"] == "Admin") {
-                                        header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
+                                        header("Location: ../../pages/dashboard-admin.php");
                                     } else {
-                                        header("Location: /Garage-V-Parrot/pages/dashboard-employes.php");
+                                        header("Location: ../../pages/dashboard-employes.php");
                                     }
                                 }
                             } else {
@@ -64,20 +64,20 @@
                                 if ($_SESSION["user_role"] == "Admin") {
                                     $_SESSION["error"] = "<p class='error'>Une erreur est survenue lors de l'upload de l'image</p>";
                                     $conn->close();
-                                    header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
+                                    header("Location: ../../pages/dashboard-admin.php");
                                 } else {
                                     $_SESSION["error"] = "<p class='error'>Une erreur est survenue lors de l'upload de l'image</p>";
                                     $conn->close();
-                                    header("Location: /Garage-V-Parrot/pages/dashboard-employes.php");
+                                    header("Location: ../../pages/dashboard-employes.php");
                                 }
                             }
                         } else {  
                             $_SESSION["error"] = "<p class='error'>Une erreur est survenue lors de l'upload de l'image</p>";
                             $conn->close();
                             if ($_SESSION["user_role"] == "Admin") {
-                                header("Location: /Garage-V-Parrot/pages/dashboard-admin.php");
+                                header("Location: ../../pages/dashboard-admin.php");
                             } else {
-                                header("Location: /Garage-V-Parrot/pages/dashboard-employes.php");
+                                header("Location: ../../pages/dashboard-employes.php");
                             }
                         }
                     }
