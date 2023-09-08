@@ -12,9 +12,6 @@
     
 
 <?php
-    $includeFile = "root.php";
-    if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
-
     $includeFile = "includes/header-index.php";
     if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
 ?>
@@ -71,7 +68,7 @@
 </main>
 
 <?php
-    $includeFile = "includes/footer.php";
+    $includeFile = "includes/footer-index.php";
     if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
 ?>
 

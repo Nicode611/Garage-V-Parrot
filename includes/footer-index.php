@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../assets/css/footer.css">
+        <link rel="stylesheet" href="assets/css/footer.css">
         <title>Garage V. Parrot</title>
     </head>
 <footer>
@@ -15,7 +15,7 @@
     <div class="horaires-footer-container">
         <h1 class="footer-titles">Horaires</h1>
         <?php
-            $includeFile = ("../includes/horaires.php");
+            $includeFile = ("includes/horaires.php");
             if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
         ?>
     </div>
