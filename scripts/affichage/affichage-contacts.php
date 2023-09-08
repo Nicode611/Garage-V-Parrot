@@ -56,11 +56,11 @@
 
             // Effectue une requête AJAX pour supprimer l'élément
             var xhr = new XMLHttpRequest();
-            xhr.open("GET", url + "/includes/dashboard-contact.php?execute_script=true&id=" + id, true);
+            xhr.open("GET", url + "/scripts/affichage/affichage-contacts.php?execute_script=true&id=" + id, true);
             xhr.send();
 
             contact.remove();
-            console.log(url + "/includes/dashboard-contact.php?execute_script=true&id=");
+            console.log(url + "/scripts/affichage/affichage-contacts.php?execute_script=true&id=");
         }
     }
 });
@@ -72,10 +72,10 @@
 
         echo "oui";
         
-        $db_host = "localhost";
-        $db_user = "root";
-        $db_pass = "";
-        $db_name = "garage_v_parrot";
+        $db_host = "mysql-garage-v-parrot.alwaysdata.net";
+        $db_user = "326283";
+        $db_pass = "Beta2k15";
+        $db_name = "garage-v-parrot_ecf";
         $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
 
         if ($conn->connect_error) {
