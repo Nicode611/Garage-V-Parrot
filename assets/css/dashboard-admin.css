@@ -355,6 +355,36 @@ main {
     zoom: 105%;
 }
 
+/* Avis */
+
+.dashboard-avis {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 50px 0px 50px 0px;
+    overflow: hidden;
+}
+
+.new-avis {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+}
+
+.dividing-bar {
+    border-top: solid 1px white;
+    width: 100%;
+}
+
+.valid-avis {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+}
+
 /* Contact */
 .dashboard-contacts {
     display: flex;

@@ -136,6 +136,21 @@
 
         <!-- Avis -->
         <div class="dashboard-avis hide">
+            <h3>Nouveaux avis</h3>
+            <div class="new-avis">
+                <div class="avis">
+                    <span class="message"></span>
+                    <span class="nom"></span>
+                </div>
+                fo
+            </div>
+            <div class="dividing-bar"></div>
+            <h3>Avis vérifiés</h3>
+            <div class="valid-avis">
+                
+
+            </div>
+
             <?php
                 $includeFile = "../scripts/affichage/affichage-avis.php";
                 if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
