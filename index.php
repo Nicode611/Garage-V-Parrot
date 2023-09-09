@@ -1,4 +1,8 @@
-<?php ?>
+<?php 
+if ($_SERVER['REQUEST_URI'] == "/") {
+    header("Location: index.php");
+}
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -20,6 +24,7 @@
 ?>
 
 <main>
+    
     <!-- Présentation -->
     <div class="section-presentation">
         <div class="presentation-glow"></div>
