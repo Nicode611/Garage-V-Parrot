@@ -13,7 +13,7 @@ body {
     position: fixed;
     top: 109px;
     right: 5px;
-    width: auto;
+    width: auto;padding: 9px;
     border: solid 1px #2b8004;
     border-radius: 5px;
     text-align: center;
@@ -30,7 +30,7 @@ body {
     position: fixed;
     top: 109px;
     right: 5px;
-    width: auto;
+    width: auto;padding: 9px;
     border: solid 1px #800404;
     border-radius: 5px;
     text-align: center;
