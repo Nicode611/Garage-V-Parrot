@@ -43,24 +43,20 @@
 
 <script> // Script de sélection de la croix de supression (en AJAX)
     document.querySelector(".dashboard-contacts").addEventListener("click", function(event) {
-    // Vérifie si la target de l'event est un bouton .service-delete contenu dans #services-section
+
     if (event.target.classList.contains("delete")) {
         var id = event.target.nextElementSibling.textContent;
         var contact = event.target.closest(".dashboard-contact");
 
         // Demande confirmation à l'utilisateur
         if (confirm("Êtes-vous sûr de vouloir supprimer cet élément ?")) {
-            // Utilise l'URL actuelle avec le même protocole que la page
-            var currentProtocol = window.location.protocol;
-            var url = currentProtocol + "//" + window.location.host;
-
+            
             // Effectue une requête AJAX pour supprimer l'élément
             var xhr = new XMLHttpRequest();
-            xhr.open("GET", url + "/scripts/affichage/affichage-contacts.php?execute_script=true&id=" + id, true);
+            xhr.open("GET", "../scripts/affichage/affichage-contacts.php?execute_script=true&id=" + id, true);
             xhr.send();
 
             contact.remove();
-            console.log(url + "/scripts/affichage/affichage-contacts.php?execute_script=true&id=");
         }
     }
 });
