@@ -374,6 +374,29 @@ main {
     padding: 20px;
 }
 
+.avis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px;
+    max-width: 540px;
+}
+
+.avis-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #09A7A0;
+    color: white;
+    box-shadow: #ffffff;
+}
+
+
+
 .dividing-bar {
     border-top: solid 1px white;
     width: 100%;

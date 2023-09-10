@@ -139,10 +139,15 @@
             <h3>Nouveaux avis</h3>
             <div class="new-avis">
                 <div class="avis">
-                    <span class="message"></span>
-                    <span class="nom"></span>
+                    <div class="avis-container">
+                        <span class="message">messagedsgdsgqsdgg dsgsdgsqdgfdsg dsqgdsgqds q dsqgdsqgds</span>
+                        <span class="nom">gfdsdgs</span>
+                    </div>
+                    <form action="../scripts/submit/submit-choose-avis.php" method="POST">
+                        <input class="choose-avis" type="submit" name="submit_valid" value="Valider">
+                        <input class="choose-avis" type="submit" name="submit_delete" value="Refuser">
+                    </form>
                 </div>
-                fo
             </div>
             <div class="dividing-bar"></div>
             <h3>Avis vérifiés</h3>
