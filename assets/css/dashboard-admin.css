@@ -387,6 +387,7 @@ main {
 }
 
 .avis-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -400,6 +401,26 @@ main {
     color: white;
     border: solid 0.5px rgb(0, 0, 0);
 }
+
+.avis-delete {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: -20px;
+    right: -20px;
+    opacity: 1;
+    z-index: 2;
+}
+
+.avis-delete:hover {
+    cursor: pointer;
+    zoom: 105%;
+}
+
+.avis-delete:hover ~ * {
+    filter: blur(5px);
+}
+    
 
 .form-avis > input {
     color: white;
@@ -424,14 +445,12 @@ main {
     background-color: #db3939;
 }
 
-
-
 .dividing-bar {
     border-top: solid 1px white;
     width: 100%;
 }
 
-.valid-avis {
+.verified-avis {
     display: flex;
     width: 100%;
     padding: 20px;

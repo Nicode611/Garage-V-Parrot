@@ -139,15 +139,17 @@
             <h3>Nouveaux avis</h3>
             <div class="new-avis">
                 <?php
-                    $includeFile = "../scripts/affichage/affichage-avis.php";
+                    $includeFile = "../scripts/affichage/affichage-new-avis.php";
                     if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
                 ?>
             </div>
             <div class="dividing-bar"></div>
             <h3>Avis vérifiés</h3>
-            <div class="valid-avis">
-                
-
+            <div class="verified-avis">
+                <?php
+                    $includeFile = "../scripts/affichage/affichage-verified-avis.php";
+                    if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
+                ?>
             </div>
 
             

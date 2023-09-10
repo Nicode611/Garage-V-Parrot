@@ -17,7 +17,10 @@
             $id = $row["id"];
             $avis = $row["avis"];
             $nom = $row["nom"];
-            $statut = $row["statut"];?>
+            $statut = $row["statut"];
+            
+            if ($statut == "waiting") {
+            ?>
 
             <div class="avis">
                 <div class="avis-container">
@@ -31,6 +34,7 @@
                     <input class="choose-delete" type="submit" name="submit_delete" value="Refuser">
                 </form>
             </div><?php
+            }
         }
 
         $conn->close();
