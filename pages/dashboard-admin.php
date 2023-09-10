@@ -138,16 +138,10 @@
         <div class="dashboard-avis hide">
             <h3>Nouveaux avis</h3>
             <div class="new-avis">
-                <div class="avis">
-                    <div class="avis-container">
-                        <span class="message">messagedsgdsgqsdgg dsgsdgsqdgfdsg dsqgdsgqds q dsqgdsqgds</span>
-                        <span class="nom">gfdsdgs</span>
-                    </div>
-                    <form action="../scripts/submit/submit-choose-avis.php" method="POST">
-                        <input class="choose-avis" type="submit" name="submit_valid" value="Valider">
-                        <input class="choose-avis" type="submit" name="submit_delete" value="Refuser">
-                    </form>
-                </div>
+                <?php
+                    $includeFile = "../scripts/affichage/affichage-avis.php";
+                    if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
+                ?>
             </div>
             <div class="dividing-bar"></div>
             <h3>Avis vérifiés</h3>
@@ -156,10 +150,7 @@
 
             </div>
 
-            <?php
-                $includeFile = "../scripts/affichage/affichage-avis.php";
-                if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
-            ?>
+            
         </div>
         
         <!-- Contact -->

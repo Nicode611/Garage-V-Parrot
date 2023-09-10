@@ -370,6 +370,8 @@ main {
 
 .new-avis {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
     padding: 20px;
 }
@@ -380,7 +382,8 @@ main {
     justify-content: center;
     align-items: center;
     min-width: 100px;
-    max-width: 540px;
+    max-width: 300px;
+    margin: 10px 30px 10px 30px;
 }
 
 .avis-container {
@@ -388,11 +391,37 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     padding: 5px;
+    margin: 15px;
+    width: 100%;
     border-radius: 5px;
     background-color: #09A7A0;
     color: white;
-    box-shadow: #ffffff;
+    border: solid 0.5px rgb(0, 0, 0);
+}
+
+.form-avis > input {
+    color: white;
+    border: none;
+    align-self: center;
+    margin: 10px;
+    padding: 3px 10px 3px 10px;
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 10px rgb(0, 0, 0));
+}
+
+.form-avis > input:hover {
+    cursor: pointer;
+    border: solid 1px white;
+}
+
+.choose-valid {
+    background-color: #4ccf4c;
+}
+
+.choose-delete {
+    background-color: #db3939;
 }
 
 
