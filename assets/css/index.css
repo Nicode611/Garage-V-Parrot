@@ -104,8 +104,10 @@ body {
 
   .avis {
     display: flex;
+    word-wrap: break-word;
     flex-direction: column;
     justify-content: space-around;
+    overflow-y: auto;
     width: 200px;
     height: 150px;
     background-color: #09A7A0;

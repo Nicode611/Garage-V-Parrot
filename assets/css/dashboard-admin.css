@@ -371,6 +371,7 @@ main {
 .new-avis {
     display: flex;
     justify-content: center;
+    align-items: baseline;
     flex-wrap: wrap;
     width: 100%;
     padding: 20px;
@@ -452,6 +453,8 @@ main {
 
 .verified-avis {
     display: flex;
+    justify-content: center;
+    align-items: baseline;
     width: 100%;
     padding: 20px;
 }

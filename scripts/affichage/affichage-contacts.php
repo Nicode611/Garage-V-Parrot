@@ -50,7 +50,7 @@
 
         // Demande confirmation à l'utilisateur
         if (confirm("Êtes-vous sûr de vouloir supprimer cet élément ?")) {
-            
+
             // Effectue une requête AJAX pour supprimer l'élément
             var xhr = new XMLHttpRequest();
             xhr.open("GET", "../scripts/affichage/affichage-contacts.php?execute_script=true&id=" + id, true);
@@ -63,7 +63,6 @@
 </script>
 
 <?php // Script de supression employes
-    // Vérifie si la requete a été efectuée
     if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET["id"])) {
 
         echo "oui";

@@ -52,22 +52,10 @@ if ($_SERVER['REQUEST_URI'] == "/") {
             <h2>Avis</h2>
             <p>Ils nous ont fait confiance</p>
             <div class="avis-caroussel">
-                <div class="avis">
-                    <p class="avis-text">Super garage ils ont bien réparé ma voiture ! C’était pas gagné </p>
-                    <p class="avis-name">Monique L.</p>
-                </div>
-                <div class="avis">
-                    <p class="avis-text">Super garage ils ont bien réparé ma voiture ! C’était pas gagné </p>
-                    <p class="avis-name">Thomas L.</p>
-                </div>
-                <div class="avis">
-                    <p class="avis-text">Super garage ils ont bien réparé ma voiture ! C’était pas gagné </p>
-                    <p class="avis-name">Mathieu L.</p>
-                </div>
-                <div class="avis">
-                    <p class="avis-text">Super garage ils ont bien réparé ma voiture ! C’était pas gagné </p>
-                    <p class="avis-name">Mathieu L.</p>
-                </div>
+                <?php
+                    $includeFile = "scripts/affichage/affichage-index-avis.php";
+                    if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
+                ?>
             </div>
             <a href="pages/avis.php"><button id="ajoutAvis">Ajouter un avis</button></a>
         </div>

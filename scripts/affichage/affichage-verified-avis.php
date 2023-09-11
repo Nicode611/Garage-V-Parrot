@@ -60,7 +60,6 @@
 </script>
 
 <?php // Script de supression d'avis
-    // Vérifie si la requete a été efectuée
     if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET["id"])) {
         
         $db_host = "mysql-garage-v-parrot.alwaysdata.net";
