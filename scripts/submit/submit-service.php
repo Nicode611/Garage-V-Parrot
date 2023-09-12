@@ -20,10 +20,6 @@ if (isset($_POST["submit_service"])) {
         $target_file = $target_directory . basename($_FILES["image"]["name"]);
         $imageFileName = basename($_FILES["image"]["name"]);
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-    
-        // Vérifie si le fichier est une image
-        $valid_extensions = array("jpg", "jpeg", "png", "gif");
-        if(in_array($imageFileType, $valid_extensions)) {
 
             // Déplace l'image téléchargée vers le répertoire de destination
             if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
@@ -73,6 +69,5 @@ if (isset($_POST["submit_service"])) {
             header("Location: ../../pages/dashboard-admin.php");
             exit();
         }
-    }
 
 ?>
