@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     let vehicules = document.querySelectorAll(".vehicules-img");
-    let prevBtn = document.querySelector("#prevButton"); // Utilisation correcte de querySelector
-    let nextBtn = document.querySelector("#nextButton"); // Utilisation correcte de querySelector
+    let prevBtn = document.querySelector("#prevButton");
+    let nextBtn = document.querySelector("#nextButton");
     let currentIndex = 0; // Pour suivre l'index de l'élément actif
   
     function setActive(event) {
