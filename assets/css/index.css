@@ -109,13 +109,14 @@ body {
     justify-content: space-around;
     overflow-y: auto;
     width: 200px;
+    min-width: 200px;
     height: 150px;
     background-color: #09A7A0;
     color: black;
     text-align: center;
     border-radius: 15px;
     padding: 10px;
-    margin: 10px;
+    margin: 10px 50px 10px 50px;
     transition: transform 0.3s ease; /* Ajoutez une transition de 0.3 seconde sur la transformation */
 
 } 
