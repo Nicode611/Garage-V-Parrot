@@ -83,23 +83,23 @@ body {
 
 #prevButton {
     display: none;
-    width: 10px;
-    height: 20px;
+    width: 20px;
+    height: 30px;
     background-color: white;
     position: absolute;
     top: 50%;
-    left: -25px;
+    left: -40px;
     z-index: 3;
 }
 
 #nextButton {
     display: none;
-    width: 10px;
-    height: 20px;
+    width: 20px;
+    height: 30px;
     background-color: white;
     position: absolute;
     top: 50%;
-    right: -25px;
+    right: -40px;
     z-index: 3;
 }
 
