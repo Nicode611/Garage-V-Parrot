@@ -3,7 +3,11 @@ const carousel = document.querySelector('.avis-caroussel');
 const slides = document.querySelectorAll('.avis');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
-let currentIndex = Math.floor(slides.length / 2);
+let currentIndex = Math.floor(slides.length / 2 );
+
+if (currentIndex % 2 === 0) {
+    currentIndex += 0.5;
+}
 
 // Fonction pour afficher la diapositive actuelle
 function showSlide(index) {

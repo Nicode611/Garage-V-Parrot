@@ -94,7 +94,7 @@ body {
 
 .avis-caroussel {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 50px;
     width: 100%;
     overflow: hidden;
@@ -106,7 +106,7 @@ body {
     display: flex;
     word-wrap: break-word;
     flex-direction: column;
-    justify-content: space-around;
+    align-items: center;
     overflow-y: auto;
     width: 200px;
     min-width: 200px;
@@ -118,7 +118,6 @@ body {
     padding: 10px;
     margin: 10px 50px 10px 50px;
     transition: transform 0.3s ease; /* Ajoutez une transition de 0.3 seconde sur la transformation */
-
 } 
 
 .shadow-left {
