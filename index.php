@@ -70,6 +70,6 @@ if ($_SERVER['REQUEST_URI'] == "/") {
 ?>
 
 <script src="assets/js/script-selection-vehicule.js"></script>
-<script src="assets/js/script-carousel.js"></script>
+<script src="assets/js/script-avis-carousel.js"></script>
 </body>
 </html>
