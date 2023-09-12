@@ -20,6 +20,7 @@ if (isset($_POST["submit_service"])) {
         $target_file = $target_directory . basename($_FILES["image"]["name"]);
         $imageFileName = basename($_FILES["image"]["name"]);
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+    
 
             // Déplace l'image téléchargée vers le répertoire de destination
             if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
@@ -63,11 +64,6 @@ if (isset($_POST["submit_service"])) {
 } 
 
             }
-        } else {
-            $_SESSION["error"] = "<p class='error'>Mauvais format de l'image.</p>";
-            $conn->close();
-            header("Location: ../../pages/dashboard-admin.php");
-            exit();
-        }
+        } 
 
 ?>
