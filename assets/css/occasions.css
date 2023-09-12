@@ -71,6 +71,7 @@ body {
 }
 
 .vehicule-card {
+    position: relative;
     background-color: white;
     color: black;
     display: flex;
@@ -78,6 +79,28 @@ body {
     width: 30%;
     border-radius: 0px 0px 15px 15px;
     box-shadow: 5px 5px 30px 10px rgb(0, 0, 0);
+}
+
+#prevButton {
+    display: none;
+    width: 10px;
+    height: 20px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    z-index: 3;
+}
+
+#nextButton {
+    display: none;
+    width: 10px;
+    height: 20px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    z-index: 3;
 }
 
 .vehicule-img {
@@ -134,5 +157,13 @@ body {
         width: auto;
         height: 50vw;
         object-fit: cover;
+    }
+
+    #prevButton {
+        display: block;
+    }
+    
+    #nextButton {
+        display: block;
     }
 }

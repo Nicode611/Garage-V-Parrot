@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+
+
 let vehicules = document.querySelectorAll(".vehicules-img");
+let prevBtn = document.querrySelector("#prevButton");
+let nextBtn = document.querrySelector("#nextButton");
 
 function setActive(event) {
     let vehiculesParent = event.currentTarget.closest('.vehicules'); // Déplacer cette ligne ici
