@@ -112,7 +112,4 @@
 </header>
 
 <script src="../assets/js/script-header.js"></script>
-<script src="../assets/js/script-dashboard.js"></script>
-
-
 </html>
