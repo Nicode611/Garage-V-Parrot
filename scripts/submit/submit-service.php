@@ -30,13 +30,13 @@ if (isset($_POST["submit_service"])) {
                 
                 // Récupère les données du formulaire
                 $image_path = $imageFileName;
-                $nom = $_POST["titre"];
+                $title = $_POST["titre"];
                 $description = $_POST["texte"];
 
                 // Prépare et exécute la requête SQL pour insérer les données (les marqueurs de position servent a éviter les injections SQL)
-                $sql = "INSERT INTO services (image, nom, description) VALUES (?, ?, ?)";
+                $sql = "INSERT INTO services (image, title, description) VALUES (?, ?, ?)";
                 $stmt = $conn->prepare($sql);
-                $stmt->bind_param("sss", $image_path, $nom, $description);
+                $stmt->bind_param("sss", $image_path, $title, $description);
                 // Si insertion
                 if ($stmt->execute()) {
                     $_SESSION["success"] = "<p class='validation'>Le service a été ajouté.</p>";
