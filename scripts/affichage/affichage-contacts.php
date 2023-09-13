@@ -9,7 +9,7 @@
         die("La connexion à la base de données a échoué : " . $conn->connect_error);
     }
 
-    $sql = "SELECT id, date, message, nom, telephone, email FROM contacts";
+    $sql = "SELECT id, date, message, name, phone, email FROM contacts";
 
     $result = $conn->query($sql);
 
@@ -18,8 +18,8 @@
             $id = $row["id"];
             $date = $row["date"];
             $message = $row["message"];
-            $nom = $row["nom"];
-            $telephone = $row["telephone"];
+            $name = $row["name"];
+            $phone = $row["phone"];
             $email = $row["email"]; ?>
 
             <div class="dashboard-contact">
@@ -28,8 +28,8 @@
                 <span class="contact-date"><?php echo $date ?></span>
                 <span class="contact-message"><?php echo $message ?></span>
                 <div class="contact-infos">
-                    <span class="contact-nom"><?php echo $nom ?></span>
-                    <span class="contect-telephone"><?php echo $telephone ?></span>
+                    <span class="contact-nom"><?php echo $name ?></span>
+                    <span class="contect-telephone"><?php echo $phone ?></span>
                     <span class="cobtact-email"><?php echo $email ?></span>
                 </div>
             </div> <?php
@@ -64,8 +64,6 @@
 
 <?php // Script de supression employes
     if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET["id"])) {
-
-        echo "oui";
         
         $db_host = "mysql-garage-v-parrot.alwaysdata.net";
         $db_user = "326283";
