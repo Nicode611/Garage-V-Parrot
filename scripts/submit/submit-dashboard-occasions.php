@@ -29,10 +29,10 @@
                             if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
                                 
                                 // Récupère les données du formulaire
-                                $model = $_POST["model"];
-                                $year = $_POST["year"];
+                                $model = $_POST["modele"];
+                                $year = $_POST["annee"];
                                 $kilometrage = $_POST["kilometrage"];
-                                $price = $_POST["price"];
+                                $price = $_POST["prix"];
                                 $image = $imageFileName;
                                 $description = $_POST["description"];
 
