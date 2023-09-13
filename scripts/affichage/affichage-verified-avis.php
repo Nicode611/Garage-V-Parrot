@@ -9,7 +9,7 @@
         die("La connexion à la base de données a échoué : " . $conn->connect_error);
     }
 
-    $sql = "SELECT id, message, name, state FROM review";
+    $sql = "SELECT id, message, name, state FROM reviews";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -75,7 +75,7 @@
         // Récupére l'ID de la ligne de l'élément à supprimer depuis la requête GET
         $id = $_GET["id"];
 
-        $sql = "DELETE FROM review WHERE id = $id";
+        $sql = "DELETE FROM reviews WHERE id = $id";
         if ($conn->query($sql) === TRUE) {
             echo "Avis suprimé";
             $conn->close();

@@ -9,7 +9,7 @@
         die("La connexion à la base de données a échoué : " . $conn->connect_error);
     }
 
-    $sql = "SELECT id, message, name, state FROM review";
+    $sql = "SELECT id, message, name, state FROM reviews";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {

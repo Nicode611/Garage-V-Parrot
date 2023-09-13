@@ -18,7 +18,7 @@ if (isset($_POST["submit_avis"])) {
     $state = "waiting";
 
     // Les marqueurs de position servent a éviter les injections SQL
-    $sql = "INSERT INTO review (message, name, state) VALUES (?, ?, ?)";
+    $sql = "INSERT INTO reviews (message, name, state) VALUES (?, ?, ?)";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("sss", $message, $name, $state);
 
