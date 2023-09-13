@@ -13,14 +13,14 @@ if (isset($_POST["submit_avis"])) {
         die("La connexion à la base de données a échoué : " . $conn->connect_error);
     }
 
-    $avis = $_POST["avis"];
-    $nom = $_POST["nom"];
-    $statut = "waiting";
+    $message = $_POST["message"];
+    $name = $_POST["name"];
+    $state = "waiting";
 
     // Les marqueurs de position servent a éviter les injections SQL
-    $sql = "INSERT INTO avis (avis, nom, statut) VALUES (?, ?, ?)";
+    $sql = "INSERT INTO review (message, name, state) VALUES (?, ?, ?)";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sss", $avis, $nom, $statut);
+    $stmt->bind_param("sss", $message, $name, $state);
 
     if ($stmt->execute()) {
         $_SESSION["success"] = "<p class='validation'>Avis en attente de validation.</p>";

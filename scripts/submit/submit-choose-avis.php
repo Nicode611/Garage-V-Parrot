@@ -15,8 +15,8 @@
         $id = $_POST['avis_id'];
     
         if (isset($_POST['submit_valid'])) {
-            // Si le bouton "Valider" a été cliqué, mettez à jour la colonne "statut" à "valid"
-            $sql = "UPDATE avis SET statut='valid' WHERE id=$id";
+            // Si le bouton "Valider" a été cliqué, met à jour la colonne "state" à "valid"
+            $sql = "UPDATE review SET state='valid' WHERE id=$id";
 
             if ($conn->query($sql) === TRUE)  {
                 $_SESSION["success"] = "<p class='validation'>Avis validé.</p>";
@@ -32,7 +32,7 @@
 
         } elseif (isset($_POST['submit_delete'])) {
             // Si le bouton "Refuser" a été cliqué, supprimez l'avis de la base de données
-            $sql = "DELETE FROM avis WHERE id=$id";
+            $sql = "DELETE FROM review WHERE id=$id";
 
             if ($conn->query($sql) === TRUE)  {
                 $_SESSION["success"] = "<p class='validation'>Avis refusé.</p>";
