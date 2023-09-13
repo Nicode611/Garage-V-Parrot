@@ -9,23 +9,23 @@
         die("La connexion à la base de données a échoué : " . $conn->connect_error);
     }
 
-    $sql = "SELECT id, avis, nom, statut FROM avis";
+    $sql = "SELECT id, message, name, state FROM review";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             $id = $row["id"];
-            $avis = $row["avis"];
-            $nom = $row["nom"];
-            $statut = $row["statut"];
+            $message = $row["message"];
+            $name = $row["name"];
+            $state = $row["state"];
             
-            if ($statut == "waiting") {
+            if ($state == "waiting") {
             ?>
 
             <div class="avis">
                 <div class="avis-container">
-                    <span class="message"><?php echo $avis ?></span><br>
-                    <span class="nom"><?php echo $nom ?></span>
+                    <span class="message"><?php echo $message ?></span><br>
+                    <span class="nom"><?php echo $name ?></span>
                 </div>
                 <form class="form-avis" action="../scripts/submit/submit-choose-avis.php" method="POST">
                     <input type="hidden" name="avis_id" value="<?php echo $id ?>">

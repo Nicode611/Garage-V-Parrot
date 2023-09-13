@@ -9,21 +9,21 @@
         die("La connexion à la base de données a échoué : " . $conn->connect_error);
     }
 
-    $sql = "SELECT avis, nom, statut FROM avis";
+    $sql = "SELECT message, name, state FROM review";
     $result = $conn->query($sql);
 
     // Si résultat plus grand que 0 lignes
     if ($result->num_rows > 0) {
         // Crée un var a chaque éléments
         while ($row = $result->fetch_assoc()) {
-            $statut = $row["statut"];
-            $avis = $row["avis"];
-            $nom = $row["nom"];
+            $state = $row["state"];
+            $message = $row["message"];
+            $name = $row["name"];
 
-            if ($statut == "valid") {  ?>
+            if ($state == "valid") {  ?>
                 <div class="avis">
-                    <p class="avis-text"><?php echo $avis ?></p><br>
-                    <p class="avis-name"><?php echo $nom ?></p>
+                    <p class="avis-text"><?php echo $message ?></p><br>
+                    <p class="avis-name"><?php echo $name ?></p>
                 </div>
                 <?php
             }
