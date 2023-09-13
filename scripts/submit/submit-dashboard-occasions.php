@@ -1,5 +1,5 @@
 
-<?php
+            <?php
                 if (isset($_POST["submit_occasions"])) { 
 
                     session_set_cookie_params(3600);
@@ -29,17 +29,17 @@
                             if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
                                 
                                 // Récupère les données du formulaire
-                                $modele = $_POST["modele"];
-                                $annee = $_POST["annee"];
+                                $model = $_POST["model"];
+                                $year = $_POST["year"];
                                 $kilometrage = $_POST["kilometrage"];
-                                $prix = $_POST["prix"];
+                                $price = $_POST["price"];
                                 $image = $imageFileName;
                                 $description = $_POST["description"];
 
                                 // Prépare et exécute la requête SQL pour insérer les données
-                                $sql = "INSERT INTO vehicules (modele, annee, kilometrage, prix, image, description) VALUES (?, ?, ?, ?, ?, ?)";
+                                $sql = "INSERT INTO vehicules (model, year, kilometrage, price, image, description) VALUES (?, ?, ?, ?, ?, ?)";
                                 $stmt = $conn->prepare($sql);
-                                $stmt->bind_param("ssssss", $modele, $annee, $kilometrage, $prix, $image, $description);
+                                $stmt->bind_param("ssssss", $model, $year, $kilometrage, $price, $image, $description);
                                 // Si insertion
                                 if ($stmt->execute()) {
                                     $_SESSION["success"] = "<p class='validation'>Le véhicule a bien été ajouté.</p>";

@@ -11,7 +11,7 @@ if ($conn->connect_error) {
 }
 
 // Récupération de tout les éléments de la table
-$sql = "SELECT id, modele, annee, kilometrage, prix, image, description FROM vehicules";
+$sql = "SELECT id, model, year, kilometrage, price, image, description FROM vehicules";
 $result = $conn->query($sql);
 $data = array();
 
@@ -19,10 +19,10 @@ $data = array();
 if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             $id = $row["id"];
-            $modele = $row["modele"];
-            $annee = $row["annee"];
+            $model = $row["model"];
+            $year = $row["year"];
             $kilometrage = $row["kilometrage"];
-            $prix = $row["prix"];
+            $price = $row["price"];
             $image = $row["image"];
             $description = $row["description"]; ?>
 
@@ -36,11 +36,11 @@ if ($result->num_rows > 0) {
                             echo '../assets/images/images-vehicules/' . $image;
                         } ?>">
                     <div class="hided-infos" style="display: none;">
-                        <span class="vehicules-model"><?php echo $modele ?></span>
-                        <span class="vehicules-infos vehicules-year"><?php echo $annee ?></span>
+                        <span class="vehicules-model"><?php echo $model ?></span>
+                        <span class="vehicules-infos vehicules-year"><?php echo $year ?></span>
                         <span class="vehicules-infos vehicules-km"><?php echo $kilometrage ?> km</span>
                         <span class="vehicules-description"><?php echo $description ?></span>
-                        <span class="vehicules-price"><?php echo $prix ?> €</span>
+                        <span class="vehicules-price"><?php echo $price ?> €</span>
                     </div>
             </div>
             <?php
