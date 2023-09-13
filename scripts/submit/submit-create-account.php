@@ -1,6 +1,4 @@
 <?php
-
- 
 if (isset($_POST["submit_create"])) {
 
     session_set_cookie_params(3600);
@@ -28,10 +26,10 @@ if (isset($_POST["submit_create"])) {
         $validPassword = $mdp;
         $hash_mdp = password_hash($validPassword, PASSWORD_DEFAULT);
 
-        $sqlSelect = "SELECT * FROM users WHERE code_employé = '$code'";
+        $sqlSelect = "SELECT * FROM users WHERE code = '$code'";
         $result = $conn->query($sqlSelect);
         if ($result->num_rows > 0) {
-            $sql = "UPDATE users SET prénom = '$prenom', nom = '$nom', email = '$email', mdp = '$hash_mdp', telephone = '$telephone' WHERE code_employé = '$code'";
+            $sql = "UPDATE users SET first_name = '$prenom', name = '$nom', email = '$email', password = '$hash_mdp', phone = '$telephone' WHERE code = '$code'";
 
             if ($conn->query($sql) === TRUE) {
                 ?> <span class="validation">Compte crée, connectez vous</span> <?php

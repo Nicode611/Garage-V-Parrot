@@ -21,7 +21,7 @@ if (isset($_POST["submit_connect"])) {
 
     if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
-        $hashMdp = $row["mdp"];
+        $hashMdp = $row["password"];
 
         if (password_verify($mdp, $hashMdp)) {
         //if ($mdp == $hashMdp) {
@@ -31,12 +31,12 @@ if (isset($_POST["submit_connect"])) {
             // Stocker les informations de l'utilisateur dans la session
             $_SESSION["user_id"] = $row["id"];
             $_SESSION["user_role"] = $row["role"];
-            $_SESSION["user_prénom"] = $row["prénom"];
-            $_SESSION["user_nom"] = $row["nom"];
+            $_SESSION["user_prénom"] = $row["first_name"];
+            $_SESSION["user_nom"] = $row["name"];
             $_SESSION["user_email"] = $row["email"];
-            $_SESSION["user_mdp"] = $row["mdp"];
-            $_SESSION["user_telephone"] = $row["telephone"];
-            $_SESSION["user_code_employé"] = $row["code_employé"];
+            $_SESSION["user_mdp"] = $row["password"];
+            $_SESSION["user_telephone"] = $row["phone"];
+            $_SESSION["user_code_employé"] = $row["code"];
             
             $_SESSION["success"] = "<p class='validation'>Connecté !</p>";
             $conn->close();

@@ -19,7 +19,7 @@
         $prenom = $_POST["prenom"];
 
         // Les marqueurs de position servent a éviter les injections SQL
-        $sql = "INSERT INTO users (role, prénom, nom, code_employé) VALUES (?, ?, ?, ?)";
+        $sql = "INSERT INTO users (role, first_name, name, code) VALUES (?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("ssss", $role, $prenom, $nom, $code);
 

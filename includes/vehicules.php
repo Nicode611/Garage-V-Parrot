@@ -34,14 +34,14 @@
                 <img class="vehicule-img" src="../assets/images/images-vehicules/<?php echo $image ?>" alt="">
                 <div class="card-bottom">
                     <div>
-                        <h3 class="vehicule-model"><?php echo $modele ?></h3>
+                        <h3 class="vehicule-model"><?php echo $model ?></h3>
                         <div>
-                            <h4 class="vehicule-infos vehicule-year"><?php echo $annee ?></h4>
+                            <h4 class="vehicule-infos vehicule-year"><?php echo $year ?></h4>
                             <h4 class="vehicule-infos vehicule-km"><?php echo $kilometrage ?> km</h4>
                         </div>
                     </div>
                     <p class="vehicule-description"><?php echo $description ?></p>
-                    <h3 class="vehicule-price"><?php echo $prix ?> €</h3>
+                    <h3 class="vehicule-price"><?php echo $price ?> €</h3>
                 </div>
                 <button id="nextButton"></button>
             </div>

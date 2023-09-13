@@ -25,7 +25,7 @@
                     $validPassword = $password;
                     $hash_mdp = password_hash($validPassword, PASSWORD_DEFAULT);
 
-                    $sql = "UPDATE users SET prénom = '$prenom', nom = '$nom', telephone = '$telephone', email = '$email', mdp = '$hash_mdp' WHERE id = $id";
+                    $sql = "UPDATE users SET first_name = '$prenom', name = '$nom', phone = '$telephone', email = '$email', password = '$hash_mdp' WHERE id = $id";
 
                     if ($conn->query($sql) === TRUE) {
                         
