@@ -47,3 +47,12 @@
     cursor: pointer;
     zoom: 105%;
 }
+
+.attention {
+    font-size: 0.7rem;
+    margin: 0;
+}
+
+.attention > svg {
+    transform: translateY(5px);
+}
