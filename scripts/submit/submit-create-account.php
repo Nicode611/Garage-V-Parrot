@@ -21,6 +21,8 @@ if (isset($_POST["submit_create"])) {
     $mdp = $_POST["motdepasse"];
     $confirmMdp = $_POST["confirmationmdp"];
 
+    if (strlen($mdp) >= 8 && preg_match("/[0-9]/", $mdp) && preg_match("/[!@#$%^&*]/", $mdp)) { 
+
     if ($mdp == $confirmMdp) {
         
         $validPassword = $mdp;
@@ -52,11 +54,17 @@ if (isset($_POST["submit_create"])) {
             exit();
         }
     } else {
-        $_SESSION["error"] = "<p class='error'>Mot de passe incorect.</p>";
+        $_SESSION["error"] = "<p class='error'>Les mdps ne correspondent pas.</p>";
         $conn->close();
         header("Location: ../../pages/create-account.php");
         exit();
     }
+} else {
+    $_SESSION["error"] = "<p class='error'>Format incorrect.</p>";
+    $conn->close();
+    header("Location: ../../pages/create-account.php");
+    exit();
+};
 }
 
 ?>

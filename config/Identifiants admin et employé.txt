@@ -6,13 +6,13 @@ Il lui faut maintenant remplir les champs du formulaire et définir un code uniq
 
 identifiants Admin :
 -valentin.parrot@gmail.com
--admin
+-admin12!
 
 identifiants Admin de secours:
 -secours.admin@gmail.com
--secours
+-secours12!
 
 
 identifiants Employé :
 -employe@gmail.com
--employé
+-employe12!

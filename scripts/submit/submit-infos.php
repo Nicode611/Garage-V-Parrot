@@ -21,6 +21,8 @@
                 $password = $_POST["password"];
                 $confirmPassword = $_POST["confirm_password"];
 
+                if (strlen($password) >= 8 && preg_match("/[0-9]/", $password) && preg_match("/[!@#$%^&*]/", $password)) { 
+
                 if ($password == $confirmPassword) {
                     $validPassword = $password;
                     $hash_mdp = password_hash($validPassword, PASSWORD_DEFAULT);
@@ -61,7 +63,7 @@
                     }
 
                     } else {
-                        $_SESSION["error"] = "<p class='error'>Les mdps ne corrspondent pas.</p>";
+                        $_SESSION["error"] = "<p class='error'>Les mdps ne correspondent pas.</p>";
                         $conn->close();
                         if ($_SESSION["user_role"] == "Admin") {
                             header("Location: ../../pages/dashboard-admin.php");
@@ -73,6 +75,19 @@
                             }
                         }
                     }
+                } else {
+                    $_SESSION["error"] = "<p class='error'>Format incorrect.</p>";
+                    $conn->close();
+                    if ($_SESSION["user_role"] == "Admin") {
+                        header("Location: ../../pages/dashboard-admin.php");
+                    } else {
+                        if ($_SESSION["user_role"] == "Employé") {
+                            header("Location: ../../pages/dashboard-employes.php");
+                        } else {
+                            header("Location: ../../index.php");
+                        }
+                    }
+                }
             }
             
         ?>
