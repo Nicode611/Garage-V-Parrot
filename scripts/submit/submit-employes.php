@@ -17,6 +17,16 @@
         $code = $_POST["code"];
         $nom = $_POST["nom"];
         $prenom = $_POST["prenom"];
+        
+        $sqlSelect = "SELECT * FROM users WHERE code = '$code'";
+        $result = $conn->query($sqlSelect);
+
+        if ($result->num_rows > 0) {
+            $_SESSION["error"] = "<p class='error'>Ce code est déjà utilisé.</p>";
+            $conn->close();
+            header("Location: ../../pages/dashboard-admin.php");
+            exit();
+        } else {  
 
         // Les marqueurs de position servent a éviter les injections SQL
         $sql = "INSERT INTO users (role, first_name, name, code) VALUES (?, ?, ?, ?)";
@@ -36,5 +46,6 @@
             header("Location: ../../pages/dashboard-admin.php");
             exit();
         }
+    }
     }
 ?>
