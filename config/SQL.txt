@@ -1,0 +1,64 @@
+-- Exemple du code servant a créer la BDD et les tables (les requettes SQL sont visibles dans les différents scripts dans le dossier scripts)
+
+-- Création de la BDD
+CREATE DATABASE IF NOT EXISTS garage-v-parrot_ecf;
+USE garage-v-parrot_ecf;
+
+-- Création de la table contacts
+CREATE TABLE IF NOT EXISTS contacts (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  date VARCHAR(20) NOT NULL,
+  message TEXT NOT NULL,
+  name VARCHAR(50) NOT NULL,
+  phone VARCHAR(10) NOT NULL,
+  email VARCHAR(125) NOT NULL
+);
+
+-- Création de la table horaires
+CREATE TABLE IF NOT EXISTS horaires (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  lundi VARCHAR(50) DEFAULT NULL,
+  mardi VARCHAR(50) DEFAULT NULL,
+  mercredi VARCHAR(50) DEFAULT NULL,
+  jeudi VARCHAR(50) DEFAULT NULL,
+  vendredi VARCHAR(50) DEFAULT NULL
+);
+
+-- Création de la table reviews
+CREATE TABLE IF NOT EXISTS reviews (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  message TEXT NOT NULL,
+  name VARCHAR(50) NOT NULL,
+  state VARCHAR(10) NOT NULL
+);
+
+-- Création de la table services
+CREATE TABLE IF NOT EXISTS services (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  image TEXT NOT NULL,
+  title VARCHAR(250) NOT NULL,
+  description TEXT NOT NULL
+);
+
+-- Création de la table users
+CREATE TABLE IF NOT EXISTS users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  role VARCHAR(15) NOT NULL,
+  first_name VARCHAR(50) NOT NULL,
+  name VARCHAR(50) NOT NULL,
+  email VARCHAR(250) NOT NULL,
+  password VARCHAR(5000) NOT NULL,
+  phone VARCHAR(15) NOT NULL,
+  code VARCHAR(5) NOT NULL
+);
+
+-- Création de la table vehicules
+CREATE TABLE IF NOT EXISTS vehicules (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  model CHAR(50) NOT NULL,
+  year INT(4) NOT NULL,
+  kilometrage INT(7) NOT NULL,
+  price INT(11) NOT NULL,
+  description TEXT NOT NULL,
+  image TEXT NOT NULL
+);

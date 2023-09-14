@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1
--- Généré le : mer. 06 sep. 2023 à 20:35
--- Version du serveur : 10.4.28-MariaDB
--- Version de PHP : 8.2.4
+-- Host: mysql-garage-v-parrot.alwaysdata.net
+-- Generation Time: Sep 15, 2023 at 12:29 AM
+-- Server version: 10.6.14-MariaDB
+-- PHP Version: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,57 +18,39 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `garage_v_parrot`
+-- Database: `garage-v-parrot_ecf`
 --
+CREATE DATABASE IF NOT EXISTS `garage-v-parrot_ecf` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `garage-v-parrot_ecf`;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `avis`
---
-
-CREATE TABLE `avis` (
-  `id` int(11) NOT NULL,
-  `avis` text NOT NULL,
-  `nom` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Déchargement des données de la table `avis`
---
-
-INSERT INTO `avis` (`id`, `avis`, `nom`) VALUES
-(1, 'Trop sympa a l\'accueil ', 'Mathieu nougaré');
-
--- --------------------------------------------------------
-
---
--- Structure de la table `contacts`
+-- Table structure for table `contacts`
 --
 
 CREATE TABLE `contacts` (
   `id` int(11) NOT NULL,
   `date` varchar(20) NOT NULL,
   `message` text NOT NULL,
-  `nom` varchar(50) NOT NULL,
-  `telephone` varchar(10) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `phone` varchar(10) NOT NULL,
   `email` varchar(125) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Déchargement des données de la table `contacts`
+-- Dumping data for table `contacts`
 --
 
-INSERT INTO `contacts` (`id`, `date`, `message`, `nom`, `telephone`, `email`) VALUES
-(3, '05-09-2023 20:09', 'dsfqsdfqsgddsgdsqg', 'sdqfdsqfsd', '0627201444', 'nico-du-64@outlook.fr'),
-(5, '06-09-2023 00:03', 'dsgsqgdgqsgdsgsdqg', 'nicoooo', '0627201444', 'nicolas.guigay.ng@gmail.com'),
-(9, '06-09-2023 19:38', 'reyzzzzzzzzzzzzzz', 'guigay nicolas', '0627201444', 'nicolas.guigay.ng@gmail.com'),
-(10, '06-09-2023 19:40', 'dfsfqd', 'Sarrance', '0627201444', 'nico-du-64@outlook.fr');
+INSERT INTO `contacts` (`id`, `date`, `message`, `name`, `phone`, `email`) VALUES
+(11, '11-09-2023 01:55', 'fdhfdshdf', 'fdgsfdgs', '0147854785', 'fdhsdhfdshfdh@hfdhsh.fr'),
+(12, '11-09-2023 21:57', 'test message', 'guigay nicolas', '0627201444', 'nicolas.guigay.ng@gmail.com'),
+(13, '12-09-2023 00:19', 'Message envoyé depuis iphone ', 'Uejejj', '0528421455', 'sknsisjs@giajja.com');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `horaires`
+-- Table structure for table `horaires`
 --
 
 CREATE TABLE `horaires` (
@@ -81,165 +63,191 @@ CREATE TABLE `horaires` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Déchargement des données de la table `horaires`
+-- Dumping data for table `horaires`
 --
 
 INSERT INTO `horaires` (`id`, `lundi`, `mardi`, `mercredi`, `jeudi`, `vendredi`) VALUES
-(23, '10:00 - 11:30 / 12:00 - 17:00', '09:00 - 11:30 / 12:00 - 17:00', '08:00 - 11:30 / 12:00 - 17:00', '08:00 - 11:30 / 12:00 - 17:00', '08:00 - 11:30 / 12:00 - 17:00'),
-(24, '10:00 - 11:30 / 12:00 - 17:00', '09:00 - 11:30 / 12:00 - 17:00', '08:00 - 11:30 / 12:00 - 17:00', '08:00 - 11:30 / 12:00 - 17:00', '08:00 - 11:30 / 12:00 - 17:00');
+(23, '07:00 - 11:30 / 12:00 - 17:00', '09:00 - 11:30 / 12:00 - 17:00', '05:00 - 11:30 / 12:00 - 17:00', '08:00 - 11:30 / 12:00 - 17:00', '08:00 - 11:30 / 12:00 - 17:00'),
+(24, '07:00 - 11:30 / 12:00 - 17:00', '09:00 - 11:30 / 12:00 - 17:00', '05:00 - 11:30 / 12:00 - 17:00', '08:00 - 11:30 / 12:00 - 17:00', '08:00 - 11:30 / 12:00 - 17:00');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `services`
+-- Table structure for table `reviews`
+--
+
+CREATE TABLE `reviews` (
+  `id` int(11) NOT NULL,
+  `message` text NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `state` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `reviews`
+--
+
+INSERT INTO `reviews` (`id`, `message`, `name`, `state`) VALUES
+(1, 'Trop sympa a l\'accueil ', 'Mathieu nougaré', 'valid'),
+(5, 'thehterhe', 'rehyerhre', 'valid'),
+(6, 'liyluykujk,hugyj', 'ujkyku', 'waiting'),
+(8, 'ytrytrfyhrthdetryhrety', 'utrutfryhtr', 'valid'),
+(9, 'skjbfdslfvhbdsufbdsfq dfsdqgdsgfdsgs dqg dsgqdsqg dsqg ds qgdsgdsgqdsqgd sqgdsgqdsq gdsqgdsqg dsqgds gqdsgds qgdsqg dsqg dsqg', 'sdqgsdqg', 'waiting'),
+(10, 'gdsgqdsg qdsgds qgd sg dsgqdsgdsgds gdsgdsgds gdsgdsgds gdsgqdsgdsgds qgd sqg dsqds qgdsgqdsqg dsqgds gdsqggdsg dsg  qgdsgds gdsg ds g dsgqdsgds gdsqgdsg dsgdsgdsgdsg sdqgdsqgdgsdqgds qgdsgdsgq dgsqgdsq gdsgdsqgdsgdsgsdq gdqsgdsqgdgsqg dsqgdsgqdsgqgd', 'gdgqgdsq', 'valid');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `services`
 --
 
 CREATE TABLE `services` (
   `id` int(11) NOT NULL,
   `image` text NOT NULL,
-  `nom` varchar(250) NOT NULL,
+  `title` varchar(250) NOT NULL,
   `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Déchargement des données de la table `services`
+-- Dumping data for table `services`
 --
 
-INSERT INTO `services` (`id`, `image`, `nom`, `description`) VALUES
+INSERT INTO `services` (`id`, `image`, `title`, `description`) VALUES
 (48, 'réparation auto.jpg', 'Réparation auto', 'Expert dans la réparation automobile'),
 (49, 'nettoyage voitures.jpg', 'Nettoyage voitures', 'On nettoie votre voiture'),
-(87, 'vente de véhicule d\'occasion.jpg', 'Vente de véhicules d\'occasion', 'Nous revendons vos véhicules d\'occasions'),
-(88, 'lamborghini urus.png', 'N\'importe', ' ');
+(87, 'vente de véhicule d\'occasion.jpg', 'Vente de véhicules d\'occasion', 'Nous revendons vos véhicules d\'occasions');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `role` varchar(15) NOT NULL,
-  `prénom` varchar(50) NOT NULL,
-  `nom` varchar(50) NOT NULL,
+  `first_name` varchar(50) NOT NULL,
+  `name` varchar(50) NOT NULL,
   `email` varchar(250) NOT NULL,
-  `mdp` varchar(5000) NOT NULL,
-  `telephone` varchar(15) NOT NULL,
-  `code_employé` varchar(5) NOT NULL
+  `password` varchar(5000) NOT NULL,
+  `phone` varchar(15) NOT NULL,
+  `code` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Déchargement des données de la table `users`
+-- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `role`, `prénom`, `nom`, `email`, `mdp`, `telephone`, `code_employé`) VALUES
-(1, 'Admin', 'Nico', 'Guigay', 'nicolas.guigay@gmail.com', '0', '0658741255', '78451'),
-(9, 'Employé', 'Jean', 'Emploi', 'jean.emploi@gmail.com', '0', '0627201444', '00003');
+INSERT INTO `users` (`id`, `role`, `first_name`, `name`, `email`, `password`, `phone`, `code`) VALUES
+(1, 'Admin', 'Nico', 'Guigay', 'nicolas.guigay@gmail.com', '$2y$10$rq9bmSH1wD7jokXvAulqDOLoFPWA92Ez8pbx8lkda4e0pInuHj/3W', '0627201445', '78451'),
+(9, 'Employé', 'Jean', 'Emploi', 'jean.emploi@gmail.com', '$2y$10$jGfx24kcPVGyPxis..kW1uCFAPrnPWDXgAP7Tdm/FUTwUaDYfZ4vq', '0627201444', '00003'),
+(17, 'Employé', 'Mathieu', 'Peste', 'mathieu.peste@gmail.com', '$2y$10$d50CeOxHA0ZDqkGBfFSk5uYIt6j/rLa7LPSRCPUz7.GvxoO25f4gW', '0657847847', '00007');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `vehicules`
+-- Table structure for table `vehicules`
 --
 
 CREATE TABLE `vehicules` (
   `id` int(11) NOT NULL,
-  `modele` char(50) NOT NULL,
-  `annee` int(4) NOT NULL,
+  `model` char(50) NOT NULL,
+  `year` int(4) NOT NULL,
   `kilometrage` int(7) NOT NULL,
-  `prix` int(11) NOT NULL,
+  `price` int(11) NOT NULL,
   `description` text NOT NULL,
   `image` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Déchargement des données de la table `vehicules`
+-- Dumping data for table `vehicules`
 --
 
-INSERT INTO `vehicules` (`id`, `modele`, `annee`, `kilometrage`, `prix`, `description`, `image`) VALUES
-(17, 'Peugeot 206', 2006, 136000, 5000, 'vvefe', 'audi rs4.png'),
+INSERT INTO `vehicules` (`id`, `model`, `year`, `kilometrage`, `price`, `description`, `image`) VALUES
 (34, 'audi a1', 2023, 136000, 5000, 'hghhv', 'audi tt.png'),
-(44, 'Mercedes AMG', 2015, 150000, 15201, 'dsgqgdsqgds', 'peugeot 308.png');
+(53, 'Porsche Cayenne', 2021, 12000, 45000, 'Porsche Cayenne turbo, comme neuve.', 'porsche-cayenne.png'),
+(54, 'Tesla X', 1500, 1, 1, 'dsfqdsq', 'lamborghini urus.png'),
+(55, 'Skoda fabia', 1500, 1, 1, 'dfsfs', 'skoda fabia.png');
 
 --
--- Index pour les tables déchargées
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `avis`
---
-ALTER TABLE `avis`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `contacts`
+-- Indexes for table `contacts`
 --
 ALTER TABLE `contacts`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `horaires`
+-- Indexes for table `horaires`
 --
 ALTER TABLE `horaires`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `services`
+-- Indexes for table `reviews`
+--
+ALTER TABLE `reviews`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `services`
 --
 ALTER TABLE `services`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `vehicules`
+-- Indexes for table `vehicules`
 --
 ALTER TABLE `vehicules`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `avis`
---
-ALTER TABLE `avis`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT pour la table `contacts`
+-- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT pour la table `horaires`
+-- AUTO_INCREMENT for table `horaires`
 --
 ALTER TABLE `horaires`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
--- AUTO_INCREMENT pour la table `services`
+-- AUTO_INCREMENT for table `reviews`
+--
+ALTER TABLE `reviews`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=126;
 
 --
--- AUTO_INCREMENT pour la table `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT pour la table `vehicules`
+-- AUTO_INCREMENT for table `vehicules`
 --
 ALTER TABLE `vehicules`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
