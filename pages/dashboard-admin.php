@@ -120,7 +120,10 @@
             <form class="employe-form" action="../scripts/submit/submit-employes.php" method="POST">
                 <h3>Ajouter un employé :</h3>
                 <div>
-                    <input type="text" placeholder="Role" id="role" name="role" pattern="^(Admin|Employé)$" required title="Le rôle doit être 'Admin' ou 'Employé'">
+                    <select id="role" name="role" required>
+                        <option value="Admin">Admin</option>
+                        <option value="Employé">Employé</option>
+                    </select>
                     <input type="text" placeholder="Code a 5 chiffres" id="code" name="code" pattern="[0-9]{5}" required title="Le code doit contenir 5 chiffres">
                     <input type="text" placeholder="Nom" id="employeNom" name="nom" required>
                     <input type="text" placeholder="Prénom" id="employéPrenom" name="prenom" required>
