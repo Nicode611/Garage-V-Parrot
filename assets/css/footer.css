@@ -77,6 +77,10 @@ li {
     flex: 1;
 }
 
+.footer-texts > svg {
+    transform: translateY(7px);
+}
+
 
 @media screen  and (max-width: 768px){
     footer {
