@@ -25,8 +25,8 @@
             </div>
             <input class="create-fields" type="tel" placeholder="Téléphone" id="createTelephone" name="telephone" pattern="[0-9]{10}" required><br><br>
             <input class="create-fields" type="email" placeholder="Email" id="createEmail" name="email" required><br><br>
-            <input class="create-fields" type="password" placeholder="Mot de passe" id="createMdp" name="motdepasse" required><br><br>
-            <input class="create-fields" type="password" placeholder="Confirmez le mot de passe" id="createConfirmationMdp" name="confirmationmdp" required><br><br>
+            <input class="create-fields" type="password" placeholder="Mot de passe" id="createMdp" name="motdepasse" required pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,}$" title="Le mot de passe doit contenir 8 caracteres dont 1 chiffre et un caractere special (! @ # $ % ^ & *.)"><br><br>
+            <input class="create-fields" type="password" placeholder="Confirmez le mot de passe" id="createConfirmationMdp" name="confirmationmdp" required pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,}$" title="Le mot de passe doit contenir 8 caracteres dont 1 chiffre et un caractere special (! @ # $ % ^ & *.)"><br><br>
             <input class="create-fields" type="text" placeholder="Code" id="createCode" name="code" pattern="[0-9]{5}" required title="Le code doit contenir 5 chiffres"><br><br>
 
             <input class="create-submit" type="submit" name="submit_create" value="Créer le compte">

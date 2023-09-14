@@ -15,10 +15,10 @@
     <input class="infos-fields" type="email" name="email" id="email" value="<?php echo $_SESSION["user_email"]; ?>">
     <br>
     <label for="password">Mot de passe :</label>
-    <input class="infos-fields" type="password" name="password" id="password" required>
+    <input class="infos-fields" type="password" name="password" id="password" required pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,}$" title="Le mot de passe doit contenir 8 caracteres dont 1 chiffre et un caractere special (! @ # $ % ^ & *.)">
     <br>
     <label for="confirm_password">Confirmation du mot de passe :</label>
-    <input class="infos-fields" type="password" name="confirm_password" id="confirm_password" required>
+    <input class="infos-fields" type="password" name="confirm_password" id="confirm_password" required pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,}$" title="Le mot de passe doit contenir 8 caracteres dont 1 chiffre et un caractere special (! @ # $ % ^ & *.)">
     <br>
     <input class="infos-submit" type="submit" name="submit_infos" value="Modifier les informations">
 </form>
