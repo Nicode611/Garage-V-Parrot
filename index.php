@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_URI'] == "/") {
     <div class="dividing-bar"></div>
     <!-- Occasions -->
     <?php
-        $includeFile = "includes/vehicules.php";
+        $includeFile = "/includes/vehicules.php";
         if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
     ?>
     <div class="dividing-bar"></div>
