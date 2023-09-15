@@ -115,14 +115,28 @@ body {
     width: 200px;
     min-width: 200px;
     height: 150px;
-    background-color: #09A7A0;
-    color: black;
+    background-color: #6d6d6d9d;
+    color: #ffffff;
     text-align: center;
     border-radius: 15px;
     padding: 10px;
     margin: 10px 50px 10px 50px;
     transition: transform 0.3s ease; /* Ajoutez une transition de 0.3 seconde sur la transformation */
 } 
+
+.avis::-webkit-scrollbar-track {
+    opacity: 0; /* Couleur de la piste de la barre de défilement */
+  }
+
+  .avis::-webkit-scrollbar {
+    width: 10px;
+    height: 5px; /* Largeur de la barre de défilement */
+  }
+  
+  .avis::-webkit-scrollbar-thumb {
+    background-color: #09A7A0;
+    border-radius: 10px;/* Couleur de la poignée de la barre de défilement */
+  }
 
 .shadow-left {
     position: absolute;
@@ -160,8 +174,9 @@ body {
     margin: 0px;
 }
 
-.avis-text {
-    font-weight: 500;
+.avis-name {
+    font-weight: 600;
+    font-size: 0.7rem;
 }
 
 
