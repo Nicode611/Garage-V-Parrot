@@ -76,6 +76,8 @@ body {
     width: 20px;
     height: 30px;
     background-color: white;
+    color: black;
+    font-weight: 900;
     position: absolute;
     top: 50%;
     left: 15px;
@@ -86,6 +88,8 @@ body {
     width: 20px;
     height: 30px;
     background-color: white;
+    color: black;
+    font-weight: 900;
     position: absolute;
     top: 50%;
     right: 15px;

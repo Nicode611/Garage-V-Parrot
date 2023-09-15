@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_URI'] == "/") {
     <div class="dividing-bar"></div>
     <!-- Avis -->
     <div class="avis-container">
-        <button id="prevBtn"></button>
+        <button id="prevBtn"><</button>
         <div class="shadow-left"></div>
         <div class="section-avis">
             <h2>Avis</h2>
@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_URI'] == "/") {
             <a href="pages/avis.php"><button id="ajoutAvis">Ajouter un avis</button></a>
         </div>
         <div class="shadow-right"></div>
-        <button id="nextBtn"></button>
+        <button id="nextBtn">></button>
     </div>
 </main>
 

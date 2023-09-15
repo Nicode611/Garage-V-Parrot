@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="vehicule-card">
-                <button id="prevButton"></button>
+                <button id="prevButton"><</button>
                 <img class="vehicule-img" src="../assets/images/images-vehicules/<?php echo $image ?>" alt="">
                 <div class="card-bottom">
                     <div>
@@ -43,7 +43,7 @@
                     <p class="vehicule-description"><?php echo $description ?></p>
                     <h3 class="vehicule-price"><?php echo $price ?> €</h3>
                 </div>
-                <button id="nextButton"></button>
+                <button id="nextButton">></button>
             </div>
         </div>
     </div>
