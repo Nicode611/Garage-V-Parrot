@@ -6,6 +6,7 @@ html {
 
 body {
     margin: 0px;
+    overflow-x: hidden;
 }
 
 main {
@@ -41,6 +42,7 @@ main {
     margin: 0px 70px 30px 70px;
     overflow: hidden;
 }
+
 
 .service {
     display: flex;
@@ -80,4 +82,10 @@ main {
 
 .service-form-container {
     display: none;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+
 }
