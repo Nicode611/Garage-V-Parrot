@@ -8,6 +8,8 @@ body {
     margin: 0px;
 }
 
+
+
 .section-vehicules-occasions {
     display: flex;
     justify-content: space-around;
@@ -142,6 +144,14 @@ body {
     margin: 5px;
 }
 
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
 
 
 @media screen and (max-width: 1000px) {

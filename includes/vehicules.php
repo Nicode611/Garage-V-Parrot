@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../assets/css/occasions.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
         <title>Occasions</title>
     </head>
     <?php 
@@ -22,36 +23,33 @@
                         <form id="form-filter">
                             <div class="filter-options">
                                 <div>
-                                    <label for="price">Prix</label>
-                                    <input type="range" min="0" max="100000" name="price" id="price">
+                                    <label for="price">Prix maximum</label>
+                                    <span id="price-value">5000 €</span>
+                                    <input type="range" min="0" max="100000" value="5000" name="price" id="price">
                                 </div>
                                 <div>
-                                    <label for="year">Année</label>
+                                    <label for="year">Année minimum</label>
                                     <input type="number" name="year" id="year">
                                 </div>
                                 <div>
-                                    <label for="km">Kilometrage</label>
+                                    <label for="km">Kilometrage maximum</label>
                                     <input type="number" name="km" id="km">
                                 </div>
                             </div>
                             <button type="button" id="filter">Appliquer le filtre</button>
                         </form>
                     <?php } ?>
-                <div class="vehicules-imgs">
+                <div class="vehicules-imgs" id="results">
                     
                     <?php
                         if ($page_name == "index.php") {
                             $includeFile = ("scripts/affichage/show-vehicules.php");
                             if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
-                        } else {
-                            $includeFile = ("../scripts/affichage/show-vehicules.php");
-                            if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
                         }
-                        
                     ?>     
                 </div>
             </div>
-            <div class="vehicule-card">
+            <div class="vehicule-card hide">
                 <button id="prevButton"><</button>
                 <img class="vehicule-img" src="../assets/images/images-vehicules/<?php echo $image ?>" alt="">
                 <div class="card-bottom">
