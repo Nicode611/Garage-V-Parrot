@@ -23,7 +23,7 @@
                             <div class="filter-options">
                                 <div>
                                     <label for="price">Prix</label>
-                                    <input type="range" name="price" id="price">
+                                    <input type="range" min="0" max="100000" name="price" id="price">
                                 </div>
                                 <div>
                                     <label for="year">Année</label>
