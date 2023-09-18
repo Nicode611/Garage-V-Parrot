@@ -29,13 +29,24 @@ body {
     z-index: -1;
 }
 
-
 .vehicules {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     text-align: center;
+}
+
+.filter-options {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.filter-options > div {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10px 0px 10px;
 }
 
 .vehicules h2 {
@@ -134,6 +145,11 @@ body {
 
 
 @media screen and (max-width: 1000px) {
+
+    #form-filter {
+        display: none;
+    }
+
     .section-vehicules-occasions {
         flex-direction: column;
         align-items: center;
