@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../assets/css/occasions.css">
         <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-        <title>Occasions</title>
     </head>
     <?php 
         $current_page = $_SERVER['REQUEST_URI'];
@@ -43,13 +42,13 @@
                     
                     <?php
                         if ($page_name == "index.php") {
-                            $includeFile = ("scripts/affichage/show-vehicules.php");
+                            $includeFile = ("scripts/affichage/affichage-show-vehicules.php");
                             if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
                         }
                     ?>     
                 </div>
             </div>
-            <div class="vehicule-card hide">
+            <div class="vehicule-card <?php if ($page_name == "occasions.php") { ?> hide <?php } ?>">
                 <button id="prevButton"><</button>
                 <img class="vehicule-img" src="../assets/images/images-vehicules/<?php echo $image ?>" alt="">
                 <div class="card-bottom">

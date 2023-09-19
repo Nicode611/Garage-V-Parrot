@@ -8,12 +8,11 @@ body {
     margin: 0px;
 }
 
-
-
 .section-vehicules-occasions {
     display: flex;
     justify-content: space-around;
     position: relative;
+    min-height: 60vh;
     padding: 70px 0px 70px 0px;
     overflow: hidden;
 }
@@ -50,6 +49,7 @@ body {
     flex-direction: column;
     margin: 0px 10px 0px 10px;
 }
+
 
 .vehicules h2 {
     margin-bottom: 5px;

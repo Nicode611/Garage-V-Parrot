@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../assets/css/occasions.css">
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/global.css">
-    <title>Garage V. Parrot</title>
+    <title>Occasions</title>
 </head>
 <body>
     

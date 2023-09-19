@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_URI'] == "/") {
     if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
 ?>
 
-<script src="assets/js/script-selection-vehicule.js"></script>
+<script src="assets/js/script-selection-vehicule-index.js"></script>
 <script src="assets/js/script-avis-carousel.js"></script>
 </body>
 </html>
