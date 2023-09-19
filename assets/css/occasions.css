@@ -76,7 +76,7 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 100%;
+    width: 90%;
 }
 
 .vehicules-imgs > .vehicules, .show-vehicules > .vehicules {
