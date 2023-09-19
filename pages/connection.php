@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../assets/css/connection.css">
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/global.css">
-    <title>Garage V. Parrot</title>
+    <title>Connexion</title>
 </head>
 <body>
     

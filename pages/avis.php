@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/global.css">
     <link rel="stylesheet" href="../assets/css/avis.css">
-    <title>Garage V. Parrot</title>
+    <title>Ajouter un avis</title>
 </head>
 <body>
     

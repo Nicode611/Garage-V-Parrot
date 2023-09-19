@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../assets/css/dashboard-employes.css">
     <link rel="stylesheet" href="../assets/css/dashboard-admin.css">
     <link rel="stylesheet" href="../assets/css/global.css">
-    <title>Garage V. Parrot</title>
+    <title>Dashboard employé</title>
 </head>
 <body>
 

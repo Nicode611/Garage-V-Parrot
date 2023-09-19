@@ -12,7 +12,7 @@
     <link rel="icon" href="../logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/dashboard-admin.css">
     <link rel="stylesheet" href="../assets/css/global.css">
-    <title>Garage V. Parrot</title>
+    <title>Dashboard administrateur</title>
 </head>
 <body>
 

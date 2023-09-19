@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../assets/css/create-account.css">
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/global.css">
-    <title>Garage V. Parrot</title>
+    <title>Créez votre compte</title>
 </head>
 <body>
     

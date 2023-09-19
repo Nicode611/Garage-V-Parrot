@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/dashboard-occasions.css">
     <link rel="stylesheet" href="../assets/css/dashboard-admin.css">
-    <title>occasions</title>
 </head>
 
 <div class="occasions-container">
