@@ -1,5 +1,4 @@
 <?php
-
     $db_host = "mysql-garage-v-parrot.alwaysdata.net";
     $db_user = "326283";
     $db_pass = "Beta2k15";
@@ -14,7 +13,8 @@
     $year = $_POST['year'];
     $km = $_POST['km'];
 
-    $sql = "SELECT * FROM vehicules WHERE 1=1"; // 1=1 est utilisé comme condition de base
+    // On selectionne tous dans véhicule puis on ajuste
+    $sql = "SELECT * FROM vehicules WHERE 1=1";
 
     if (!empty($price)) {
         $sql .= " AND price <= $price";
@@ -28,10 +28,9 @@
         $sql .= " AND kilometrage <= $km";
     }
 
-    // Exécuter la requête SQL
     $result = $conn->query($sql);
 
-    // Créer un tableau pour stocker les résultats
+    // Crée un tableau pour stocker les résultats
     $resultsArray = array();
 
     if ($result->num_rows > 0) {
@@ -40,16 +39,11 @@
         }
     }
 
-    // Fermer la connexion à la base de données
     $conn->close();
 
-    // Convertir les résultats en JSON
+    // Converti les résultats en JSON
     $resultsJSON = json_encode($resultsArray);
 
-    
-
-    // Renvoyer les résultats au script JavaScript
+    // Renvois les résultats au script JavaScript
     echo $resultsJSON;
-
-    
 ?>

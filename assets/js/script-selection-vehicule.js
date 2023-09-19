@@ -1,53 +1,52 @@
+  // Fonctionne avec JQuery
   $(document).ready(function () {
 
+    // Met à jour l'affichage de la value de l'input prix
     let priceRange = document.getElementById("price");
     let priceValue = document.getElementById("price-value");
-
     priceRange.addEventListener("input", function () {
-      // Mettez à jour le texte avec la valeur actuelle du curseur
-      priceValue.textContent = priceRange.value + " €";
-  });
+        priceValue.textContent = priceRange.value + " €";
+    });
 
     // Lorsque le bouton "Appliquer le filtre" est cliqué
     $("#filter").click(function () {
-        // Récupérer les valeurs du formulaire
+        // On récupere les valeurs du formulaire
         var price = $("#price").val();
         var year = $("#year").val();
         var km = $("#km").val();
 
-        // Envoyer les données au serveur via AJAX
+        // On envoi les données au serveur via AJAX
         $.ajax({
             type: "POST",
-            url: "../scripts/affichage/affichage-filtered-vehicules.php", // Remplacez par le chemin de votre script PHP
+            url: "../scripts/affichage/affichage-filtered-vehicules.php", 
             data: { price: price, year: year, km: km },
             dataType: "json",
             success: function (data) {
-                // Mettre à jour la section des résultats avec les données renvoyées par le serveur
+                // On vide le contenu de la div contenant les résultats
                 $("#results").empty();
 
+                // On récupere les données renvoyées par le serveur et on les traite
                 if (Array.isArray(data)) {
                 $.each(data, function (index, vehicle) {
-                  var html = '<div class="vehicules">';
-                  html += '<img class="vehicules-img" src="../assets/images/images-vehicules/' + vehicle.image + '">';
-                  html += '<div class="hided-infos" style="display: none;">';
-                  html += '<span class="vehicules-model">' + vehicle.model + '</span>';
-                  html += '<span class="vehicules-infos vehicules-year">' + vehicle.year + '</span>';
-                  html += '<span class="vehicules-infos vehicules-km">' + vehicle.kilometrage + ' km</span>';
-                  html += '<span class="vehicules-description">' + vehicle.description + '</span>';
-                  html += '<span class="vehicules-price">' + vehicle.price + ' €</span>';
-                  html += '</div>';
-                  html += '</div>';
+                    var html = '<div class="vehicules">';
+                    html += '<img class="vehicules-img" src="../assets/images/images-vehicules/' + vehicle.image + '">';
+                    html += '<div class="hided-infos" style="display: none;">';
+                    html += '<span class="vehicules-model">' + vehicle.model + '</span>';
+                    html += '<span class="vehicules-infos vehicules-year">' + vehicle.year + '</span>';
+                    html += '<span class="vehicules-infos vehicules-km">' + vehicle.kilometrage + ' km</span>';
+                    html += '<span class="vehicules-description">' + vehicle.description + '</span>';
+                    html += '<span class="vehicules-price">' + vehicle.price + ' €</span>';
+                    html += '</div>';
+                    html += '</div>';
       
-                  // Ajoutez le HTML généré à la section des résultats
-                  $("#results").append(html);
-                  
+                    $("#results").append(html);
                 });
+
+                // Script d'affichage du véhicule et carousel 
                 let vehicules = document.querySelectorAll(".vehicules-img");
                 let prevBtn = document.querySelector("#prevButton");
                 let nextBtn = document.querySelector("#nextButton");
-                let currentIndex = 0; // Pour suivre l'index de l'élément actif
-
-
+                let currentIndex = 0;
 
                 function setActive(event) {
                   console.log('click');
