@@ -1,7 +1,7 @@
 let vehicules = document.querySelectorAll(".vehicules-img");
 let prevBtn = document.querySelector("#prevButton");
 let nextBtn = document.querySelector("#nextButton");
-let currentIndex = 0; // Pour suivre l'index de l'élément actif
+let currentIndex = 0;
 
 function setActive(event) {
     let vehiculesParent = event.currentTarget.closest('.vehicules');

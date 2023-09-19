@@ -40,14 +40,25 @@ body {
 
 .filter-options {
     display: flex;
-    flex-direction: row;
+    align-items: center;
     margin-bottom: 20px;
+}
+
+.filter-options div > input {
+    width: 70px;
+    margin: 5px;
 }
 
 .filter-options > div {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: 0px 10px 0px 10px;
+}
+
+#filter {
+    height: 30px;
+    margin-left: 10px;
 }
 
 
@@ -55,18 +66,15 @@ body {
     margin-bottom: 5px;
 }
 
-.vehicules-imgs {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
+.vehicules-imgs, .show-vehicules {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
-.show-vehicules {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
+.vehicules-imgs > .vehicules, .show-vehicules > .vehicules {
+    margin: 5px;
 }
 
 .hided-infos > * {
@@ -163,9 +171,7 @@ body {
 
 @media screen and (max-width: 1000px) {
 
-    #form-filter {
-        display: none;
-    }
+    
 
     .section-vehicules-occasions {
         flex-direction: column;
@@ -176,9 +182,6 @@ body {
         margin-bottom: 70px;
     }
 
-    .vehicules-imgs {
-        display: none;
-    }
 
     .vehicule-card {
         background-color: white;

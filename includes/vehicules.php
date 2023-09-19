@@ -23,8 +23,7 @@
                             <div class="filter-options">
                                 <div>
                                     <label for="price">Prix maximum</label>
-                                    <span id="price-value">5000 €</span>
-                                    <input type="range" min="0" max="100000" value="5000" name="price" id="price">
+                                    <input type="number" name="price" id="price">
                                 </div>
                                 <div>
                                     <label for="year">Année minimum</label>
@@ -34,8 +33,9 @@
                                     <label for="km">Kilometrage maximum</label>
                                     <input type="number" name="km" id="km">
                                 </div>
+                                <button type="button" id="filter">Appliquer le filtre</button>
                             </div>
-                            <button type="button" id="filter">Appliquer le filtre</button>
+                            
                         </form>
                         <div class="show-vehicules"> <?php
                             $includeFile = ("../scripts/affichage/affichage-show-vehicules.php");
@@ -54,7 +54,7 @@
                 </div>
             </div>
             <div class="vehicule-card">
-                <button id="prevButton"><</button>
+                <?php if ($page_name == "index.php") { ?> <button id="prevButton"><</button> <?php } ?>
                 <img class="vehicule-img" src="../assets/images/images-vehicules/<?php echo $image ?>" alt="">
                 <div class="card-bottom">
                     <div>
@@ -67,7 +67,7 @@
                     <p class="vehicule-description"><?php echo $description ?></p>
                     <h3 class="vehicule-price"><?php echo $price ?> €</h3>
                 </div>
-                <button id="nextButton">></button>
+                <?php if ($page_name == "index.php") { ?> <button id="nextButton">></button> <?php } ?>
             </div>
         </div>
     </div>

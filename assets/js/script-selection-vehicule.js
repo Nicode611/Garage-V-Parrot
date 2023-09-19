@@ -7,13 +7,6 @@ if (!document.getElementById('filter').clicked) {
 // Fonctionne avec JQuery
 $(document).ready(function () {
 
-    // Met à jour l'affichage de la value de l'input prix
-    let priceRange = document.getElementById("price");
-    let priceValue = document.getElementById("price-value");
-    priceRange.addEventListener("input", function () {
-        priceValue.textContent = priceRange.value + " €";
-    });
-
     // Lorsque le bouton "Appliquer le filtre" est cliqué
     $("#filter").click(function () {
 
@@ -108,7 +101,7 @@ $(document).ready(function () {
                     // Ajoute des gestionnaires de clic pour les boutons "prev" et "next"
                     prevBtn.addEventListener("click", moveToPrev);
                     nextBtn.addEventListener("click", moveToNext);
-                } else { console.error("Les données renvoyées ne sont pas un tableau JSON valide."); }
+                }
             }
         });
     });
