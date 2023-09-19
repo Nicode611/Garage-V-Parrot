@@ -95,6 +95,9 @@ a {
 
 /* Menu hamburger */
 
+.menu-hamburger {
+    display: none;
+}
 
 
 .menu-btn {

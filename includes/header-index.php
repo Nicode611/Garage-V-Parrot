@@ -32,7 +32,7 @@
             </ul>
         </nav>
     </div>
-    <div class="menu-hamburger hide">
+    <div class="menu-hamburger">
         <div class="menu-btn">
             <div class="btn-line"></div>
             <div class="btn-line"></div>
