@@ -11,10 +11,6 @@ function setActive(event) {
     let vehiculeKm = document.querySelector('.vehicule-km');
     let vehiculeDescription = document.querySelector('.vehicule-description');
     let vehiculePrice = document.querySelector('.vehicule-price');
-    let vehiculeCard = document.querySelector('.vehicule-card')
-
-    vehiculeCard.classList.remove("hide");
-    vehiculeCard.classList.add("show");
 
     // Supprime la classe "vehicule-active" de tous les éléments ayant la classe "vehicules-img"
     vehicules.forEach(function (vehicule) {

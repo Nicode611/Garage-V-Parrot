@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function() {
 // Variables
 const carousel = document.querySelector('.avis-caroussel');
 const slides = document.querySelectorAll('.avis');
@@ -32,4 +33,6 @@ prevBtn.addEventListener('click', () => {
 nextBtn.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % slides.length;
     showSlide(currentIndex);
+});
+
 });
