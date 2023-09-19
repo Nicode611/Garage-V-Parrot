@@ -29,4 +29,4 @@ secoursemploye12!
 
 --Execution en local--
 
-Pour exécuter le site en local il suffit d'importer le projet dans le dossier htdocs de xampp puis de lancer le serveur XAMPP et dacceder a localhost sur le navigateur.
+Pour exécuter le site en local il suffit d'importer les fichiers du projet dans le dossier htdocs de xampp puis de lancer le serveur XAMPP et dacceder a localhost sur le navigateur.

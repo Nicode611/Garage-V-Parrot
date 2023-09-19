@@ -48,9 +48,6 @@ $(document).ready(function () {
 
                     // Script d'affichage du véhicule et carousel 
                     let vehicules = document.querySelectorAll(".vehicules-img");
-                    let prevBtn = document.querySelector("#prevButton");
-                    let nextBtn = document.querySelector("#nextButton");
-                    let currentIndex = 0;
 
                     function setActive(event) {
                         let vehiculesParent = event.currentTarget.closest('.vehicules');
@@ -83,24 +80,10 @@ $(document).ready(function () {
                         vehiculePrice.innerHTML = vehiculesPrice.textContent;
                     }
 
-                    function moveToNext() {
-                        currentIndex = (currentIndex + 1) % vehicules.length;
-                        setActive({ currentTarget: vehicules[currentIndex] });
-                    }
-
-                    function moveToPrev() {
-                        currentIndex = (currentIndex - 1 + vehicules.length) % vehicules.length;
-                        setActive({ currentTarget: vehicules[currentIndex] });
-                    }
-
                     // Ajoute un gestionnaire de clic à chaque élément ayant la classe "vehicules-img"
                     vehicules.forEach(function (vehicule) {
                         vehicule.addEventListener("click", setActive);
                     });
-
-                    // Ajoute des gestionnaires de clic pour les boutons "prev" et "next"
-                    prevBtn.addEventListener("click", moveToPrev);
-                    nextBtn.addEventListener("click", moveToNext);
                 }
             }
         });
