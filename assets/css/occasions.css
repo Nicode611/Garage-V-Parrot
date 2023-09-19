@@ -62,6 +62,13 @@ body {
     gap: 10px;
 }
 
+.show-vehicules {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+
 .hided-infos > * {
     display: block !important ;
     border: solid 1px #09A7A0;

@@ -37,7 +37,12 @@
                             </div>
                             <button type="button" id="filter">Appliquer le filtre</button>
                         </form>
-                    <?php } ?>
+                        <div class="show-vehicules"> <?php
+                            $includeFile = ("../scripts/affichage/affichage-show-vehicules.php");
+                            if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; } ?> 
+                        </div> 
+                <?php } ?> 
+                    
                 <div class="vehicules-imgs" id="results">
                     
                     <?php
@@ -45,10 +50,10 @@
                             $includeFile = ("scripts/affichage/affichage-show-vehicules.php");
                             if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
                         }
-                    ?>     
+                    ?> 
                 </div>
             </div>
-            <div class="vehicule-card <?php if ($page_name == "occasions.php") { ?> hide <?php } ?>">
+            <div class="vehicule-card">
                 <button id="prevButton"><</button>
                 <img class="vehicule-img" src="../assets/images/images-vehicules/<?php echo $image ?>" alt="">
                 <div class="card-bottom">
