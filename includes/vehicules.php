@@ -69,5 +69,4 @@
         </div>
     </div>
     
-<script src="../../assets/js/script-selection-vehicule-index.js"></script>
 </html>
