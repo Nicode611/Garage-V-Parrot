@@ -20,22 +20,19 @@
                 <?php
                     if ($page_name == "occasions.php") { ?>
                         <form id="form-filter">
-                            <div class="filter-options">
-                                <div>
-                                    <label for="price">Prix maximum</label>
-                                    <input type="number" name="price" id="price">
-                                </div>
-                                <div>
-                                    <label for="year">Année minimum</label>
-                                    <input type="number" name="year" id="year">
-                                </div>
-                                <div>
-                                    <label for="km">Kilometrage maximum</label>
-                                    <input type="number" name="km" id="km">
-                                </div>
-                                <button type="button" id="filter">Appliquer le filtre</button>
+                            <div>
+                                <label for="price">Prix <br> maximum</label>
+                                <input type="number" name="price" id="price">
                             </div>
-                            
+                            <div>
+                                <label for="year">Année <br> minimum</label>
+                                <input type="number" name="year" id="year">
+                            </div>
+                            <div>
+                                <label for="km">Kilometrage <br> maximum</label>
+                                <input type="number" name="km" id="km">
+                            </div>
+                            <button type="button" id="filter">Appliquer le filtre</button>
                         </form>
                         <div class="show-vehicules"> <?php
                             $includeFile = ("../scripts/affichage/affichage-show-vehicules.php");

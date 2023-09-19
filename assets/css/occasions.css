@@ -38,27 +38,32 @@ body {
     text-align: center;
 }
 
-.filter-options {
+#form-filter {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    align-items: end;
     margin-bottom: 20px;
+    width: 60%;
 }
 
-.filter-options div > input {
-    width: 70px;
-    margin: 5px;
+#form-filter > * {
+    width: 25%;
 }
 
-.filter-options > div {
+#form-filter > div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0px 10px 0px 10px;
+    margin: 0px;
+}
+
+#form-filter div > input {
+    width: 80px;
+    margin: 5px;
 }
 
 #filter {
-    height: 30px;
-    margin-left: 10px;
+    height: auto;
 }
 
 
@@ -171,7 +176,14 @@ body {
 
 @media screen and (max-width: 1000px) {
 
-    
+    #form-filter {
+        width: 70vw;
+        flex-wrap: wrap;
+    }
+
+    #form-filter > * {
+        margin: 10px;
+    }
 
     .section-vehicules-occasions {
         flex-direction: column;
