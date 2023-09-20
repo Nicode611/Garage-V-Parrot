@@ -9,7 +9,7 @@
     <div class="contact-footer-container">
         <h1 class="footer-titles">Contactez-nous !</h1>
         <p class="footer-texts">Besoin d'aide avec votre véhicule,<br> envie de voir nos véhicules ...</p>
-        <button>Contactez-nous</button>
+        <a href="/pages/contact.php"><button>Contactez-nous</button></a>
     </div>
     <div class="horaires-footer-container">
         <h1 class="footer-titles">Horaires</h1>

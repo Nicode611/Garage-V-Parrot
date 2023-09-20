@@ -63,6 +63,12 @@
                     </div>
                     <p class="vehicule-description"><?php echo $description ?></p>
                     <h3 class="vehicule-price"><?php echo $price ?> €</h3>
+                    <form class="vehicule-objet" action="../pages/contact.php" method="POST">
+                        <input class="vehicule-form-infos" type="text" name="model" value="<?php echo $model ?>">
+                        <input class="vehicule-form-infos" type="text" name="year" value="<?php echo $year ?>">
+                        <input class="vehicule-form-infos" type="text" name="km" value="<?php echo $kilometrage ?>">
+                        <input type="submit" class="car-contact" name="car_contact" value="Contactez nous">
+                    </form>
                 </div>
                 <?php if ($page_name == "index.php") { ?> <button id="nextButton">></button> <?php } ?>
             </div>

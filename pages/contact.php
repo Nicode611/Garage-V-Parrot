@@ -23,6 +23,14 @@
     <div class="form-container">
         <div class="glow"></div>
         <form class="contact-form" action="../scripts/submit/submit-contacts.php" method="POST">
+        <input type="text" placeholder="Objet" id="contactObjet" name="objet"
+        <?php if (isset($_POST["car_contact"])) { 
+            $model = $_POST["model"];
+            $year = $_POST["year"];
+            $km = $_POST["km"];
+            ?> value="<?php echo $model . '/' . $year . '/' . $km . 'km' ?>" 
+        <?php } ?>
+        required>
             <div class="first-line">
                 <input type="text" placeholder="Nom" id="contactNom" name="nom" required>
                 <input type="tel" placeholder="Téléphone" id="contactTelephone" name="telephone" pattern="[0-9]{10}" required >
