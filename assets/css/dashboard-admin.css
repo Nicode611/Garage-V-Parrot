@@ -490,13 +490,14 @@ main {
 .contact-date {
     position: absolute;
     top: -25px;
+    left: 15px;
     font-weight: 300;
 }
 
 .contact-objet {
     position: absolute;
     top: -25px;
-    left: 15%;
+    left: 25%;
     font-weight: 300;
 }
 
@@ -717,6 +718,11 @@ main {
         align-items: center;
         text-align: center;
         width: 100%;
+    }
+
+    .contact-objet {
+        position: initial;
+        margin-bottom: 15px;
     }
     
     .contact-nom {
