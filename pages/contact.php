@@ -28,7 +28,7 @@
             $model = $_POST["model"];
             $year = $_POST["year"];
             $km = $_POST["km"];
-            ?> value="<?php echo $model . '/' . $year . '/' . $km . 'km' ?>" 
+            ?> value="<?php echo $model . '/' . $year . '/' . $km ?>" 
         <?php } ?>
         required>
             <div class="first-line">

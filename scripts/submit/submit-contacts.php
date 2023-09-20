@@ -14,14 +14,15 @@
                 session_set_cookie_params(3600);
                 session_start();
                 $date = date("d-m-Y H:i");
+                $objet = $_POST["objet"];
                 $nom = $_POST["nom"];
                 $telephone = $_POST["telephone"];
                 $email = $_POST["email"];
                 $message = $_POST["message"];
 
-                $sql = "INSERT INTO contacts (date, message, name, phone, email) VALUES (?, ?, ?, ?, ?)";
+                $sql = "INSERT INTO contacts (date, message, name, phone, email, objet) VALUES (?, ?, ?, ?, ?, ?)";
                 $stmt = $conn->prepare($sql);
-                $stmt->bind_param("sssss", $date, $message, $nom, $telephone, $email);
+                $stmt->bind_param("ssssss", $date, $message, $nom, $telephone, $email, $objet);
 
                     
                 if ($stmt->execute()) {
