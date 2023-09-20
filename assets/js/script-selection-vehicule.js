@@ -9,6 +9,10 @@ function setActive(event) {
     let vehiculeKm = document.querySelector('.vehicule-km');
     let vehiculeDescription = document.querySelector('.vehicule-description');
     let vehiculePrice = document.querySelector('.vehicule-price');
+    let inputModel = document.querySelector('#vehiculeModel');
+    let inputYear = document.querySelector('#vehiculeYear');
+    let inputKm = document.querySelector('#vehiculeKm');
+
 
 
     // Supprime la classe "vehicule-active" de tous les éléments ayant la classe "vehicules-img"
@@ -30,6 +34,9 @@ function setActive(event) {
     vehiculeKm.innerHTML = vehiculesKm.textContent;
     vehiculeDescription.innerHTML = vehiculesDescription.textContent;
     vehiculePrice.innerHTML = vehiculesPrice.textContent;
+    inputModel.value = vehiculesModel.textContent;
+    inputYear.value = vehiculesYear.textContent;
+    inputKm.value = vehiculesKm.textContent;
 }
 
 // Ajoute un gestionnaire de clic à chaque élément ayant la classe "vehicules-img"
@@ -95,6 +102,9 @@ $(document).ready(function () {
                             let vehiculeKm = document.querySelector('.vehicule-km');
                             let vehiculeDescription = document.querySelector('.vehicule-description');
                             let vehiculePrice = document.querySelector('.vehicule-price');
+                            let inputModel = document.querySelector('#vehiculeModel');
+                            let inputYear = document.querySelector('#vehiculeYear');
+                            let inputKm = document.querySelector('#vehiculeKm');
 
 
                             // Supprime la classe "vehicule-active" de tous les éléments ayant la classe "vehicules-img"
@@ -116,6 +126,9 @@ $(document).ready(function () {
                             vehiculeKm.innerHTML = vehiculesKm.textContent;
                             vehiculeDescription.innerHTML = vehiculesDescription.textContent;
                             vehiculePrice.innerHTML = vehiculesPrice.textContent;
+                            inputModel.value = vehiculesModel.textContent;
+                            inputYear.value = vehiculesYear.textContent;
+                            inputKm.value = vehiculesKm.textContent;
                         }
 
                         // Ajoute un gestionnaire de clic à chaque élément ayant la classe "vehicules-img"
