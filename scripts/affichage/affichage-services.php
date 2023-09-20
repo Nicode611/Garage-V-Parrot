@@ -1,4 +1,4 @@
-<!-- Script d'affichage du service -->
+
 <?php
     $db_host = "mysql-garage-v-parrot.alwaysdata.net";
     $db_user = "326283";
@@ -9,12 +9,11 @@
     if ($conn->connect_error) {
         die("La connexion à la base de données a échoué : " . $conn->connect_error);
     }
-    // Récupération de tout les éléments de la table
+
     $sql = "SELECT id, image, title, description FROM services";
-    // Exécution de la requete
+
     $result = $conn->query($sql);
 
-    // Si résultat plus grand que 0 lignes
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             $id = $row["id"];

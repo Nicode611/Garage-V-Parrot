@@ -1,22 +1,20 @@
-<!-- Script d'affichage du véhicule -->
+
 <?php
                 $db_host = "mysql-garage-v-parrot.alwaysdata.net";
                 $db_user = "326283";
                 $db_pass = "Beta2k15";
                 $db_name = "garage-v-parrot_ecf";
                 $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
-                // Vérification de la connection
+
                 if ($conn->connect_error) {
                     die("La connexion à la base de données a échoué : " . $conn->connect_error);
                 }
-                // Récupération de tout les éléments de la table
+
                 $sql = "SELECT id, image FROM vehicules";
-                // Exécution de la requete
+
                 $result = $conn->query($sql);
 
-                // Si résultat plus grand que 0 lignes
                 if ($result->num_rows > 0) {
-                    // Crée un var a chaque éléments
                     while ($row = $result->fetch_assoc()) {
                         $id = $row["id"];
                         $image = $row["image"]; ?>

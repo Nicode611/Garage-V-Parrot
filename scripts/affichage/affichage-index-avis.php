@@ -12,9 +12,7 @@
     $sql = "SELECT message, name, state FROM reviews";
     $result = $conn->query($sql);
 
-    // Si résultat plus grand que 0 lignes
     if ($result->num_rows > 0) {
-        // Crée un var a chaque éléments
         while ($row = $result->fetch_assoc()) {
             $state = $row["state"];
             $message = $row["message"];

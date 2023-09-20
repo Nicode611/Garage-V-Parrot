@@ -1,4 +1,4 @@
-<?php // Affichage contacts
+<?php
     $db_host = "mysql-garage-v-parrot.alwaysdata.net";
     $db_user = "326283";
     $db_pass = "Beta2k15";

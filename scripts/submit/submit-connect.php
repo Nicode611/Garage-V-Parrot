@@ -24,7 +24,6 @@ if (isset($_POST["submit_connect"])) {
         $hashMdp = $row["password"];
 
         if (password_verify($mdp, $hashMdp)) {
-        //if ($mdp == $hashMdp) {
 
             session_start();
 

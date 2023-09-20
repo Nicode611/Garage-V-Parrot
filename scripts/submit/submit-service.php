@@ -1,5 +1,4 @@
 <?php
-// Vérifie si le formulaire a été soumis
 if (isset($_POST["submit_service"])) { 
 
     session_set_cookie_params(3600);
@@ -33,11 +32,11 @@ if (isset($_POST["submit_service"])) {
                 $title = $_POST["titre"];
                 $description = $_POST["texte"];
 
-                // Prépare et exécute la requête SQL pour insérer les données (les marqueurs de position servent a éviter les injections SQL)
+                //Les marqueurs de position servent a éviter les injections SQL
                 $sql = "INSERT INTO services (image, title, description) VALUES (?, ?, ?)";
                 $stmt = $conn->prepare($sql);
                 $stmt->bind_param("sss", $image_path, $title, $description);
-                // Si insertion
+
                 if ($stmt->execute()) {
                     $_SESSION["success"] = "<p class='validation'>Le service a été ajouté.</p>";
                     $conn->close();
@@ -53,7 +52,6 @@ if (isset($_POST["submit_service"])) {
             } else {
                 // Vérifie si le répertoire de destination existe
                 if (!is_dir($target_directory)) {
-                        // La création du répertoire a échoué
                         $_SESSION["error"] = "<p class='error'>Le répertoire de destination existe.</p>";
                         $conn->close();
                         header("Location: ../../pages/dashboard-admin.php");

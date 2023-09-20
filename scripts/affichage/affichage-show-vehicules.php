@@ -5,17 +5,14 @@
     $db_name = "garage-v-parrot_ecf";
     $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
 
-    // Vérification de la connection
     if ($conn->connect_error) {
         die("La connexion à la base de données a échoué : " . $conn->connect_error);
     }
 
-    // Récupération de tout les éléments de la table
     $sql = "SELECT id, model, year, kilometrage, price, image, description FROM vehicules";
     $result = $conn->query($sql);
     $data = array();
 
-    // Si résultat plus grand que 0 lignes
     if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 $id = $row["id"];

@@ -36,11 +36,11 @@
                                 $image = $imageFileName;
                                 $description = $_POST["description"];
 
-                                // Prépare et exécute la requête SQL pour insérer les données
+
                                 $sql = "INSERT INTO vehicules (model, year, kilometrage, price, image, description) VALUES (?, ?, ?, ?, ?, ?)";
                                 $stmt = $conn->prepare($sql);
                                 $stmt->bind_param("ssssss", $model, $year, $kilometrage, $price, $image, $description);
-                                // Si insertion
+                                
                                 if ($stmt->execute()) {
                                     $_SESSION["success"] = "<p class='validation'>Le véhicule a bien été ajouté.</p>";
                                     $stmt->close();

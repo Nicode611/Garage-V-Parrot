@@ -1,4 +1,4 @@
-<?php //Affichage employés
+<?php
     $db_host = "mysql-garage-v-parrot.alwaysdata.net";
     $db_user = "326283";
     $db_pass = "Beta2k15";
@@ -8,14 +8,12 @@
     if ($conn->connect_error) {
         die("La connexion à la base de données a échoué : " . $conn->connect_error);
     }
-    // Récupération de tout les éléments de la table
+
     $sql = "SELECT id, role, first_name, name, code FROM users";
-    // Exécution de la requete
+
     $result = $conn->query($sql);
 
-    // Si résultat plus grand que 0 lignes
     if ($result->num_rows > 0) {
-        // Crée un var a chaque éléments
         while ($row = $result->fetch_assoc()) {
             $id = $row["id"];
             $role = $row["role"];
@@ -74,7 +72,6 @@
 </script>
 
 <?php // Script de supression employes
-    // Vérifie si la requete a été efectuée
     if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET["action"]) && $_GET["action"] === "delete-employe" && isset($_GET["id"])) {
         
         $db_host = "mysql-garage-v-parrot.alwaysdata.net";
