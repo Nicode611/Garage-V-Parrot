@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const nextBtn = document.getElementById('nextBtn');
     let currentIndex = Math.floor(slides.length / 2 );
 
-    if (currentIndex % 2 === 0) {
+    if (slides.length % 2 === 0) {
         currentIndex += 0.5;
     }
 
