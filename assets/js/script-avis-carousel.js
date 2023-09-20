@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const nextBtn = document.getElementById('nextBtn');
     let currentIndex = Math.floor(slides.length / 2 );
 
+    // Si la nombres de slides est pair mettre le currentIndex a la slide suivante
     if (slides.length % 2 === 0) {
         currentIndex += 0.5;
     }

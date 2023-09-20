@@ -76,7 +76,7 @@ $(document).ready(function () {
                 $("#results").empty();
 
                 // On récupere les données renvoyées par le serveur et on les traite
-                if (Array.isArray(data)) {
+                if (Array.isArray(data) && data.length > 0) {
                     $.each(data, function (index, vehicle) {
                         var html = '<div class="vehicules">';
                         html += '<img class="vehicules-img" src="../assets/images/images-vehicules/' + vehicle.image + '">';
@@ -136,6 +136,8 @@ $(document).ready(function () {
                             vehicule.addEventListener("click", setActive);
                         });
                     });
+                } else {
+                    $("#results").html("<p>Aucun vehicules ne corresponds à vos criteres.</p>");
                 }
             }
         });
