@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../assets/css/occasions.css">
+        <link rel="stylesheet" href="assets/css/occasions.css">
         <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     </head>
     <?php 
@@ -34,7 +35,7 @@
                             </div>
                             <button type="button" id="filter">Appliquer le filtre</button>
                         </form>
-                        <div class="show-vehicules"> <?php
+                        <div class="show-vehicules"> <?php 
                             $includeFile = ("../scripts/affichage/affichage-show-vehicules.php");
                             if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; } ?> 
                         </div> 
@@ -43,7 +44,7 @@
                 <div class="vehicules-imgs" id="results">
                     
                     <?php
-                        if ($page_name == "index.php") {
+                        if ($page_name == "index.php" || $page_name == "") { ?> <script> console.log('validé'); </script> <?php
                             $includeFile = ("scripts/affichage/affichage-show-vehicules.php");
                             if (file_exists($includeFile)) { include($includeFile); } else { echo "Le fichier $includeFile n'a pas été trouvé."; }
                         }
