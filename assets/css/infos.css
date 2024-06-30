@@ -1,0 +1,58 @@
+.dashboard-infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #24242B;
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.user-icon {
+    width: 75px;
+    height: 75px;
+}
+
+.infos-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px 50px 0px;
+    padding: 20px;
+    border: solid 1px #09A7A0;
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px rgb(0, 0, 0);
+}
+
+.infos-form > *{
+    margin: 5px;
+}
+
+.infos-form > .infos-fields{
+    height: 25px;
+}
+
+.infos-submit {
+    height: 38px;
+    margin-top: 10px;
+    background-color: #09A7A0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 10px rgb(0, 0, 0));
+}
+
+.infos-submit:hover {
+    cursor: pointer;
+    zoom: 105%;
+}
+
+.attention {
+    font-size: 0.7rem;
+    margin: 0;
+}
+
+.attention > svg {
+    transform: translateY(5px);
+}

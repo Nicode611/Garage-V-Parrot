@@ -1,0 +1,91 @@
+html {
+    background-color: #24242B;
+    color: white;
+    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+body {
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+main {
+    padding-bottom: 50px;
+    min-height: 60vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.glow {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 500px;
+    height: 400px;
+    background: radial-gradient(circle, #09a79f9f, transparent);
+    filter: blur(80px);
+    transform: scale(2.5); /* Ajuster la valeur pour l'effet de taille */
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.main-title {
+    text-align: center;
+    margin: 50px 0px 40px 0px;
+}
+
+.services-section {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0px 70px 30px 70px;
+    overflow: hidden;
+}
+
+
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 40%;
+    margin: 20px 50px 40px 50px;
+    min-width: 500px;
+}
+
+.id-service {
+    display: none;
+}
+
+.service-img {
+    width: 250px;
+    height: 150px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.service-infos {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    width: 50%;
+}
+
+.service-infos > * {
+    margin: 5px;
+}
+
+.service-description {
+    font-weight: 300;
+}
+
+.service-form-container {
+    display: none;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+
+}

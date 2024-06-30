@@ -1,0 +1,84 @@
+html {
+    background-color: #24242B;
+    color: white;
+    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+body {
+    margin: 0px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+::placeholder {
+    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    color: #000;
+}
+
+h2 {
+    margin: 40px;
+    text-align: center;
+}
+
+.create-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+}
+
+.create-form1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 81%;
+}
+
+.create-fields {
+    height: 30px;
+    border: solid 1px black;
+}
+
+.create-form > .create-fields {
+    width: 80%;
+}
+
+.create-form1 > .create-fields {
+    width: 40%;
+    margin-bottom: 40px;
+}
+
+#createCode {
+    width: 50px;
+}
+
+.create-submit {
+    height: 38px;
+    background-color: #09A7A0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 10px rgb(0, 0, 0));
+}
+
+.create-submit:hover {
+    cursor: pointer;
+    zoom: 105%;
+}
+
+
+@media screen and (max-width: 1000px) {
+    main {
+        margin: 50px 0px 50px 0px;
+    }
+
+    .create-form {
+        width: 90vw;
+    }
+}

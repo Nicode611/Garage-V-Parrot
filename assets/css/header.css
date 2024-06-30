@@ -1,0 +1,209 @@
+header {
+    position: relative;
+    background-color: #18181F;
+    color: white;
+    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 20;
+    box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.534);
+}
+
+.logo-container {
+    padding-left: 4%;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.nav-container {
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.nav-ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-ul li {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.connect-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 3%;
+    font-size: 0.9rem;
+}
+
+.connect-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.connect-btn , .deco {
+    background-color: #09A7A0;
+    color: white;
+    border: none;
+    font-size: 0.8rem;
+    margin: 10px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 10px rgb(0, 0, 0));
+}
+
+.connect-btn:hover, .deco:hover {
+    cursor: pointer;
+    border: solid 1px white;
+}
+
+.connect-icon {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+
+.connect-icon-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 15px;
+}
+
+.connect-icon-container > * {
+    margin: 0px;
+    font-weight: 300;
+}
+
+
+
+
+/* Menu hamburger */
+
+.menu-hamburger {
+    display: none;
+}
+
+
+.menu-btn {
+    position: fixed;
+    top: 35px;
+    right: 20px; /* Position à droite */
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.btn-line {
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px 0;
+}
+
+.menu-btn.open .btn-line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-btn.open .btn-line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.open .btn-line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.menu {
+    position: fixed;
+    top: 0px;
+    right: -250px; /* Position à droite et valeur en pixels */
+    width: 250px;
+    height: 100%;
+    background-color: #18181F;
+    transition: right 0.4s; /* Changement de left à right */
+    z-index: 999;
+}
+
+.menu.open {
+    right: 0; /* Changement de left à right */
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li{
+    padding: 15px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.menu ul li:last-child {
+    border-bottom: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.hide {
+    display: none;
+}
+
+.active {
+    color: #09A7A0;
+    font-size: 1rem;
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 1000px) {
+    .nav-element, .connect-btn {
+        display: none;
+    }
+    
+    .menu-hamburger {
+        display: block;
+    }
+
+    .connect-infos-elements {
+        display: none;
+    }
+
+    .connect-infos-container-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0px 20px 0px;
+    }
+}

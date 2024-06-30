@@ -1,0 +1,731 @@
+html {
+    background-color: #24242B;
+    color: white;
+    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+body {
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+::placeholder {
+    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    color: #000;
+}
+
+.sidebar {
+    width: 16%;
+    max-width: 250px;
+    min-width: 180px;
+    min-height: 100vh;
+    background-color: #18181F;
+    margin: 0px;
+}
+
+.sidebar-btn {
+    display: none;
+}
+
+.sidebar-ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.sidebar-ul:hover {
+    cursor: pointer;
+}
+
+.sidebar-li {
+    list-style: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.sidebar-active {
+    background-color: #09A7A0;
+    color: black;
+    font-weight: 500;
+}
+
+
+/* Services */
+
+.services-main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.dashboard-services {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    margin: 50px 0px 50px 0px;
+    overflow: hidden;
+}
+
+.glow {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 500px;
+    height: 400px;
+    background: radial-gradient(circle, #09a79f9f, transparent);
+    filter: blur(80px);
+    transform: scale(2.5); /* Ajuster la valeur pour l'effet de taille */
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.services-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.id-service {
+    display: none;
+}
+
+.service {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 40%;
+    min-width: 500px;
+    max-height: 240px;
+    margin: 0px 50px 0px 50px;
+}
+
+.service-delete {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 40px;
+    right: 40px;
+    opacity: 1;
+    z-index: 2;
+}
+
+.service-delete:hover {
+    cursor: pointer;
+    zoom: 105%;
+}
+
+.service-delete:hover ~ * {
+    filter: blur(5px);
+}
+
+.service-img {
+    width: 213px;
+    height: 103px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.service-infos {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 50%;
+}
+
+.service-description {
+    font-weight: 300;
+}
+
+.service-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    min-width: 500px;
+    margin: 50px;
+}
+
+.service-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 1px #09A7A0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 10px 15px rgb(0, 0, 0);
+}
+
+.service-form1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+
+.service-form1 > * {
+    margin: 10px;
+    width: 100%;
+}
+
+.service-form1 > input {
+    height: 25px;
+}
+
+.service-submit {
+    height: 38px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #09A7A0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 10px rgb(0, 0, 0));
+}
+
+.service-submit:hover {
+    cursor: pointer;
+    zoom: 105%;
+}
+
+
+/* Occasions */
+
+.dashboard-occasions {
+    width: 100%;
+}
+
+/* Horaires */
+
+.dashboard-horaires {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.horaires-form > *, .horaires-form-matin > *, .horaires-form-apresmidi > * {
+    margin: 5px;
+}
+
+.horaires-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: solid 1px #09A7A0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 100px;
+    box-shadow: 0px 10px 15px rgb(0, 0, 0);
+}  
+
+.horaires-form h3 {
+    margin-bottom: 20px;
+}
+
+.horaires-form1 {
+    display: flex;
+    align-items: center;
+}
+
+.horaires-form-matin, .horaires-form-apresmidi {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0px 30px 30px 30px;
+    width: 150px;
+}
+
+.horaires-submit {
+    height: 38px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #09A7A0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 10px rgb(0, 0, 0));
+}
+
+.horaires-submit:hover {
+    cursor: pointer;
+    zoom: 105%;
+}
+
+
+/* Employés */
+
+.dashboard-employes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 50px 0px 50px 0px;
+}
+
+.employe {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 700px;
+    height: 100px;
+    background-color: #18181F;
+    border: solid 1px #09A7A0;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.employe > div {
+    width: 33.33%;
+    height: 60%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.employe > div > * {
+    margin: 0px;
+}
+
+.employe > div > h3 {
+    margin-bottom: 10px;
+}
+
+.employe-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    background-color: #24242B;
+    border: solid 1px #09A7A0;
+    width: 700px;
+    height: auto;
+    border-radius: 10px;
+    margin: 50px;
+    padding: 20px 0px 20px 0px;
+    box-shadow: 0px 10px 15px rgb(0, 0, 0);
+}
+
+.employe-form > h3 {
+    margin: 0px;
+}
+
+.employe-form > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px 0px 30px 0px;
+}
+
+.employe-form > div > * {
+    width: 20%;
+    height: 25px;
+    border: solid 1px black;
+}
+
+.employe-submit {
+    background-color: #09A7A0;
+    color: white;
+    border: none;
+    align-self: center;
+    height: 38px;
+    padding: 10px;
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 10px rgb(0, 0, 0));
+}
+
+.employe-submit:hover {
+    cursor: pointer;
+    zoom: 105%;
+}
+
+/* Avis */
+
+.dashboard-avis {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 50px 0px 50px 0px;
+    overflow: hidden;
+}
+
+.new-avis {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px;
+}
+
+.avis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px;
+    max-width: 300px;
+    margin: 10px 30px 10px 30px;
+}
+
+.avis-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    margin: 15px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #09A7A0;
+    color: white;
+    border: solid 0.5px rgb(0, 0, 0);
+}
+
+.avis-delete {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: -20px;
+    right: -20px;
+    opacity: 1;
+    z-index: 2;
+}
+
+.avis-delete:hover {
+    cursor: pointer;
+    zoom: 105%;
+}
+
+.avis-delete:hover ~ * {
+    filter: blur(1px);
+}
+    
+
+.form-avis > input {
+    color: white;
+    border: none;
+    align-self: center;
+    margin: 10px;
+    padding: 3px 10px 3px 10px;
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 10px rgb(0, 0, 0));
+}
+
+.form-avis > input:hover {
+    cursor: pointer;
+    border: solid 1px white;
+}
+
+.choose-valid {
+    background-color: #4ccf4c;
+}
+
+.choose-delete {
+    background-color: #db3939;
+}
+
+.dividing-bar {
+    border-top: solid 1px white;
+    width: 100%;
+}
+
+.verified-avis {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Contact */
+.dashboard-contacts {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 50px 0px 50px 0px;
+}
+
+.dashboard-contact {
+    display: flex;
+    position: relative;
+    width: 70vw;
+    padding: 10px;
+    margin: 50px 0px 50px 0px;
+    background-color: #18181F;
+    border-radius: 10px;
+    border: solid 1px #09A7A0;
+}
+
+.dashboard-contact > .delete {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+}
+
+.contact-date {
+    position: absolute;
+    top: -25px;
+    left: 15px;
+    font-weight: 300;
+}
+
+.contact-objet {
+    position: absolute;
+    top: -25px;
+    left: 25%;
+    font-weight: 300;
+}
+
+
+.contact-message {
+    width: 75%;
+}
+
+.contact-infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: end;
+    width: 25%;
+    font-weight: 300;
+}
+
+.contact-nom {
+    font-weight: 600;
+}
+
+
+.hide {
+    display: none;
+}
+
+
+@media screen and (max-width: 1000px) {
+    #header {
+        box-shadow: none;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 40px;
+        min-height: auto;
+        max-width: 100%;
+        width: 100%;
+        background-color: #24242B;
+        border-bottom: solid 1px white;
+        border-top: solid 1px white;
+        box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.534);
+    }
+
+    .sidebar-btn {
+        display: block;
+        cursor: pointer;
+    }
+
+    .sidebar-nav {
+        position: absolute;
+        opacity: 0;
+        top: 41px;
+        left: -300px;
+        transform: translateX(-50%);
+        width: 250px;
+        height: 100%;
+        z-index: 10;
+        transition: left 0.2s, opacity 0.2s;
+    }
+
+    .sidebar-ul {
+        background-color: #18181F;
+        border: solid 1px white;
+        border-top: none;
+    }
+
+    .sidebar-nav.open {
+        display: block;
+        top: 41px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+
+    .sidebar-active {
+        background-color: #24242B;
+        border: solid 1px #ffffff;
+        color: white;
+    }
+    
+    .dashboard-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.09);
+        z-index: 9;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .dashboard-overlay.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+
+    /* Services */
+
+    .dashboard-services {
+        margin-top: 0px;
+    }
+
+    .services-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        flex-direction: column;
+        text-align: center;
+        min-width: 200px;
+        margin: 40px 0px 40px 0px;
+    }
+
+    .service-delete {
+        top: -15px;
+        right: 9%;
+    }
+
+    .service-img {
+        width: 70%;
+    }
+
+    .service * {
+        margin: 3px;
+    }
+
+    .service-infos {
+        width: 80%;
+    }
+
+    .service-form {
+        width: 70vw;
+    }
+
+
+    /* Horaires */
+
+    .horaires-form {
+        width: 70vw;
+    }
+
+    .horaires-form1 {
+        flex-direction: column;
+    }
+
+    .horaires-form-matin, .horaires-form-apresmidi {
+        align-items: center;
+    }
+
+
+    /* Employes */
+
+    .employe {
+        width: 90%;
+    }
+
+    .employe div h3 {
+        font-size: 1rem;
+    }
+
+    .employe div p {
+        font-size: 0.7rem;
+    }
+
+    .employe-form {
+        width: 80vw;
+    }
+
+    .employe-form div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .employe-form div * {
+        width: 80%;
+        margin: 10px 0px 10px 0px;
+    }
+
+
+    /* Contact */
+
+    .dashboard-contacts {
+        min-height: 300px;
+    }
+
+    .dashboard-contact {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: auto;
+    }
+    
+    .contact-message {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .contact-infos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .contact-objet {
+        position: initial;
+        margin-bottom: 15px;
+    }
+    
+    .contact-nom {
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,67 @@
+html {
+    background-color: #24242B;
+    color: white;
+    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+body {
+    margin: 0px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+    overflow: hidden;
+}
+
+h2 {
+    margin: 40px;
+}
+
+::placeholder {
+    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    color: #000;
+}
+
+.connect-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+}
+
+.connect-form > * {
+    margin: 15px;
+}
+
+.connect-fields {
+    height: 30px;
+    width: 60%;
+    border: solid 1px black;
+}
+
+.connect-submit {
+    height: 38px;
+    background-color: #09A7A0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 10px rgb(0, 0, 0));
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.connect-submit:hover {
+    cursor: pointer;
+    zoom: 105%;
+}
+
+
+@media screen and (max-width: 1000px) {
+    main {
+        margin: 50px 0px 50px 0px;
+    }
+}

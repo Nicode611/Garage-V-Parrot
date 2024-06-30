@@ -1,0 +1,155 @@
+html {
+    background-color: #24242B;
+    color: white;
+    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+body {
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+}
+
+.sidebar {
+    width: 16%;
+    max-width: 250px;
+    min-width: 180px;
+    height: 100vh;
+    background-color: #18181F;
+    margin: 0px;
+}
+
+.sidebar-btn {
+    display: none;
+}
+
+.sidebar-ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.sidebar-ul:hover {
+    cursor: pointer;
+}
+
+.sidebar-li {
+    list-style: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.sidebar-active {
+    background-color: #09A7A0;
+    color: black;
+    font-weight: 500;
+}
+
+
+/* Infos */
+
+
+
+/* Occasions */
+
+.dashboard-occasions {
+    width: 100%;
+}
+
+
+.hide {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    #header {
+        box-shadow: none;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 40px;
+        min-height: auto;
+        max-width: 100%;
+        width: 100%;
+        background-color: #24242B;
+        border-bottom: solid 1px white;
+        border-top: solid 1px white;
+        box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.534);
+    }
+
+    .sidebar-btn {
+        display: block;
+        cursor: pointer;
+    }
+
+    .sidebar-nav {
+        position: absolute;
+        opacity: 0;
+        top: 41px;
+        left: -300px;
+        transform: translateX(-50%);
+        width: 250px;
+        height: 100%;
+        z-index: 10;
+        transition: left 0.2s, opacity 0.2s;
+    }
+
+    .sidebar-ul {
+        background-color: #18181F;
+        border: solid 1px white;
+        border-top: none;
+    }
+
+    .sidebar-nav.open {
+        display: block;
+        top: 41px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+
+    .sidebar-active {
+        background-color: #24242B;
+        border: solid 1px #ffffff;
+        color: white;
+    }
+    
+    .dashboard-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.09);
+        z-index: 9;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .dashboard-overlay.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+
+    /* Infos */
+
+    .infos-form {
+        width: 60vw;
+        text-align: center;
+    }
+}

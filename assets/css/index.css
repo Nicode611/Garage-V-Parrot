@@ -1,0 +1,189 @@
+html {
+    background-color: #24242B;
+    color: white;
+    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+body {
+    margin: 0px;
+}
+
+.dividing-bar {
+    position: relative;
+    background-color: #18181F;
+    height: 25px;
+}
+
+
+/* Presentation */
+
+.section-presentation::before {
+  content: " ";
+  background-image:  url('../images/background.jpg');
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+
+.section-presentation {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.presentation-glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #24242b, transparent);
+    filter: blur(1px);
+    transform: scale(4);
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.presentation-text {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 300;
+    width: 50%;
+}
+
+
+/* Avis */
+
+.avis-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#prevBtn {
+    width: 20px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    z-index: 3;
+}
+
+#nextBtn {
+    width: 20px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    z-index: 3;
+}
+
+.avis-caroussel {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    width: 100%;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    position: relative;
+  }
+
+  .avis {
+    display: flex;
+    word-wrap: break-word;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    width: 200px;
+    min-width: 200px;
+    height: 150px;
+    background-color: #6d6d6d9d;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px 50px 10px 50px;
+    transition: transform 0.3s ease; /* Ajoutez une transition de 0.3 seconde sur la transformation */
+} 
+
+.avis::-webkit-scrollbar-track {
+    opacity: 0; /* Couleur de la piste de la barre de défilement */
+  }
+
+  .avis::-webkit-scrollbar {
+    width: 10px;
+    height: 5px; /* Largeur de la barre de défilement */
+  }
+  
+  .avis::-webkit-scrollbar-thumb {
+    background-color: #09A7A0;
+    border-radius: 10px;/* Couleur de la poignée de la barre de défilement */
+  }
+
+.shadow-left {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 20%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(2, 2, 2, 0.411) 48.44%, rgba(0, 0, 0, 0.288) 70.50%, rgba(0, 0, 0, 0.075) 84.92%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 2, 0.17) 100%);
+}
+.shadow-right {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 20%;
+    height: 100%;
+    background: linear-gradient(270deg, rgba(2, 2, 2, 0.411) 48.44%, rgba(0, 0, 0, 0.288) 70.50%, rgba(0, 0, 0, 0.075) 84.92%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 2, 0.17) 100%);
+}
+
+.section-avis {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#ajoutAvis {
+    margin-top: 30px;
+    width: 150px;
+    align-self: center;
+}
+
+.section-avis h2, .section-avis p {
+    margin: 0px;
+}
+
+.avis-name {
+    font-weight: 600;
+    font-size: 0.7rem;
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 1000px) {
+    #results {
+        display: none;
+    }
+}

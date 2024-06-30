@@ -1,0 +1,143 @@
+.occasions-container {
+    margin: 50px 0px 50px 0px;
+}
+
+.vehicules-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.vehicules-imgs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 650px;
+}
+
+.vehicules {
+    position: relative;
+    width: 185px;
+    height: 115px;
+    margin: 15px;
+}
+
+.vehicules-img {
+    width: 185px;
+    height: 115px;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.vehicules-img:hover {
+    cursor: pointer;
+}
+
+.delete:hover {
+    cursor: pointer;
+    zoom: 110%;
+}
+
+.delete:hover ~ * {
+    filter: blur(5px);
+}
+
+.delete {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0px;
+    right: 0px;
+    opacity: 1;
+    z-index: 2;
+}
+
+.id-vehicule {
+    display: none;
+}
+
+.occasions-form {
+    padding: 20px;
+    margin-top: 50px;
+    border: solid 1px #09A7A0;
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px rgb(0, 0, 0);
+}
+
+.occasions-form h3 {
+    margin-top: 0px;
+}
+
+.occasions-form1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.occasions-form1 > * {
+    width: 15%;
+    height: 25px;
+    margin: 10px;
+}
+
+.occasions-form2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#occasions-description {
+    width: 250px;
+}
+
+.occasions-submit {
+    height: 38px;
+    background-color: #09A7A0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 10px rgb(0, 0, 0));
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.occasions-submit:hover {
+    cursor: pointer;
+    zoom: 105%;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    
+    .vehicules-imgs {
+        flex-direction: column;
+    }
+    
+    .occasions-form {
+        width: 70vw;
+    }
+
+    .occasions-form1 {
+        flex-direction: column;
+    }
+
+    .occasions-form1 > * {
+        width: 50%;
+    }
+
+    .occasions-form2 {
+        flex-direction: column;
+    }
+
+    #occasions-description {
+        width: 80%;
+    }
+
+    .occasions-form2 > * {
+        width: 80%;
+        margin: 10px 0px 10px 0px;
+    }
+}

@@ -1,0 +1,254 @@
+html {
+    background-color: #24242B;
+    color: white;
+    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+body {
+    margin: 0px;
+}
+
+.section-vehicules-occasions {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    min-height: 60vh;
+    padding: 70px 100px 70px 50px;
+    overflow: hidden;
+}
+
+.occasions-glow {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 300px;
+    height: 200px;
+    background: radial-gradient(circle, #09a79f9f, transparent);
+    filter: blur(80px);
+    transform: scale(2.5);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.vehicules {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#form-filter {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-bottom: 20px;
+    width: 60%;
+    min-width: 500px;
+}
+
+#form-filter > * {
+    width: 25%;
+}
+
+#form-filter > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+}
+
+#form-filter div > input {
+    width: 80px;
+    margin: 5px;
+}
+
+#filter {
+    height: auto;
+}
+
+
+.vehicules h2 {
+    margin-bottom: 5px;
+}
+
+.vehicules-imgs, .show-vehicules {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 70%;
+}
+
+.vehicules-imgs > .vehicules, .show-vehicules > .vehicules {
+    margin: 5px;
+}
+
+.hided-infos > * {
+    display: block !important ;
+    border: solid 1px #09A7A0;
+}
+
+.vehicule-active {
+    border: 1px solid #09A7A0;
+}
+
+.vehicules-img {
+    width: 185px;
+    height: 115px;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.vehicules-img:hover {
+    cursor: pointer;
+}
+
+.vehicule-card {
+    position: relative;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border-radius: 0px 0px 15px 15px;
+    box-shadow: 5px 5px 30px 10px rgb(0, 0, 0);
+}
+
+#prevButton {
+    display: none;
+    width: 20px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: -40px;
+    z-index: 3;
+}
+
+#nextButton {
+    display: none;
+    width: 20px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    right: -40px;
+    z-index: 3;
+}
+
+.vehicule-img {
+    width: auto;
+    height: 349px;
+    object-fit: cover;
+}
+
+.card-bottom {
+    padding: 15px;
+}
+
+.card-bottom > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.vehicule-infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+}
+
+.car-contact {
+    float: right;
+    background-color: #09A7A0;
+    border: none;
+    border-radius: 8px;
+    padding: 6px;
+    color: white;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+}
+
+.car-contact:hover {
+    cursor: pointer;
+    zoom: 101%;
+} 
+
+.vehicule-objet > .vehicule-form-infos{
+    display: none;
+}
+
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+
+@media screen and (max-width: 1000px) {
+    
+    .section-vehicules-occasions {
+        padding: 70px 0px 70px 0px;
+    }
+
+    #form-filter {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #form-filter > * {
+        margin: 10px;
+    }
+
+    #filter {
+        overflow: hidden;
+    }
+
+    .section-vehicules-occasions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vehicules div {
+        margin-bottom: 70px;
+    }
+
+
+    .vehicule-card {
+        background-color: white;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        border-radius: 0px 0px 15px 15px;
+        box-shadow: 5px 5px 30px 10px rgb(0, 0, 0);
+    }
+
+    .vehicule-img {
+        width: auto;
+        height: 50vw;
+        object-fit: cover;
+    }
+
+    #prevButton {
+        display: block;
+    }
+    
+    #nextButton {
+        display: block;
+    }
+
+    .vehicules-imgs, .show-vehicules {
+        width: 90%;
+    }
+}
